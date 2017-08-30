@@ -79,8 +79,8 @@ bool inline process_gpio_cmd(uint8_t cmd, uint8_t* rsp) {
             return false;
         
         case SETGET_CMD:
-            LATC = cmd & ~gpio_dir;
             (*rsp) = PORTC & gpio_dir;
+            LATC = cmd & ~gpio_dir;
             return true;
     }
 }
@@ -102,7 +102,7 @@ void inline gpio_task() {
         uint8_t tx_ptr = 0;
         
         for (uint8_t rx_ptr = 0; rx_ptr < bytes_rcvd; rx_ptr++) {
-            bool has_output = process_gpio_cmd(usb_rx_buf[rx_ptr], &usb_tx_buf[tx_ptr]);
+            bool has_output = process_gpio_cmd(usb_rx_buf[rx_ptr], &(usb_tx_buf[tx_ptr]));
             
             if (has_output) {
                 tx_ptr += 1;

@@ -433,12 +433,12 @@ EVENT_TRANSFER_TERMINATED 5
 [s S904 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
 "259
 [v _sd000 sd000 `DCCS904  1 e 4 0 ]
-[s S908 . 52 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[25]ui 1 string 50 2 ]
+[s S908 . 18 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[8]ui 1 string 16 2 ]
 "263
-[v _sd001 sd001 `DCCS908  1 e 52 0 ]
-[s S912 . 26 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[12]ui 1 string 24 2 ]
+[v _sd001 sd001 `DCCS908  1 e 18 0 ]
+[s S912 . 40 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[19]ui 1 string 38 2 ]
 "269
-[v _sd002 sd002 `DCCS912  1 e 26 0 ]
+[v _sd002 sd002 `DCCS912  1 e 40 0 ]
 "275
 [v _USB_CD_Ptr USB_CD_Ptr `DCC[1]*.25DCCuc  1 e 2 0 ]
 "281

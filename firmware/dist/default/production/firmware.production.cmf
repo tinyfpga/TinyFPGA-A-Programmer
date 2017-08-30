@@ -13,26 +13,26 @@
 %PSECTS
 $dist/default/production\firmware.production.obj
 cinit CODE 0 1A 1A 33 2
-text1 CODE 0 104C 104C E 2
+text1 CODE 0 104B 104B E 2
 text2 CODE 0 2F7 2F7 E9 2
-text3 CODE 0 11A7 11A7 20 2
-text4 CODE 0 1148 1148 1F 2
-text5 CODE 0 120F 120F 27 2
-text6 CODE 0 110D 110D 1C 2
+text3 CODE 0 11A6 11A6 20 2
+text4 CODE 0 1147 1147 1F 2
+text5 CODE 0 120E 120E 27 2
+text6 CODE 0 110C 110C 1C 2
 text7 CODE 0 15D5 15D5 5A 2
 text8 CODE 0 148A 148A 48 2
 text9 CODE 0 ED1 ED1 92 2
 text10 CODE 0 16E5 16E5 5B 2
 text11 CODE 0 838 838 60 2
 text12 CODE 0 D20 D20 8E 2
-text13 CODE 0 10BE 10BE 19 2
+text13 CODE 0 10BD 10BD 19 2
 text14 CODE 0 157D 157D 58 2
 text15 CODE 0 BA0 BA0 7F 2
 text16 CODE 0 4D 4D 157 2
-text17 CODE 0 1266 1266 30 2
+text17 CODE 0 1265 1265 30 2
 text18 CODE 0 898 898 61 2
-text19 CODE 0 1302 1302 3D 2
-text20 CODE 0 11C7 11C7 23 2
+text19 CODE 0 1301 1301 3D 2
+text20 CODE 0 11C6 11C6 23 2
 text21 CODE 0 1400 1400 42 2
 text22 CODE 0 801 801 37 2
 text23 CODE 0 6F2 6F2 9D 2
@@ -40,23 +40,23 @@ text24 CODE 0 AAD AAD 74 2
 text25 CODE 0 961 961 68 2
 text26 CODE 0 A3B A3B 72 2
 text27 CODE 0 4BD 4BD D2 2
-text28 CODE 0 137F 137F 40 2
-text29 CODE 0 10D7 10D7 1A 2
-text30 CODE 0 133F 133F 40 2
+text28 CODE 0 133E 133E 40 2
+text29 CODE 0 10D6 10D6 1A 2
+text30 CODE 0 13BF 13BF 41 2
 text31 CODE 0 168A 168A 5B 2
 text32 CODE 0 C9F C9F 81 2
-text33 CODE 0 1038 1038 4 2
-text34 CODE 0 105A 105A F 2
-text35 CODE 0 1034 1034 4 2
+text33 CODE 0 1037 1037 4 2
+text34 CODE 0 1059 1059 F 2
+text35 CODE 0 1FFC 1FFC 4 2
 text36 CODE 0 58F 58F B6 2
-text37 CODE 0 10F1 10F1 1C 2
-text38 CODE 0 1079 1079 15 2
-text39 CODE 0 1042 1042 A 2
+text37 CODE 0 10F0 10F0 1C 2
+text38 CODE 0 1078 1078 15 2
+text39 CODE 0 1041 1041 A 2
 text41 CODE 0 3E0 3E0 DD 2
-text42 CODE 0 1187 1187 20 2
-text43 CODE 0 1129 1129 1F 2
-text44 CODE 0 11EA 11EA 25 2
-text45 CODE 0 10A6 10A6 18 2
+text42 CODE 0 1186 1186 20 2
+text43 CODE 0 1128 1128 1F 2
+text44 CODE 0 11E9 11E9 25 2
+text45 CODE 0 10A5 10A5 18 2
 text46 CODE 0 645 645 AD 2
 text47 CODE 0 1526 1526 57 2
 text48 CODE 0 1442 1442 48 2
@@ -64,34 +64,34 @@ text49 CODE 0 E3F E3F 92 2
 text50 CODE 0 162F 162F 5B 2
 text51 CODE 0 17A0 17A0 60 2
 text52 CODE 0 DAE DAE 91 2
-text53 CODE 0 108E 108E 18 2
+text53 CODE 0 108D 108D 18 2
 text54 CODE 0 14D2 14D2 54 2
 text55 CODE 0 B21 B21 7F 2
 text56 CODE 0 1A4 1A4 153 2
-text57 CODE 0 1236 1236 30 2
+text57 CODE 0 1235 1235 30 2
 text58 CODE 0 1740 1740 60 2
-text59 CODE 0 1296 1296 35 2
+text59 CODE 0 1295 1295 35 2
 text60 CODE 0 C1F C1F 80 2
-text61 CODE 0 1167 1167 20 2
-text62 CODE 0 13BF 13BF 41 2
-text63 CODE 0 12CB 12CB 37 2
+text61 CODE 0 1166 1166 20 2
+text62 CODE 0 137E 137E 41 2
+text63 CODE 0 12CA 12CA 37 2
 text64 CODE 0 F63 F63 9D 2
 text65 CODE 0 78F 78F 70 2
 text66 CODE 0 8F9 8F9 68 2
 text67 CODE 0 9C9 9C9 72 2
-maintext CODE 0 1069 1069 10 2
+maintext CODE 0 1068 1068 10 2
 cstackBANK0h BANK0 1 58 58 8 1
 cstackCOMMON COMMON 1 70 70 E 1
 cstackBANK1 BANK1 1 A0 A0 26 1
 cstackBANK2 BANK2 1 167 167 9 1
 cstackBANK3 BANK3 1 1E0 1E0 2 1
-stringtext1 STRCODE 0 18A3 18A3 6 2
-stringtext2 STRCODE 0 18AD 18AD 2 2
+stringtext1 STRCODE 0 188F 188F 6 2
+stringtext2 STRCODE 0 1899 1899 2 2
 stringtext3 STRCODE 0 1800 1800 43 2
-stringtext4 STRCODE 0 1843 1843 34 2
-stringtext5 STRCODE 0 1877 1877 1A 2
-stringtext6 STRCODE 0 1891 1891 12 2
-stringtext7 STRCODE 0 18A9 18A9 4 2
+stringtext4 STRCODE 0 1843 1843 28 2
+stringtext5 STRCODE 0 186B 186B 12 2
+stringtext6 STRCODE 0 187D 187D 12 2
+stringtext7 STRCODE 0 1895 1895 4 2
 intentry CODE 0 4 4 14 2
 bssBANK1 BANK1 1 C6 C6 1C 1
 bssBANK2 BANK2 1 120 120 47 1
@@ -101,8 +101,8 @@ bssBANK5 BANK5 1 2A0 2A0 40 1
 bssBANK6 BANK6 1 320 320 40 1
 swtext1 CONST 0 1000 1000 1A 2
 swtext2 CONST 0 101A 101A 1A 2
-clrtext CODE 0 103C 103C 6 2
-$C:\Users\lvale\AppData\Local\Temp\s6rg.obj
+clrtext CODE 0 103B 103B 6 2
+$C:\Users\lvale\AppData\Local\Temp\skg8.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 18 18 2 2
 config CONFIG 0 8007 8007 2 2
@@ -133,10 +133,12 @@ BANK8 420-46F 1
 BANK9 4A0-4EF 1
 CONST 2-3 2
 CONST 7FF-800 2
-CONST 18AF-1FFF 2
+CONST 1034-1036 2
+CONST 189B-1FFB 2
 ENTRY 2-3 2
 ENTRY 7FF-800 2
-ENTRY 18AF-1FFF 2
+ENTRY 1034-1036 2
+ENTRY 189B-1FFB 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
 SFR11 580-59F 1
@@ -163,7 +165,8 @@ SFR31 F80-FEF 1
 STACK 2220-23EF 1
 CODE 2-3 2
 CODE 7FF-800 2
-CODE 18AF-1FFF 2
+CODE 1034-1036 2
+CODE 189B-1FFB 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-11F 1
@@ -180,10 +183,12 @@ BANK12 620-64F 1
 BIGRAM 2000-23EF 1
 STRCODE 2-3 2
 STRCODE 7FF-800 2
-STRCODE 18AF-1FFF 2
+STRCODE 1034-1036 2
+STRCODE 189B-1FFB 2
 STRING 2-3 2
 STRING 7FF-800 2
-STRING 18AF-1FFF 2
+STRING 1034-1036 2
+STRING 189B-1FFB 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -198,48 +203,48 @@ STRING 18AF-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\firmware.production.obj
-1A cinit CODE >2747:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1A cinit CODE >2750:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1A cinit CODE >2921:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1B cinit CODE >2922:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1C cinit CODE >2923:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1D cinit CODE >2924:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1E cinit CODE >2925:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1F cinit CODE >2926:C:\Users\lvale\AppData\Local\Temp\s6rg.
-22 cinit CODE >2930:C:\Users\lvale\AppData\Local\Temp\s6rg.
-23 cinit CODE >2931:C:\Users\lvale\AppData\Local\Temp\s6rg.
-24 cinit CODE >2932:C:\Users\lvale\AppData\Local\Temp\s6rg.
-25 cinit CODE >2933:C:\Users\lvale\AppData\Local\Temp\s6rg.
-26 cinit CODE >2934:C:\Users\lvale\AppData\Local\Temp\s6rg.
-27 cinit CODE >2935:C:\Users\lvale\AppData\Local\Temp\s6rg.
-2A cinit CODE >2939:C:\Users\lvale\AppData\Local\Temp\s6rg.
-2B cinit CODE >2940:C:\Users\lvale\AppData\Local\Temp\s6rg.
-2C cinit CODE >2941:C:\Users\lvale\AppData\Local\Temp\s6rg.
-2D cinit CODE >2942:C:\Users\lvale\AppData\Local\Temp\s6rg.
-2E cinit CODE >2943:C:\Users\lvale\AppData\Local\Temp\s6rg.
-2F cinit CODE >2944:C:\Users\lvale\AppData\Local\Temp\s6rg.
-32 cinit CODE >2948:C:\Users\lvale\AppData\Local\Temp\s6rg.
-33 cinit CODE >2949:C:\Users\lvale\AppData\Local\Temp\s6rg.
-34 cinit CODE >2950:C:\Users\lvale\AppData\Local\Temp\s6rg.
-35 cinit CODE >2951:C:\Users\lvale\AppData\Local\Temp\s6rg.
-36 cinit CODE >2952:C:\Users\lvale\AppData\Local\Temp\s6rg.
-37 cinit CODE >2953:C:\Users\lvale\AppData\Local\Temp\s6rg.
-3A cinit CODE >2957:C:\Users\lvale\AppData\Local\Temp\s6rg.
-3B cinit CODE >2958:C:\Users\lvale\AppData\Local\Temp\s6rg.
-3C cinit CODE >2959:C:\Users\lvale\AppData\Local\Temp\s6rg.
-3D cinit CODE >2960:C:\Users\lvale\AppData\Local\Temp\s6rg.
-3E cinit CODE >2961:C:\Users\lvale\AppData\Local\Temp\s6rg.
-3F cinit CODE >2962:C:\Users\lvale\AppData\Local\Temp\s6rg.
-42 cinit CODE >2966:C:\Users\lvale\AppData\Local\Temp\s6rg.
-43 cinit CODE >2967:C:\Users\lvale\AppData\Local\Temp\s6rg.
-44 cinit CODE >2968:C:\Users\lvale\AppData\Local\Temp\s6rg.
-45 cinit CODE >2969:C:\Users\lvale\AppData\Local\Temp\s6rg.
-46 cinit CODE >2970:C:\Users\lvale\AppData\Local\Temp\s6rg.
-47 cinit CODE >2971:C:\Users\lvale\AppData\Local\Temp\s6rg.
-49 cinit CODE >2977:C:\Users\lvale\AppData\Local\Temp\s6rg.
-49 cinit CODE >2979:C:\Users\lvale\AppData\Local\Temp\s6rg.
-4A cinit CODE >2980:C:\Users\lvale\AppData\Local\Temp\s6rg.
-4B cinit CODE >2981:C:\Users\lvale\AppData\Local\Temp\s6rg.
+1A cinit CODE >2717:C:\Users\lvale\AppData\Local\Temp\skg8.
+1A cinit CODE >2720:C:\Users\lvale\AppData\Local\Temp\skg8.
+1A cinit CODE >2891:C:\Users\lvale\AppData\Local\Temp\skg8.
+1B cinit CODE >2892:C:\Users\lvale\AppData\Local\Temp\skg8.
+1C cinit CODE >2893:C:\Users\lvale\AppData\Local\Temp\skg8.
+1D cinit CODE >2894:C:\Users\lvale\AppData\Local\Temp\skg8.
+1E cinit CODE >2895:C:\Users\lvale\AppData\Local\Temp\skg8.
+1F cinit CODE >2896:C:\Users\lvale\AppData\Local\Temp\skg8.
+22 cinit CODE >2900:C:\Users\lvale\AppData\Local\Temp\skg8.
+23 cinit CODE >2901:C:\Users\lvale\AppData\Local\Temp\skg8.
+24 cinit CODE >2902:C:\Users\lvale\AppData\Local\Temp\skg8.
+25 cinit CODE >2903:C:\Users\lvale\AppData\Local\Temp\skg8.
+26 cinit CODE >2904:C:\Users\lvale\AppData\Local\Temp\skg8.
+27 cinit CODE >2905:C:\Users\lvale\AppData\Local\Temp\skg8.
+2A cinit CODE >2909:C:\Users\lvale\AppData\Local\Temp\skg8.
+2B cinit CODE >2910:C:\Users\lvale\AppData\Local\Temp\skg8.
+2C cinit CODE >2911:C:\Users\lvale\AppData\Local\Temp\skg8.
+2D cinit CODE >2912:C:\Users\lvale\AppData\Local\Temp\skg8.
+2E cinit CODE >2913:C:\Users\lvale\AppData\Local\Temp\skg8.
+2F cinit CODE >2914:C:\Users\lvale\AppData\Local\Temp\skg8.
+32 cinit CODE >2918:C:\Users\lvale\AppData\Local\Temp\skg8.
+33 cinit CODE >2919:C:\Users\lvale\AppData\Local\Temp\skg8.
+34 cinit CODE >2920:C:\Users\lvale\AppData\Local\Temp\skg8.
+35 cinit CODE >2921:C:\Users\lvale\AppData\Local\Temp\skg8.
+36 cinit CODE >2922:C:\Users\lvale\AppData\Local\Temp\skg8.
+37 cinit CODE >2923:C:\Users\lvale\AppData\Local\Temp\skg8.
+3A cinit CODE >2927:C:\Users\lvale\AppData\Local\Temp\skg8.
+3B cinit CODE >2928:C:\Users\lvale\AppData\Local\Temp\skg8.
+3C cinit CODE >2929:C:\Users\lvale\AppData\Local\Temp\skg8.
+3D cinit CODE >2930:C:\Users\lvale\AppData\Local\Temp\skg8.
+3E cinit CODE >2931:C:\Users\lvale\AppData\Local\Temp\skg8.
+3F cinit CODE >2932:C:\Users\lvale\AppData\Local\Temp\skg8.
+42 cinit CODE >2936:C:\Users\lvale\AppData\Local\Temp\skg8.
+43 cinit CODE >2937:C:\Users\lvale\AppData\Local\Temp\skg8.
+44 cinit CODE >2938:C:\Users\lvale\AppData\Local\Temp\skg8.
+45 cinit CODE >2939:C:\Users\lvale\AppData\Local\Temp\skg8.
+46 cinit CODE >2940:C:\Users\lvale\AppData\Local\Temp\skg8.
+47 cinit CODE >2941:C:\Users\lvale\AppData\Local\Temp\skg8.
+49 cinit CODE >2947:C:\Users\lvale\AppData\Local\Temp\skg8.
+49 cinit CODE >2949:C:\Users\lvale\AppData\Local\Temp\skg8.
+4A cinit CODE >2950:C:\Users\lvale\AppData\Local\Temp\skg8.
+4B cinit CODE >2951:C:\Users\lvale\AppData\Local\Temp\skg8.
 4 intentry CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/interrupt_manager.c
 4 intentry CODE >94:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
 A intentry CODE >54:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/interrupt_manager.c
@@ -340,38 +345,38 @@ FF9 text64 CODE >1927:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 FFA text64 CODE >1941:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 FFD text64 CODE >1943:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 FFF text64 CODE >1944:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12CB text63 CODE >2538:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12CB text63 CODE >2540:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12D0 text63 CODE >2542:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12D2 text63 CODE >2543:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12D3 text63 CODE >2548:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12D5 text63 CODE >2555:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12D9 text63 CODE >2557:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12E6 text63 CODE >2558:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12F3 text63 CODE >2559:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12F9 text63 CODE >2560:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12FE text63 CODE >2561:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-12FF text63 CODE >2564:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1301 text63 CODE >2565:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13BF text62 CODE >1543:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13C0 text62 CODE >1549:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13C4 text62 CODE >1550:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13DD text62 CODE >1552:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13E1 text62 CODE >1557:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13E4 text62 CODE >1559:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13ED text62 CODE >1560:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13EE text62 CODE >1563:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13F6 text62 CODE >1567:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13FA text62 CODE >1568:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-13FF text62 CODE >1585:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1167 text61 CODE >878:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1168 text61 CODE >884:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-116A text61 CODE >886:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-116F text61 CODE >888:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1171 text61 CODE >890:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1176 text61 CODE >899:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1180 text61 CODE >901:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1186 text61 CODE >902:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12CA text63 CODE >2538:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12CA text63 CODE >2540:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12CF text63 CODE >2542:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12D1 text63 CODE >2543:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12D2 text63 CODE >2548:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12D4 text63 CODE >2555:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12D8 text63 CODE >2557:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12E5 text63 CODE >2558:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12F2 text63 CODE >2559:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12F8 text63 CODE >2560:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12FD text63 CODE >2561:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+12FE text63 CODE >2564:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1300 text63 CODE >2565:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+137E text62 CODE >1543:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+137F text62 CODE >1549:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1383 text62 CODE >1550:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+139C text62 CODE >1552:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+13A0 text62 CODE >1557:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+13A3 text62 CODE >1559:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+13AC text62 CODE >1560:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+13AD text62 CODE >1563:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+13B5 text62 CODE >1567:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+13B9 text62 CODE >1568:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+13BE text62 CODE >1585:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1166 text61 CODE >878:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1167 text61 CODE >884:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1169 text61 CODE >886:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+116E text61 CODE >888:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1170 text61 CODE >890:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1175 text61 CODE >899:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+117F text61 CODE >901:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1185 text61 CODE >902:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 C1F text60 CODE >995:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 C20 text60 CODE >1000:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 C23 text60 CODE >1003:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -388,18 +393,18 @@ C6B text60 CODE >1039:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 C81 text60 CODE >1040:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 C82 text60 CODE >1044:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 C9A text60 CODE >1046:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1296 text59 CODE >293:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-1296 text59 CODE >296:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-129F text59 CODE >297:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12A0 text59 CODE >298:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12A1 text59 CODE >299:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12A5 text59 CODE >301:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12A6 text59 CODE >314:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12AE text59 CODE >315:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12B6 text59 CODE >317:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12C7 text59 CODE >318:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12C9 text59 CODE >345:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-12CA text59 CODE >346:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+1295 text59 CODE >293:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+1295 text59 CODE >296:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+129E text59 CODE >297:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+129F text59 CODE >298:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+12A0 text59 CODE >299:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+12A4 text59 CODE >301:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+12A5 text59 CODE >314:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+12AD text59 CODE >315:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+12B5 text59 CODE >317:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+12C6 text59 CODE >318:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+12C8 text59 CODE >345:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+12C9 text59 CODE >346:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 1740 text58 CODE >146:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 1740 text58 CODE >151:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 1746 text58 CODE >156:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
@@ -424,14 +429,14 @@ C9A text60 CODE >1046:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 178C text58 CODE >257:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 178D text58 CODE >165:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 179F text58 CODE >259:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-1236 text57 CODE >49:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-1236 text57 CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-1237 text57 CODE >76:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-1239 text57 CODE >80:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-123A text57 CODE >85:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-123C text57 CODE >96:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-123D text57 CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-1265 text57 CODE >98:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1235 text57 CODE >49:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1235 text57 CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1236 text57 CODE >76:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1238 text57 CODE >80:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1239 text57 CODE >85:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+123B text57 CODE >96:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+123C text57 CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1264 text57 CODE >98:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
 1A4 text56 CODE >2754:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 1A4 text56 CODE >2800:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 1AD text56 CODE >2802:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -529,11 +534,11 @@ B9F text55 CODE >2110:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 151C text54 CODE >2180:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 1520 text54 CODE >2181:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 1521 text54 CODE >2182:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-108E text53 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
-108E text53 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
-1092 text53 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
-109B text53 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
-10A5 text53 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+108D text53 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+108D text53 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+1091 text53 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+109A text53 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+10A4 text53 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
 DAE text52 CODE >1968:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 DAE text52 CODE >1973:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 DB0 text52 CODE >1976:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -715,39 +720,39 @@ ED0 text49 CODE >1744:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 6EE text46 CODE >367:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 6EF text46 CODE >370:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 6F1 text46 CODE >371:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10A6 text45 CODE >3025:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10A6 text45 CODE >3033:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10AF text45 CODE >3034:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10B2 text45 CODE >3036:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10B6 text45 CODE >3038:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10B9 text45 CODE >3040:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10BD text45 CODE >3041:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11EA text44 CODE >2202:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11EA text44 CODE >2214:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11ED text44 CODE >2217:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11FD text44 CODE >2220:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1204 text44 CODE >2221:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1208 text44 CODE >2223:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-120A text44 CODE >2226:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-120E text44 CODE >2227:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1129 text43 CODE >2245:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1129 text43 CODE >2270:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-112B text43 CODE >2271:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1131 text43 CODE >2274:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1132 text43 CODE >2277:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1138 text43 CODE >2278:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1139 text43 CODE >2285:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1147 text43 CODE >2286:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1187 text42 CODE >2303:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1187 text42 CODE >2305:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1189 text42 CODE >2311:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1198 text42 CODE >2318:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-119A text42 CODE >2323:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-119B text42 CODE >2341:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-119D text42 CODE >2344:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11A3 text42 CODE >2341:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11A4 text42 CODE >2347:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11A6 text42 CODE >2349:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10A5 text45 CODE >3025:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10A5 text45 CODE >3033:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10AE text45 CODE >3034:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10B1 text45 CODE >3036:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10B5 text45 CODE >3038:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10B8 text45 CODE >3040:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10BC text45 CODE >3041:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11E9 text44 CODE >2202:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11E9 text44 CODE >2214:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11EC text44 CODE >2217:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11FC text44 CODE >2220:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1203 text44 CODE >2221:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1207 text44 CODE >2223:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1209 text44 CODE >2226:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+120D text44 CODE >2227:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1128 text43 CODE >2245:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1128 text43 CODE >2270:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+112A text43 CODE >2271:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1130 text43 CODE >2274:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1131 text43 CODE >2277:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1137 text43 CODE >2278:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1138 text43 CODE >2285:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1146 text43 CODE >2286:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1186 text42 CODE >2303:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1186 text42 CODE >2305:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1188 text42 CODE >2311:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1197 text42 CODE >2318:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1199 text42 CODE >2323:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+119A text42 CODE >2341:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+119C text42 CODE >2344:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11A2 text42 CODE >2341:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11A3 text42 CODE >2347:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11A5 text42 CODE >2349:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 3E0 text41 CODE >477:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 3E0 text41 CODE >590:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 3E4 text41 CODE >601:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -806,32 +811,32 @@ ED0 text49 CODE >1744:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 4BA text41 CODE >824:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 4BA text41 CODE >826:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 4BC text41 CODE >827:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1042 text39 CODE >82:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1042 text39 CODE >85:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1045 text39 CODE >87:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1046 text39 CODE >89:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1048 text39 CODE >91:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1048 text39 CODE >93:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1079 text38 CODE >52:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-1079 text38 CODE >57:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-107B text38 CODE >58:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-107C text38 CODE >63:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-107F text38 CODE >64:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-1081 text38 CODE >69:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-1084 text38 CODE >70:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-1086 text38 CODE >75:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-1089 text38 CODE >76:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-108B text38 CODE >82:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-108D text38 CODE >87:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
-10F1 text37 CODE >1352:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10F1 text37 CODE >1355:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10F5 text37 CODE >1360:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10F7 text37 CODE >1363:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10F8 text37 CODE >1367:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10FE text37 CODE >1369:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1102 text37 CODE >1372:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1107 text37 CODE >1375:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-110C text37 CODE >1380:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1041 text39 CODE >82:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1041 text39 CODE >85:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1044 text39 CODE >87:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1045 text39 CODE >89:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1047 text39 CODE >91:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1047 text39 CODE >93:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1078 text38 CODE >52:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+1078 text38 CODE >57:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+107A text38 CODE >58:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+107B text38 CODE >63:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+107E text38 CODE >64:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+1080 text38 CODE >69:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+1083 text38 CODE >70:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+1085 text38 CODE >75:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+1088 text38 CODE >76:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+108A text38 CODE >82:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+108C text38 CODE >87:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/pin_manager.c
+10F0 text37 CODE >1352:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10F0 text37 CODE >1355:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10F4 text37 CODE >1360:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10F6 text37 CODE >1363:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10F7 text37 CODE >1367:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+10FD text37 CODE >1369:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1101 text37 CODE >1372:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1106 text37 CODE >1375:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+110B text37 CODE >1380:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 58F text36 CODE >277:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 58F text36 CODE >281:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 591 text36 CODE >288:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -873,19 +878,19 @@ ED0 text49 CODE >1744:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 641 text36 CODE >367:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 642 text36 CODE >370:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 644 text36 CODE >371:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1034 text35 CODE >96:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1034 text35 CODE >99:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1037 text35 CODE >100:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-105A text34 CODE >72:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-105A text34 CODE >75:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-105D text34 CODE >76:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1060 text34 CODE >77:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1063 text34 CODE >78:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1066 text34 CODE >79:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1068 text34 CODE >80:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
-1038 text33 CODE >88:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1038 text33 CODE >89:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-103B text33 CODE >90:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1FFC text35 CODE >96:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1FFC text35 CODE >99:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1FFF text35 CODE >100:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1059 text34 CODE >72:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1059 text34 CODE >75:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+105C text34 CODE >76:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+105F text34 CODE >77:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1062 text34 CODE >78:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1065 text34 CODE >79:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1067 text34 CODE >80:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
+1037 text33 CODE >88:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1037 text33 CODE >89:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+103A text33 CODE >90:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 C9F text32 CODE >995:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 CA1 text32 CODE >1000:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 CA4 text32 CODE >1003:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -912,40 +917,40 @@ D1B text32 CODE >1046:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 16C8 text31 CODE >500:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 16CE text31 CODE >507:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 16E3 text31 CODE >511:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-133F text30 CODE >64:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1341 text30 CODE >66:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1346 text30 CODE >68:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1347 text30 CODE >70:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-134D text30 CODE >71:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1350 text30 CODE >72:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1352 text30 CODE >75:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1354 text30 CODE >78:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-135A text30 CODE >79:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-135C text30 CODE >82:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1362 text30 CODE >83:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-136E text30 CODE >84:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-136F text30 CODE >85:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1370 text30 CODE >68:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-137E text30 CODE >86:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-10D7 text29 CODE >555:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-10D9 text29 CODE >580:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-10DA text29 CODE >581:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-10DE text29 CODE >583:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-10EE text29 CODE >585:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-10F0 text29 CODE >586:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-137F text28 CODE >96:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-137F text28 CODE >100:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1383 text28 CODE >101:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1390 text28 CODE >102:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1391 text28 CODE >104:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1396 text28 CODE >105:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-13A8 text28 CODE >107:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-13AB text28 CODE >108:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-13AF text28 CODE >104:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-13AF text28 CODE >109:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-13B4 text28 CODE >112:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-13B7 text28 CODE >113:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-13BE text28 CODE >114:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13BF text30 CODE >64:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13C1 text30 CODE >66:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13C6 text30 CODE >68:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13C7 text30 CODE >70:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13CD text30 CODE >71:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13D0 text30 CODE >72:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13D2 text30 CODE >75:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13D4 text30 CODE >78:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13DA text30 CODE >79:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13DC text30 CODE >82:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13E8 text30 CODE >83:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13EE text30 CODE >84:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13EF text30 CODE >85:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13F0 text30 CODE >68:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+13FF text30 CODE >86:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+10D6 text29 CODE >555:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+10D8 text29 CODE >580:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+10D9 text29 CODE >581:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+10DD text29 CODE >583:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+10ED text29 CODE >585:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+10EF text29 CODE >586:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+133E text28 CODE >96:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+133E text28 CODE >100:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1342 text28 CODE >101:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+134F text28 CODE >102:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1350 text28 CODE >104:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1355 text28 CODE >105:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1367 text28 CODE >107:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+136A text28 CODE >108:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+136E text28 CODE >104:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+136E text28 CODE >109:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1373 text28 CODE >112:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1376 text28 CODE >113:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+137D text28 CODE >114:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 4BD text27 CODE >835:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 4BD text27 CODE >840:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 4BF text27 CODE >844:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
@@ -1104,26 +1109,26 @@ B20 text24 CODE >1457:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 1438 text21 CODE >1567:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 143C text21 CODE >1568:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 1441 text21 CODE >1585:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11C7 text20 CODE >878:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11C9 text20 CODE >884:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11CB text20 CODE >886:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11D0 text20 CODE >888:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11D3 text20 CODE >890:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11D8 text20 CODE >899:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11E3 text20 CODE >901:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11E9 text20 CODE >902:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1302 text19 CODE >293:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-1302 text19 CODE >296:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-130B text19 CODE >297:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-130C text19 CODE >298:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-130D text19 CODE >299:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-1313 text19 CODE >301:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-1314 text19 CODE >314:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-131D text19 CODE >315:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-1326 text19 CODE >317:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-133B text19 CODE >318:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-133D text19 CODE >345:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-133E text19 CODE >346:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+11C6 text20 CODE >878:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11C8 text20 CODE >884:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11CA text20 CODE >886:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11CF text20 CODE >888:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11D2 text20 CODE >890:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11D7 text20 CODE >899:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11E2 text20 CODE >901:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11E8 text20 CODE >902:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1301 text19 CODE >293:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+1301 text19 CODE >296:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+130A text19 CODE >297:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+130B text19 CODE >298:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+130C text19 CODE >299:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+1312 text19 CODE >301:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+1313 text19 CODE >314:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+131C text19 CODE >315:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+1325 text19 CODE >317:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+133A text19 CODE >318:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+133C text19 CODE >345:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
+133D text19 CODE >346:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 898 text18 CODE >146:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 898 text18 CODE >151:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 89E text18 CODE >156:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
@@ -1148,14 +1153,14 @@ B20 text24 CODE >1457:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 8E5 text18 CODE >257:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 8E6 text18 CODE >165:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 8F8 text18 CODE >259:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
-1266 text17 CODE >49:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-1266 text17 CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-1267 text17 CODE >76:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-1269 text17 CODE >80:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-126A text17 CODE >85:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-126C text17 CODE >96:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-126D text17 CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
-1295 text17 CODE >98:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1265 text17 CODE >49:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1265 text17 CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1266 text17 CODE >76:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1268 text17 CODE >80:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1269 text17 CODE >85:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+126B text17 CODE >96:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+126C text17 CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
+1294 text17 CODE >98:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
 4D text16 CODE >2754:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 4D text16 CODE >2800:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 56 text16 CODE >2802:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -1253,11 +1258,11 @@ C1E text15 CODE >2110:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 15CB text14 CODE >2180:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 15CF text14 CODE >2181:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 15D0 text14 CODE >2182:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-10BE text13 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
-10BE text13 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
-10C3 text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
-10CC text13 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
-10D6 text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+10BD text13 CODE >8:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+10BD text13 CODE >18:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+10C2 text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+10CB text13 CODE >20:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
+10D5 text13 CODE >19:C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
 D20 text12 CODE >1968:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 D20 text12 CODE >1973:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 D22 text12 CODE >1976:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -1398,39 +1403,39 @@ F62 text9 CODE >1744:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programm
 1623 text7 CODE >2416:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 162C text7 CODE >2420:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 162E text7 CODE >2421:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-110D text6 CODE >3025:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-110D text6 CODE >3033:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1116 text6 CODE >3034:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1119 text6 CODE >3036:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-111F text6 CODE >3038:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1122 text6 CODE >3040:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1128 text6 CODE >3041:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-120F text5 CODE >2202:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-120F text5 CODE >2214:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1212 text5 CODE >2217:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1222 text5 CODE >2220:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1229 text5 CODE >2221:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-122D text5 CODE >2223:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-122F text5 CODE >2226:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1235 text5 CODE >2227:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1148 text4 CODE >2245:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1148 text4 CODE >2270:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-114A text4 CODE >2271:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1150 text4 CODE >2274:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1151 text4 CODE >2277:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1157 text4 CODE >2278:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1158 text4 CODE >2285:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-1166 text4 CODE >2286:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11A7 text3 CODE >2303:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11A7 text3 CODE >2305:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11A9 text3 CODE >2311:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11B8 text3 CODE >2318:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11BA text3 CODE >2323:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11BB text3 CODE >2341:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11BD text3 CODE >2344:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11C3 text3 CODE >2341:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11C4 text3 CODE >2347:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-11C6 text3 CODE >2349:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+110C text6 CODE >3025:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+110C text6 CODE >3033:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1115 text6 CODE >3034:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1118 text6 CODE >3036:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+111E text6 CODE >3038:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1121 text6 CODE >3040:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1127 text6 CODE >3041:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+120E text5 CODE >2202:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+120E text5 CODE >2214:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1211 text5 CODE >2217:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1221 text5 CODE >2220:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1228 text5 CODE >2221:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+122C text5 CODE >2223:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+122E text5 CODE >2226:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1234 text5 CODE >2227:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1147 text4 CODE >2245:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1147 text4 CODE >2270:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1149 text4 CODE >2271:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+114F text4 CODE >2274:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1150 text4 CODE >2277:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1156 text4 CODE >2278:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1157 text4 CODE >2285:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+1165 text4 CODE >2286:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11A6 text3 CODE >2303:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11A6 text3 CODE >2305:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11A8 text3 CODE >2311:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11B7 text3 CODE >2318:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11B9 text3 CODE >2323:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11BA text3 CODE >2341:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11BC text3 CODE >2344:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11C2 text3 CODE >2341:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11C3 text3 CODE >2347:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
+11C5 text3 CODE >2349:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 2F7 text2 CODE >477:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 2F7 text2 CODE >590:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 2FB text2 CODE >601:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -1489,25 +1494,25 @@ F62 text9 CODE >1744:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programm
 3DD text2 CODE >824:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 3DD text2 CODE >826:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 3DF text2 CODE >827:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-104C text1 CODE >28:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-104C text1 CODE >29:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-104F text1 CODE >34:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1057 text1 CODE >35:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1069 maintext CODE >122:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1069 maintext CODE >123:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-106C maintext CODE >124:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-106F maintext CODE >125:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1072 maintext CODE >128:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1075 maintext CODE >129:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1078 maintext CODE >127:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-103C clrtext CODE >2910:C:\Users\lvale\AppData\Local\Temp\s6rg.
-103C clrtext CODE >2911:C:\Users\lvale\AppData\Local\Temp\s6rg.
-103D clrtext CODE >2912:C:\Users\lvale\AppData\Local\Temp\s6rg.
-103D clrtext CODE >2913:C:\Users\lvale\AppData\Local\Temp\s6rg.
-103E clrtext CODE >2914:C:\Users\lvale\AppData\Local\Temp\s6rg.
-103F clrtext CODE >2915:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1040 clrtext CODE >2916:C:\Users\lvale\AppData\Local\Temp\s6rg.
-1041 clrtext CODE >2917:C:\Users\lvale\AppData\Local\Temp\s6rg.
+104B text1 CODE >28:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+104B text1 CODE >29:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+104E text1 CODE >34:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1056 text1 CODE >35:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1068 maintext CODE >122:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1068 maintext CODE >123:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+106B maintext CODE >124:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+106E maintext CODE >125:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1071 maintext CODE >128:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1074 maintext CODE >129:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+1077 maintext CODE >127:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+103B clrtext CODE >2880:C:\Users\lvale\AppData\Local\Temp\skg8.
+103B clrtext CODE >2881:C:\Users\lvale\AppData\Local\Temp\skg8.
+103C clrtext CODE >2882:C:\Users\lvale\AppData\Local\Temp\skg8.
+103C clrtext CODE >2883:C:\Users\lvale\AppData\Local\Temp\skg8.
+103D clrtext CODE >2884:C:\Users\lvale\AppData\Local\Temp\skg8.
+103E clrtext CODE >2885:C:\Users\lvale\AppData\Local\Temp\skg8.
+103F clrtext CODE >2886:C:\Users\lvale\AppData\Local\Temp\skg8.
+1040 clrtext CODE >2887:C:\Users\lvale\AppData\Local\Temp\skg8.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1541,10 +1546,10 @@ __end_of_USBStdSetCfgHandler 1B5C 0 CODE 0 text12 dist/default/production\firmwa
 USBEnableEndpoint@options B5 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 ?i1_USBTransferOnePacket 70 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\firmware.production.obj
-i1_USER_USB_CALLBACK_EVENT_HANDLER 246C 0 CODE 0 text57 dist/default/production\firmware.production.obj
+i1_USER_USB_CALLBACK_EVENT_HANDLER 246A 0 CODE 0 text57 dist/default/production\firmware.production.obj
 i1_USBStdSetCfgHandler 1B5C 0 CODE 0 text52 dist/default/production\firmware.production.obj
 __size_of_USBIncrement1msInternalTimers 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_of_WDT_Initialize 2070 0 CODE 0 text35 dist/default/production\firmware.production.obj
+__end_of_WDT_Initialize 4000 0 CODE 0 text35 dist/default/production\firmware.production.obj
 _CDCTxService 97A 0 CODE 0 text27 dist/default/production\firmware.production.obj
 __Hstrings 0 0 ABS 0 strings -
 i1memset@p1 70 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
@@ -1557,17 +1562,17 @@ _UEIR E93 0 ABS 0 - dist/default/production\firmware.production.obj
 _UEP0 E98 0 ABS 0 - dist/default/production\firmware.production.obj
 _UEP1 E99 0 ABS 0 - dist/default/production\firmware.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production\firmware.production.obj
-___sp 0 0 STACK 2 stack C:\Users\lvale\AppData\Local\Temp\s6rg.obj
-_main 20D2 0 CODE 0 maintext dist/default/production\firmware.production.obj
+___sp 0 0 STACK 2 stack C:\Users\lvale\AppData\Local\Temp\skg8.obj
+_main 20D0 0 CODE 0 maintext dist/default/production\firmware.production.obj
 _pDst 14F 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_USBCtrlTrfTxService 0 0 ABS 0 - dist/default/production\firmware.production.obj
-start 30 0 CODE 0 init C:\Users\lvale\AppData\Local\Temp\s6rg.obj
+start 30 0 CODE 0 init C:\Users\lvale\AppData\Local\Temp\skg8.obj
 _USBTransferOnePacket 193E 0 CODE 0 text32 dist/default/production\firmware.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\firmware.production.obj
 i1USER_USB_CALLBACK_EVENT_HANDLER@size 5C 0 BANK0 1 cstackBANK0h dist/default/production\firmware.production.obj
 __CFG_PLLMULT$3x 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_ofi1_USBSuspend 2290 0 CODE 0 text43 dist/default/production\firmware.production.obj
+__end_ofi1_USBSuspend 228E 0 CODE 0 text43 dist/default/production\firmware.production.obj
 _USBDeviceInit B1E 0 CODE 0 text36 dist/default/production\firmware.production.obj
 _pBDTEntryEP0OutNext D8 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -1582,12 +1587,12 @@ _UEP0bits E98 0 ABS 0 - dist/default/production\firmware.production.obj
 _CDCDataOutHandle 140 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 _CtrlTrfData 60 0 ABS 1 - dist/default/production\firmware.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\firmware.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s6rg.obj
-intlevel1 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s6rg.obj
-intlevel2 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s6rg.obj
-intlevel3 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s6rg.obj
-intlevel4 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s6rg.obj
-intlevel5 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s6rg.obj
+intlevel0 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\skg8.obj
+intlevel1 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\skg8.obj
+intlevel2 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\skg8.obj
+intlevel3 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\skg8.obj
+intlevel4 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\skg8.obj
+intlevel5 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\skg8.obj
 _pBDTEntryIn CD 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_CDCTxService 0 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -1635,7 +1640,7 @@ USBEnableEndpoint@ep BA 0 BANK1 1 cstackBANK1 dist/default/production\firmware.p
 i1USBStdGetStatusHandler@p 71 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 __Lmaintext 0 0 ABS 0 maintext -
 __size_of_USBStdGetDscHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_of_USBStallHandler 246C 0 CODE 0 text5 dist/default/production\firmware.production.obj
+__end_of_USBStallHandler 246A 0 CODE 0 text5 dist/default/production\firmware.production.obj
 i1USBTransferOnePacket@dir 70 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 i1USBTransferOnePacket@len 73 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 i1_USBCtrlEPService 2A4C 0 CODE 0 text47 dist/default/production\firmware.production.obj
@@ -1645,17 +1650,17 @@ __end_of_USBCtrlEPAllowStatusStage 1642 0 CODE 0 text24 dist/default/production\
 __end_ofi1_USBTransferOnePacket 193E 0 CODE 0 text60 dist/default/production\firmware.production.obj
 _USBCtrlTrfRxService DE4 0 CODE 0 text23 dist/default/production\firmware.production.obj
 USBStdFeatureReqHandler@pUEP 167 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
-__end_ofi1_USER_USB_CALLBACK_EVENT_HANDLER 24CC 0 CODE 0 text57 dist/default/production\firmware.production.obj
+__end_ofi1_USER_USB_CALLBACK_EVENT_HANDLER 24CA 0 CODE 0 text57 dist/default/production\firmware.production.obj
 USBCtrlTrfRxService@byteToRead B3 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __size_of_USBDeviceInit 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_ofi1_USBCtrlEPServiceComplete 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_of_USBCtrlTrfOutHandler 1070 0 CODE 0 text22 dist/default/production\firmware.production.obj
 _USBBusIsSuspended 14D 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
-__end_ofi1_USBConfigureEndpoint 2800 0 CODE 0 text62 dist/default/production\firmware.production.obj
+__end_ofi1_USBConfigureEndpoint 277E 0 CODE 0 text62 dist/default/production\firmware.production.obj
 i1USER_USB_CALLBACK_EVENT_HANDLER@event 58 0 BANK0 1 cstackBANK0h dist/default/production\firmware.production.obj
 i1USER_USB_CALLBACK_EVENT_HANDLER@pdata 5A 0 BANK0 1 cstackBANK0h dist/default/production\firmware.production.obj
 _USBDeferOUTDataStagePackets 147 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
-_PIN_MANAGER_Initialize 20F2 0 CODE 0 text38 dist/default/production\firmware.production.obj
+_PIN_MANAGER_Initialize 20F0 0 CODE 0 text38 dist/default/production\firmware.production.obj
 start_initialization 34 0 CODE 0 cinit dist/default/production\firmware.production.obj
 gpio_task@rx_ptr C1 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 _OSCCON 99 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -1665,34 +1670,34 @@ _PLLRDY 4D6 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_of_USBCheckStdRequest 1130 0 CODE 0 text11 dist/default/production\firmware.production.obj
 gpio_task@tx_ptr C2 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __size_ofi1_USBStallHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
-_device_dsc 3122 0 STRCODE 0 stringtext6 dist/default/production\firmware.production.obj
-__end_of_memset 21AE 0 CODE 0 text13 dist/default/production\firmware.production.obj
+_device_dsc 30FA 0 STRCODE 0 stringtext6 dist/default/production\firmware.production.obj
+__end_of_memset 21AC 0 CODE 0 text13 dist/default/production\firmware.production.obj
 _USBTicksSinceSuspendEnd 146 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
-__end_of_SYSTEM_Initialize 20D2 0 CODE 0 text34 dist/default/production\firmware.production.obj
+__end_of_SYSTEM_Initialize 20D0 0 CODE 0 text34 dist/default/production\firmware.production.obj
 __end_ofi1_USBStdFeatureReqHandler 5EE 0 CODE 0 text56 dist/default/production\firmware.production.obj
 __end_of_USBDeviceInit C8A 0 CODE 0 text36 dist/default/production\firmware.production.obj
 i1USBDeviceTasks@i AC 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 _USBStdGetDscHandler 1740 0 CODE 0 text15 dist/default/production\firmware.production.obj
-clear_ram0 2078 0 CODE 0 clrtext dist/default/production\firmware.production.obj
+clear_ram0 2076 0 CODE 0 clrtext dist/default/production\firmware.production.obj
 __pcstackBANK1 A0 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __pcstackBANK2 167 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 __pcstackBANK3 1E0 0 BANK3 1 cstackBANK3 dist/default/production\firmware.production.obj
-__end_of_USER_USB_CALLBACK_EVENT_HANDLER 252C 0 CODE 0 text17 dist/default/production\firmware.production.obj
+__end_of_USER_USB_CALLBACK_EVENT_HANDLER 252A 0 CODE 0 text17 dist/default/production\firmware.production.obj
 i1_USBCheckCDCRequest 2E80 0 CODE 0 text58 dist/default/production\firmware.production.obj
 __end_of_USBCtrlTrfTxService 155A 0 CODE 0 text26 dist/default/production\firmware.production.obj
-_USBStallHandler 241E 0 CODE 0 text5 dist/default/production\firmware.production.obj
+_USBStallHandler 241C 0 CODE 0 text5 dist/default/production\firmware.production.obj
 _cdc_data_rx 1A0 0 BANK3 1 bssBANK3 dist/default/production\firmware.production.obj
 _cdc_data_tx 220 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
 USBDeviceInit@i_1508 B1 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 _getsUSBUSART 2D14 0 CODE 0 text31 dist/default/production\firmware.production.obj
 i1_USBCtrlTrfTxService 1392 0 CODE 0 text67 dist/default/production\firmware.production.obj
-_process_gpio_cmd 267E 0 CODE 0 text30 dist/default/production\firmware.production.obj
-__end_of_USBEnableEndpoint 23D4 0 CODE 0 text20 dist/default/production\firmware.production.obj
+_process_gpio_cmd 277E 0 CODE 0 text30 dist/default/production\firmware.production.obj
+__end_of_USBEnableEndpoint 23D2 0 CODE 0 text20 dist/default/production\firmware.production.obj
 i1_USBCtrlEPServiceComplete 1C7E 0 CODE 0 text49 dist/default/production\firmware.production.obj
 _WDTCON 97 0 ABS 0 - dist/default/production\firmware.production.obj
 i1USBCtrlTrfRxService@i 74 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 i1USBCtrlTrfTxService@byteToSend 72 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\lvale\AppData\Local\Temp\s6rg.obj
+___int_sp 0 0 STACK 2 stack C:\Users\lvale\AppData\Local\Temp\skg8.obj
 _UIEbits E92 0 ABS 0 - dist/default/production\firmware.production.obj
 _UIRbits E90 0 ABS 0 - dist/default/production\firmware.production.obj
 i1USBTransferOnePacket@data 71 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
@@ -1707,7 +1712,7 @@ __Hbank7 0 0 ABS 0 bank7 -
 __Hbank8 0 0 ABS 0 bank8 -
 __Hbank9 0 0 ABS 0 bank9 -
 __Hcinit 9A 0 CODE 0 cinit -
-__end_of_USBWakeFromSuspend 238E 0 CODE 0 text3 dist/default/production\firmware.production.obj
+__end_of_USBWakeFromSuspend 238C 0 CODE 0 text3 dist/default/production\firmware.production.obj
 __Hidloc 0 0 IDLOC 0 idloc -
 __size_ofi1_memset 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -1762,13 +1767,13 @@ __size_of_USBCtrlEPAllowStatusStage 0 0 ABS 0 - dist/default/production\firmware
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
 _USBCheckStdRequest 1070 0 CODE 0 text11 dist/default/production\firmware.production.obj
-_USBIncrement1msInternalTimers 221A 0 CODE 0 text6 dist/default/production\firmware.production.obj
+_USBIncrement1msInternalTimers 2218 0 CODE 0 text6 dist/default/production\firmware.production.obj
 USBStdFeatureReqHandler@p 16A 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 gpio_task@has_output C0 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 0 config -
-i1_USBEnableEndpoint 22CE 0 CODE 0 text61 dist/default/production\firmware.production.obj
+i1_USBEnableEndpoint 22CC 0 CODE 0 text61 dist/default/production\firmware.production.obj
 __end_ofi1_USBCtrlTrfSetupHandler 2914 0 CODE 0 text48 dist/default/production\firmware.production.obj
 USER_USB_CALLBACK_EVENT_HANDLER@event BC 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __CFG_PLLEN$ENABLED 0 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -1849,13 +1854,13 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-__pstringtext1 3146 0 STRCODE 0 stringtext1 dist/default/production\firmware.production.obj
-__pstringtext2 315A 0 STRCODE 0 stringtext2 dist/default/production\firmware.production.obj
+__pstringtext1 311E 0 STRCODE 0 stringtext1 dist/default/production\firmware.production.obj
+__pstringtext2 3132 0 STRCODE 0 stringtext2 dist/default/production\firmware.production.obj
 __pstringtext3 3000 0 STRCODE 0 stringtext3 dist/default/production\firmware.production.obj
 __pstringtext4 3086 0 STRCODE 0 stringtext4 dist/default/production\firmware.production.obj
-__pstringtext5 30EE 0 STRCODE 0 stringtext5 dist/default/production\firmware.production.obj
-__pstringtext6 3122 0 STRCODE 0 stringtext6 dist/default/production\firmware.production.obj
-__pstringtext7 3152 0 STRCODE 0 stringtext7 dist/default/production\firmware.production.obj
+__pstringtext5 30D6 0 STRCODE 0 stringtext5 dist/default/production\firmware.production.obj
+__pstringtext6 30FA 0 STRCODE 0 stringtext6 dist/default/production\firmware.production.obj
+__pstringtext7 312A 0 STRCODE 0 stringtext7 dist/default/production\firmware.production.obj
 memset@c B0 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 memset@n B2 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 memset@p B4 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
@@ -1866,11 +1871,11 @@ __LcstackBANK3 0 0 ABS 0 cstackBANK3 -
 int$flags 7E 0 ABS 0 - dist/default/production\firmware.production.obj
 _cdc_rx_len 155 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__end_of_device_dsc 3146 0 STRCODE 0 stringtext6 dist/default/production\firmware.production.obj
+__end_of_device_dsc 311E 0 STRCODE 0 stringtext6 dist/default/production\firmware.production.obj
 __size_of_INTERRUPT_InterruptManager 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_WDT_Initialize 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_USBCtrlTrfInHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
-_USBSuspend 2290 0 CODE 0 text4 dist/default/production\firmware.production.obj
+_USBSuspend 228E 0 CODE 0 text4 dist/default/production\firmware.production.obj
 _cdc_trf_state 154 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 _BDT 20 0 ABS 1 - dist/default/production\firmware.production.obj
 _UIE E92 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -1880,9 +1885,9 @@ __S1 360 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __end_ofi1_USBCheckStdRequest 3000 0 CODE 0 text51 dist/default/production\firmware.production.obj
 i1USBTransferOnePacket@handle 79 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
-_USBWakeFromSuspend 234E 0 CODE 0 text3 dist/default/production\firmware.production.obj
-__end_of_gpio_init 2078 0 CODE 0 text33 dist/default/production\firmware.production.obj
-__end_of_gpio_task 277E 0 CODE 0 text28 dist/default/production\firmware.production.obj
+_USBWakeFromSuspend 234C 0 CODE 0 text3 dist/default/production\firmware.production.obj
+__end_of_gpio_init 2076 0 CODE 0 text33 dist/default/production\firmware.production.obj
+__end_of_gpio_task 26FC 0 CODE 0 text28 dist/default/production\firmware.production.obj
 _cdc_tx_len 153 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 _USBStdFeatureReqHandler 9A 0 CODE 0 text16 dist/default/production\firmware.production.obj
 _BothEP0OutUOWNsSet 14C 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
@@ -1895,13 +1900,13 @@ __end_of_USBStdFeatureReqHandler 348 0 CODE 0 text16 dist/default/production\fir
 __size_ofi1_USBWakeFromSuspend 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_ofi1_USBStdFeatureReqHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_ofi1_USBStdGetDscHandler 1740 0 CODE 0 text55 dist/default/production\firmware.production.obj
-_putUSBUSART 21AE 0 CODE 0 text29 dist/default/production\firmware.production.obj
+_putUSBUSART 21AC 0 CODE 0 text29 dist/default/production\firmware.production.obj
 process_gpio_cmd@gpio_dir 150 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 i1USBTransferOnePacket@ep 78 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 __size_of_usb_task 0 0 ABS 0 - dist/default/production\firmware.production.obj
-i1_memset 211C 0 CODE 0 text53 dist/default/production\firmware.production.obj
-i1_CDCInitEP 252C 0 CODE 0 text59 dist/default/production\firmware.production.obj
-_SYSTEM_Initialize 20B4 0 CODE 0 text34 dist/default/production\firmware.production.obj
+i1_memset 211A 0 CODE 0 text53 dist/default/production\firmware.production.obj
+i1_CDCInitEP 252A 0 CODE 0 text59 dist/default/production\firmware.production.obj
+_SYSTEM_Initialize 20B2 0 CODE 0 text34 dist/default/production\firmware.production.obj
 __end_ofi1_USBCtrlEPAllowDataStage 2D14 0 CODE 0 text50 dist/default/production\firmware.production.obj
 __end_of_getsUSBUSART 2DCA 0 CODE 0 text31 dist/default/production\firmware.production.obj
 _USBAlternateInterface 165 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
@@ -1909,19 +1914,19 @@ _USBDeviceState DF 0 BANK1 1 bssBANK1 dist/default/production\firmware.productio
 _USBDeviceTasks 5EE 0 CODE 0 text2 dist/default/production\firmware.production.obj
 __size_of_USBStdGetStatusHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\firmware.production.obj
-_gpio_init 2070 0 CODE 0 text33 dist/default/production\firmware.production.obj
-_gpio_task 26FE 0 CODE 0 text28 dist/default/production\firmware.production.obj
+_gpio_init 206E 0 CODE 0 text33 dist/default/production\firmware.production.obj
+_gpio_task 267C 0 CODE 0 text28 dist/default/production\firmware.production.obj
 __end_of_USBStdGetDscHandler 183E 0 CODE 0 text15 dist/default/production\firmware.production.obj
 __Lintentry 8 0 CODE 0 intentry -
 __size_of_USBStallHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_ofi1_USBWakeFromSuspend 234E 0 CODE 0 text42 dist/default/production\firmware.production.obj
-__end_of_process_gpio_cmd 26FE 0 CODE 0 text30 dist/default/production\firmware.production.obj
+__end_ofi1_USBWakeFromSuspend 234C 0 CODE 0 text42 dist/default/production\firmware.production.obj
+__end_of_process_gpio_cmd 2800 0 CODE 0 text30 dist/default/production\firmware.production.obj
 __end_of_USBCtrlTrfSetupHandler 29A4 0 CODE 0 text8 dist/default/production\firmware.production.obj
-__end_ofi1_memset 214C 0 CODE 0 text53 dist/default/production\firmware.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\lvale\AppData\Local\Temp\s6rg.obj
+__end_ofi1_memset 214A 0 CODE 0 text53 dist/default/production\firmware.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\lvale\AppData\Local\Temp\skg8.obj
 i1_USBStdGetDscHandler 1642 0 CODE 0 text55 dist/default/production\firmware.production.obj
-_USBEnableEndpoint 238E 0 CODE 0 text20 dist/default/production\firmware.production.obj
-__end_ofi1_USBStallHandler 241E 0 CODE 0 text44 dist/default/production\firmware.production.obj
+_USBEnableEndpoint 238C 0 CODE 0 text20 dist/default/production\firmware.production.obj
+__end_ofi1_USBStallHandler 241C 0 CODE 0 text44 dist/default/production\firmware.production.obj
 __size_ofi1_USBTransferOnePacket 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __LbssBANK1 0 0 ABS 0 bssBANK1 -
 __LbssBANK2 0 0 ABS 0 bssBANK2 -
@@ -1933,7 +1938,7 @@ i1USBDeviceInit@i_1508 73 0 COMMON 1 cstackCOMMON dist/default/production\firmwa
 __size_ofi1_USBCtrlEPAllowStatusStage 0 0 ABS 0 - dist/default/production\firmware.production.obj
 _control_signal_bitmap 151 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 __size_of_process_gpio_cmd 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_ofi1_USBIncrement1msInternalTimers 217C 0 CODE 0 text45 dist/default/production\firmware.production.obj
+__end_ofi1_USBIncrement1msInternalTimers 217A 0 CODE 0 text45 dist/default/production\firmware.production.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
@@ -1945,23 +1950,23 @@ __Lstringtext7 0 0 ABS 0 stringtext7 -
 __end_of_USBCtrlEPService 2C5E 0 CODE 0 text7 dist/default/production\firmware.production.obj
 _INTERRUPT_InterruptManager 8 0 CODE 0 intentry dist/default/production\firmware.production.obj
 _USBCtrlTrfInHandler 12C2 0 CODE 0 text25 dist/default/production\firmware.production.obj
-i1_USBCtrlTrfOutHandler 2596 0 CODE 0 text63 dist/default/production\firmware.production.obj
+i1_USBCtrlTrfOutHandler 2594 0 CODE 0 text63 dist/default/production\firmware.production.obj
 __size_of_USBTransferOnePacket 0 0 ABS 0 - dist/default/production\firmware.production.obj
 _PIE2bits 92 0 ABS 0 - dist/default/production\firmware.production.obj
-_memset 217C 0 CODE 0 text13 dist/default/production\firmware.production.obj
+_memset 217A 0 CODE 0 text13 dist/default/production\firmware.production.obj
 USBConfigureEndpoint@handle B4 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 memset@p1 AE 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __ptext10 2DCA 0 CODE 0 text10 dist/default/production\firmware.production.obj
 __ptext11 1070 0 CODE 0 text11 dist/default/production\firmware.production.obj
 __ptext12 1A40 0 CODE 0 text12 dist/default/production\firmware.production.obj
-__ptext13 217C 0 CODE 0 text13 dist/default/production\firmware.production.obj
+__ptext13 217A 0 CODE 0 text13 dist/default/production\firmware.production.obj
 __ptext14 2AFA 0 CODE 0 text14 dist/default/production\firmware.production.obj
 __ptext15 1740 0 CODE 0 text15 dist/default/production\firmware.production.obj
 __ptext16 9A 0 CODE 0 text16 dist/default/production\firmware.production.obj
-__ptext17 24CC 0 CODE 0 text17 dist/default/production\firmware.production.obj
+__ptext17 24CA 0 CODE 0 text17 dist/default/production\firmware.production.obj
 __ptext18 1130 0 CODE 0 text18 dist/default/production\firmware.production.obj
-__ptext19 2604 0 CODE 0 text19 dist/default/production\firmware.production.obj
-__ptext20 238E 0 CODE 0 text20 dist/default/production\firmware.production.obj
+__ptext19 2602 0 CODE 0 text19 dist/default/production\firmware.production.obj
+__ptext20 238C 0 CODE 0 text20 dist/default/production\firmware.production.obj
 __ptext21 2800 0 CODE 0 text21 dist/default/production\firmware.production.obj
 __ptext22 1002 0 CODE 0 text22 dist/default/production\firmware.production.obj
 __ptext23 DE4 0 CODE 0 text23 dist/default/production\firmware.production.obj
@@ -1969,23 +1974,23 @@ __ptext24 155A 0 CODE 0 text24 dist/default/production\firmware.production.obj
 __ptext25 12C2 0 CODE 0 text25 dist/default/production\firmware.production.obj
 __ptext26 1476 0 CODE 0 text26 dist/default/production\firmware.production.obj
 __ptext27 97A 0 CODE 0 text27 dist/default/production\firmware.production.obj
-__ptext28 26FE 0 CODE 0 text28 dist/default/production\firmware.production.obj
-__ptext29 21AE 0 CODE 0 text29 dist/default/production\firmware.production.obj
-__ptext30 267E 0 CODE 0 text30 dist/default/production\firmware.production.obj
+__ptext28 267C 0 CODE 0 text28 dist/default/production\firmware.production.obj
+__ptext29 21AC 0 CODE 0 text29 dist/default/production\firmware.production.obj
+__ptext30 277E 0 CODE 0 text30 dist/default/production\firmware.production.obj
 __ptext31 2D14 0 CODE 0 text31 dist/default/production\firmware.production.obj
 __ptext32 193E 0 CODE 0 text32 dist/default/production\firmware.production.obj
-__ptext33 2070 0 CODE 0 text33 dist/default/production\firmware.production.obj
-__ptext34 20B4 0 CODE 0 text34 dist/default/production\firmware.production.obj
-__ptext35 2068 0 CODE 0 text35 dist/default/production\firmware.production.obj
+__ptext33 206E 0 CODE 0 text33 dist/default/production\firmware.production.obj
+__ptext34 20B2 0 CODE 0 text34 dist/default/production\firmware.production.obj
+__ptext35 3FF8 0 CODE 0 text35 dist/default/production\firmware.production.obj
 __ptext36 B1E 0 CODE 0 text36 dist/default/production\firmware.production.obj
-__ptext37 21E2 0 CODE 0 text37 dist/default/production\firmware.production.obj
-__ptext38 20F2 0 CODE 0 text38 dist/default/production\firmware.production.obj
-__ptext39 2084 0 CODE 0 text39 dist/default/production\firmware.production.obj
+__ptext37 21E0 0 CODE 0 text37 dist/default/production\firmware.production.obj
+__ptext38 20F0 0 CODE 0 text38 dist/default/production\firmware.production.obj
+__ptext39 2082 0 CODE 0 text39 dist/default/production\firmware.production.obj
 __ptext41 7C0 0 CODE 0 text41 dist/default/production\firmware.production.obj
-__ptext42 230E 0 CODE 0 text42 dist/default/production\firmware.production.obj
-__ptext43 2252 0 CODE 0 text43 dist/default/production\firmware.production.obj
-__ptext44 23D4 0 CODE 0 text44 dist/default/production\firmware.production.obj
-__ptext45 214C 0 CODE 0 text45 dist/default/production\firmware.production.obj
+__ptext42 230C 0 CODE 0 text42 dist/default/production\firmware.production.obj
+__ptext43 2250 0 CODE 0 text43 dist/default/production\firmware.production.obj
+__ptext44 23D2 0 CODE 0 text44 dist/default/production\firmware.production.obj
+__ptext45 214A 0 CODE 0 text45 dist/default/production\firmware.production.obj
 __ptext46 C8A 0 CODE 0 text46 dist/default/production\firmware.production.obj
 __ptext47 2A4C 0 CODE 0 text47 dist/default/production\firmware.production.obj
 __ptext48 2884 0 CODE 0 text48 dist/default/production\firmware.production.obj
@@ -1993,17 +1998,17 @@ __ptext49 1C7E 0 CODE 0 text49 dist/default/production\firmware.production.obj
 __ptext50 2C5E 0 CODE 0 text50 dist/default/production\firmware.production.obj
 __ptext51 2F40 0 CODE 0 text51 dist/default/production\firmware.production.obj
 __ptext52 1B5C 0 CODE 0 text52 dist/default/production\firmware.production.obj
-__ptext53 211C 0 CODE 0 text53 dist/default/production\firmware.production.obj
+__ptext53 211A 0 CODE 0 text53 dist/default/production\firmware.production.obj
 __ptext54 29A4 0 CODE 0 text54 dist/default/production\firmware.production.obj
 __ptext55 1642 0 CODE 0 text55 dist/default/production\firmware.production.obj
 __ptext56 348 0 CODE 0 text56 dist/default/production\firmware.production.obj
-__ptext57 246C 0 CODE 0 text57 dist/default/production\firmware.production.obj
+__ptext57 246A 0 CODE 0 text57 dist/default/production\firmware.production.obj
 __ptext58 2E80 0 CODE 0 text58 dist/default/production\firmware.production.obj
-__ptext59 252C 0 CODE 0 text59 dist/default/production\firmware.production.obj
+__ptext59 252A 0 CODE 0 text59 dist/default/production\firmware.production.obj
 __ptext60 183E 0 CODE 0 text60 dist/default/production\firmware.production.obj
-__ptext61 22CE 0 CODE 0 text61 dist/default/production\firmware.production.obj
-__ptext62 277E 0 CODE 0 text62 dist/default/production\firmware.production.obj
-__ptext63 2596 0 CODE 0 text63 dist/default/production\firmware.production.obj
+__ptext61 22CC 0 CODE 0 text61 dist/default/production\firmware.production.obj
+__ptext62 26FC 0 CODE 0 text62 dist/default/production\firmware.production.obj
+__ptext63 2594 0 CODE 0 text63 dist/default/production\firmware.production.obj
 __ptext64 1EC6 0 CODE 0 text64 dist/default/production\firmware.production.obj
 __ptext65 F1E 0 CODE 0 text65 dist/default/production\firmware.production.obj
 __ptext66 11F2 0 CODE 0 text66 dist/default/production\firmware.production.obj
@@ -2014,10 +2019,10 @@ i1USBDeviceInit@i 74 0 COMMON 1 cstackCOMMON dist/default/production\firmware.pr
 i1USBDeviceInit@p 71 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 __size_of_USBCtrlEPService 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_ofi1_USBConfigureEndpoint 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_of_PIN_MANAGER_Initialize 211C 0 CODE 0 text38 dist/default/production\firmware.production.obj
+__end_of_PIN_MANAGER_Initialize 211A 0 CODE 0 text38 dist/default/production\firmware.production.obj
 __end_of_configDescriptor1 3086 0 STRCODE 0 stringtext3 dist/default/production\firmware.production.obj
 __size_ofi1_USBCtrlEPService 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_of_USBSuspend 22CE 0 CODE 0 text4 dist/default/production\firmware.production.obj
+__end_of_USBSuspend 22CC 0 CODE 0 text4 dist/default/production\firmware.production.obj
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -2040,14 +2045,14 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 20D2 0 CODE 0 maintext dist/default/production\firmware.production.obj
+__pmaintext 20D0 0 CODE 0 maintext dist/default/production\firmware.production.obj
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\firmware.production.obj
-_USB_CD_Ptr 315A 0 STRCODE 0 stringtext2 dist/default/production\firmware.production.obj
+_USB_CD_Ptr 3132 0 STRCODE 0 stringtext2 dist/default/production\firmware.production.obj
 _ep_data_in 13B 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 i1USBEnableEndpoint@options 77 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 _USBActiveConfiguration E1 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
-__end_ofi1_USBEnableEndpoint 230E 0 CODE 0 text61 dist/default/production\firmware.production.obj
+__end_ofi1_USBEnableEndpoint 230C 0 CODE 0 text61 dist/default/production\firmware.production.obj
 _USBCtrlEPAllowStatusStage 155A 0 CODE 0 text24 dist/default/production\firmware.production.obj
 __size_of_USBConfigureEndpoint 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __Lcommon 0 0 ABS 0 common -
@@ -2060,17 +2065,17 @@ __end_ofi1_USBCtrlEPAllowStatusStage FFE 0 CODE 0 text65 dist/default/production
 process_gpio_cmd@cmd B1 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 process_gpio_cmd@rsp AE 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 _RemoteWakeup 14E 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
-_usb_task 2098 0 CODE 0 text1 dist/default/production\firmware.production.obj
+_usb_task 2096 0 CODE 0 text1 dist/default/production\firmware.production.obj
 i1USBConfigureEndpoint@handle 76 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
-__end_of_USBDeviceAttach 221A 0 CODE 0 text37 dist/default/production\firmware.production.obj
+__end_of_USBDeviceAttach 2218 0 CODE 0 text37 dist/default/production\firmware.production.obj
 __end_of_USBDeviceTasks 7C0 0 CODE 0 text2 dist/default/production\firmware.production.obj
 _ep_data_out 138 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 USBEnableEndpoint@p B8 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 _dummy_encapsulated_cmd_response 156 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 putUSBUSART@length AE 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
-__end_of_usb_task 20B4 0 CODE 0 text1 dist/default/production\firmware.production.obj
-stackhi 23EF 0 ABS 0 - C:\Users\lvale\AppData\Local\Temp\s6rg.obj
-stacklo 2220 0 ABS 0 - C:\Users\lvale\AppData\Local\Temp\s6rg.obj
+__end_of_usb_task 20B2 0 CODE 0 text1 dist/default/production\firmware.production.obj
+stackhi 23EF 0 ABS 0 - C:\Users\lvale\AppData\Local\Temp\skg8.obj
+stacklo 2220 0 ABS 0 - C:\Users\lvale\AppData\Local\Temp\skg8.obj
 _cdc_mem_type 152 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 __end_of_USBConfigureEndpoint 2884 0 CODE 0 text21 dist/default/production\firmware.production.obj
 _USBCtrlEPAllowDataStage 2DCA 0 CODE 0 text10 dist/default/production\firmware.production.obj
@@ -2104,16 +2109,16 @@ __size_of_USBStdSetCfgHandler 0 0 ABS 0 - dist/default/production\firmware.produ
 __Hintentry 30 0 CODE 0 intentry -
 _USBDeferStatusStagePacket DA 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_of_CDCInitEP 267E 0 CODE 0 text19 dist/default/production\firmware.production.obj
-_USER_USB_CALLBACK_EVENT_HANDLER 24CC 0 CODE 0 text17 dist/default/production\firmware.production.obj
+__end_of_CDCInitEP 267C 0 CODE 0 text19 dist/default/production\firmware.production.obj
+_USER_USB_CALLBACK_EVENT_HANDLER 24CA 0 CODE 0 text17 dist/default/production\firmware.production.obj
 __Lstrings 0 0 ABS 0 strings -
 __end_ofi1_USBCtrlTrfInHandler 12C2 0 CODE 0 text66 dist/default/production\firmware.production.obj
 __size_of_CDCInitEP 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec -
 _inPipes D3 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
 _shortPacketStatus DD 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
-__end_of_USB_CD_Ptr 315E 0 STRCODE 0 stringtext2 dist/default/production\firmware.production.obj
-i1_USBStallHandler 23D4 0 CODE 0 text44 dist/default/production\firmware.production.obj
+__end_of_USB_CD_Ptr 3136 0 STRCODE 0 stringtext2 dist/default/production\firmware.production.obj
+i1_USBStallHandler 23D2 0 CODE 0 text44 dist/default/production\firmware.production.obj
 USBTransferOnePacket@ep B6 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __HbssBANK1 0 0 ABS 0 bssBANK1 -
 __HbssBANK2 0 0 ABS 0 bssBANK2 -
@@ -2123,23 +2128,23 @@ __HbssBANK5 0 0 ABS 0 bssBANK5 -
 __HbssBANK6 0 0 ABS 0 bssBANK6 -
 _endpoint_number DB 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
 USBConfigureEndpoint@EPNum B3 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
-_USB_SD_Ptr 3146 0 STRCODE 0 stringtext1 dist/default/production\firmware.production.obj
-__ptext1 2098 0 CODE 0 text1 dist/default/production\firmware.production.obj
+_USB_SD_Ptr 311E 0 STRCODE 0 stringtext1 dist/default/production\firmware.production.obj
+__ptext1 2096 0 CODE 0 text1 dist/default/production\firmware.production.obj
 __ptext2 5EE 0 CODE 0 text2 dist/default/production\firmware.production.obj
-__ptext3 234E 0 CODE 0 text3 dist/default/production\firmware.production.obj
-__ptext4 2290 0 CODE 0 text4 dist/default/production\firmware.production.obj
-__ptext5 241E 0 CODE 0 text5 dist/default/production\firmware.production.obj
-__ptext6 221A 0 CODE 0 text6 dist/default/production\firmware.production.obj
+__ptext3 234C 0 CODE 0 text3 dist/default/production\firmware.production.obj
+__ptext4 228E 0 CODE 0 text4 dist/default/production\firmware.production.obj
+__ptext5 241C 0 CODE 0 text5 dist/default/production\firmware.production.obj
+__ptext6 2218 0 CODE 0 text6 dist/default/production\firmware.production.obj
 __ptext7 2BAA 0 CODE 0 text7 dist/default/production\firmware.production.obj
 __ptext8 2914 0 CODE 0 text8 dist/default/production\firmware.production.obj
 __ptext9 1DA2 0 CODE 0 text9 dist/default/production\firmware.production.obj
-_USBDeviceAttach 21E2 0 CODE 0 text37 dist/default/production\firmware.production.obj
+_USBDeviceAttach 21E0 0 CODE 0 text37 dist/default/production\firmware.production.obj
 __size_of_USBCheckStdRequest 0 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_of_USBIncrement1msInternalTimers 2252 0 CODE 0 text6 dist/default/production\firmware.production.obj
+__end_of_USBIncrement1msInternalTimers 2250 0 CODE 0 text6 dist/default/production\firmware.production.obj
 __end_of_USBCheckCDCRequest 11F2 0 CODE 0 text18 dist/default/production\firmware.production.obj
 __end_of_USBCtrlTrfInHandler 1392 0 CODE 0 text25 dist/default/production\firmware.production.obj
 __size_ofi1_USBCtrlTrfTxService 0 0 ABS 0 - dist/default/production\firmware.production.obj
-_CDCInitEP 2604 0 CODE 0 text19 dist/default/production\firmware.production.obj
+_CDCInitEP 2602 0 CODE 0 text19 dist/default/production\firmware.production.obj
 _USBCtrlEPServiceComplete 1DA2 0 CODE 0 text9 dist/default/production\firmware.production.obj
 i1_USBCtrlTrfInHandler 11F2 0 CODE 0 text66 dist/default/production\firmware.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
@@ -2179,39 +2184,39 @@ __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\firmware.prod
 __size_ofi1_USBCheckCDCRequest 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __Hend_init 34 0 CODE 0 end_init -
 i1USBStdSetCfgHandler@i_2173 A2 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
-__end_ofi1_USBCtrlTrfOutHandler 2604 0 CODE 0 text63 dist/default/production\firmware.production.obj
-__end_of_USB_SD_Ptr 3152 0 STRCODE 0 stringtext1 dist/default/production\firmware.production.obj
-__end_of_main 20F2 0 CODE 0 maintext dist/default/production\firmware.production.obj
+__end_ofi1_USBCtrlTrfOutHandler 2602 0 CODE 0 text63 dist/default/production\firmware.production.obj
+__end_of_USB_SD_Ptr 312A 0 STRCODE 0 stringtext1 dist/default/production\firmware.production.obj
+__end_of_main 20F0 0 CODE 0 maintext dist/default/production\firmware.production.obj
 i1_USBCtrlEPAllowDataStage 2C5E 0 CODE 0 text50 dist/default/production\firmware.production.obj
 i1_USBCheckStdRequest 2F40 0 CODE 0 text51 dist/default/production\firmware.production.obj
 __end_ofi1_USBDeviceInit DE4 0 CODE 0 text46 dist/default/production\firmware.production.obj
-__end_of_putUSBUSART 21E2 0 CODE 0 text29 dist/default/production\firmware.production.obj
+__end_of_putUSBUSART 21E0 0 CODE 0 text29 dist/default/production\firmware.production.obj
 i1USBStdFeatureReqHandler@pUEP A0 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
-i1_USBSuspend 2252 0 CODE 0 text43 dist/default/production\firmware.production.obj
+i1_USBSuspend 2250 0 CODE 0 text43 dist/default/production\firmware.production.obj
 _PORTC E 0 ABS 0 - dist/default/production\firmware.production.obj
 _TRISA 8C 0 ABS 0 - dist/default/production\firmware.production.obj
 _TRISC 8E 0 ABS 0 - dist/default/production\firmware.production.obj
 _UADDR E96 0 ABS 0 - dist/default/production\firmware.production.obj
 _USTAT E8F 0 ABS 0 - dist/default/production\firmware.production.obj
-__end_of_sd000 315A 0 STRCODE 0 stringtext7 dist/default/production\firmware.production.obj
-__end_of_sd001 30EE 0 STRCODE 0 stringtext4 dist/default/production\firmware.production.obj
-__end_of_sd002 3122 0 STRCODE 0 stringtext5 dist/default/production\firmware.production.obj
+__end_of_sd000 3132 0 STRCODE 0 stringtext7 dist/default/production\firmware.production.obj
+__end_of_sd001 30FA 0 STRCODE 0 stringtext5 dist/default/production\firmware.production.obj
+__end_of_sd002 30D6 0 STRCODE 0 stringtext4 dist/default/production\firmware.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 _USBStdGetStatusHandler 2AFA 0 CODE 0 text14 dist/default/production\firmware.production.obj
 __size_ofi1_USBStdGetStatusHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 _USBDeferINDataStagePackets 148 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
-_sd000 3152 0 STRCODE 0 stringtext7 dist/default/production\firmware.production.obj
-_sd001 3086 0 STRCODE 0 stringtext4 dist/default/production\firmware.production.obj
-_sd002 30EE 0 STRCODE 0 stringtext5 dist/default/production\firmware.production.obj
+_sd000 312A 0 STRCODE 0 stringtext7 dist/default/production\firmware.production.obj
+_sd001 30D6 0 STRCODE 0 stringtext5 dist/default/production\firmware.production.obj
+_sd002 3086 0 STRCODE 0 stringtext4 dist/default/production\firmware.production.obj
 __size_of_USBSuspend 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __CFG_USBLSCLK$48MHz 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\firmware.production.obj
-_WDT_Initialize 2068 0 CODE 0 text35 dist/default/production\firmware.production.obj
-__end_ofi1_CDCInitEP 2596 0 CODE 0 text59 dist/default/production\firmware.production.obj
+_WDT_Initialize 3FF8 0 CODE 0 text35 dist/default/production\firmware.production.obj
+__end_ofi1_CDCInitEP 2594 0 CODE 0 text59 dist/default/production\firmware.production.obj
 __pintentry 8 0 CODE 0 intentry dist/default/production\firmware.production.obj
 __end_ofi1_USBCheckCDCRequest 2F40 0 CODE 0 text58 dist/default/production\firmware.production.obj
-__end_of_OSCILLATOR_Initialize 2098 0 CODE 0 text39 dist/default/production\firmware.production.obj
+__end_of_OSCILLATOR_Initialize 2096 0 CODE 0 text39 dist/default/production\firmware.production.obj
 i1_USBTransferOnePacket 183E 0 CODE 0 text60 dist/default/production\firmware.production.obj
 __initialization 34 0 CODE 0 cinit dist/default/production\firmware.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -2221,7 +2226,7 @@ __pbssBANK3 1A0 0 BANK3 1 bssBANK3 dist/default/production\firmware.production.o
 __pbssBANK4 220 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
 __pbssBANK5 2A0 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __pbssBANK6 320 0 BANK6 1 bssBANK6 dist/default/production\firmware.production.obj
-i1_USBIncrement1msInternalTimers 214C 0 CODE 0 text45 dist/default/production\firmware.production.obj
+i1_USBIncrement1msInternalTimers 214A 0 CODE 0 text45 dist/default/production\firmware.production.obj
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_USBDeviceAttach 0 0 ABS 0 - dist/default/production\firmware.production.obj
 USBDeviceTasks@i 16F 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
@@ -2229,16 +2234,16 @@ __size_of_USER_USB_CALLBACK_EVENT_HANDLER 0 0 ABS 0 - dist/default/production\fi
 USBConfigureEndpoint@direction AE 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __size_ofi1_USBStdGetDscHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 i1_USBDeviceTasks 7C0 0 CODE 0 text41 dist/default/production\firmware.production.obj
-i1_USBWakeFromSuspend 230E 0 CODE 0 text42 dist/default/production\firmware.production.obj
+i1_USBWakeFromSuspend 230C 0 CODE 0 text42 dist/default/production\firmware.production.obj
 CDCTxService@byte_to_send BB 0 BANK1 1 cstackBANK1 dist/default/production\firmware.production.obj
 __size_of_USBStdFeatureReqHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
-i1_USBConfigureEndpoint 277E 0 CODE 0 text62 dist/default/production\firmware.production.obj
+i1_USBConfigureEndpoint 26FC 0 CODE 0 text62 dist/default/production\firmware.production.obj
 __end_ofi1_USBStdSetCfgHandler 1C7E 0 CODE 0 text52 dist/default/production\firmware.production.obj
 _USBStatusStageEnabledFlag1 14A 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 _USBStatusStageEnabledFlag2 149 0 BANK2 1 bssBANK2 dist/default/production\firmware.production.obj
 __pswtext1 2000 0 CONST 0 swtext1 dist/default/production\firmware.production.obj
 __pswtext2 2034 0 CONST 0 swtext2 dist/default/production\firmware.production.obj
-_OSCILLATOR_Initialize 2084 0 CODE 0 text39 dist/default/production\firmware.production.obj
+_OSCILLATOR_Initialize 2082 0 CODE 0 text39 dist/default/production\firmware.production.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -2267,68 +2272,68 @@ _BDT 1 20 30
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-text1 0 104C 2098 E 2
-text3 0 11A7 234E 20 2
-text4 0 1148 2290 1F 2
-text5 0 120F 241E 27 2
-text6 0 110D 221A 1C 2
+text1 0 104B 2096 E 2
+text3 0 11A6 234C 20 2
+text4 0 1147 228E 1F 2
+text5 0 120E 241C 27 2
+text6 0 110C 2218 1C 2
 text7 0 15D5 2BAA 5A 2
 text8 0 148A 2914 48 2
 text9 0 ED1 1DA2 92 2
 text10 0 16E5 2DCA 5B 2
 text11 0 838 1070 60 2
 text12 0 D20 1A40 8E 2
-text13 0 10BE 217C 19 2
+text13 0 10BD 217A 19 2
 text14 0 157D 2AFA 58 2
 text15 0 BA0 1740 7F 2
-text17 0 1266 24CC 30 2
+text17 0 1265 24CA 30 2
 text18 0 898 1130 61 2
-text19 0 1302 2604 3D 2
-text20 0 11C7 238E 23 2
+text19 0 1301 2602 3D 2
+text20 0 11C6 238C 23 2
 text21 0 1400 2800 42 2
 text22 0 801 1002 37 2
 text24 0 AAD 155A 74 2
 text25 0 961 12C2 68 2
 text26 0 A3B 1476 72 2
-text28 0 137F 26FE 40 2
-text29 0 10D7 21AE 1A 2
-text30 0 133F 267E 40 2
+text28 0 133E 267C 40 2
+text29 0 10D6 21AC 1A 2
+text30 0 13BF 277E 41 2
 text31 0 168A 2D14 5B 2
 text32 0 C9F 193E 81 2
-text33 0 1038 2070 4 2
-text34 0 105A 20B4 F 2
-text35 0 1034 2068 4 2
-text37 0 10F1 21E2 1C 2
-text38 0 1079 20F2 15 2
-text39 0 1042 2084 A 2
-text42 0 1187 230E 20 2
-text43 0 1129 2252 1F 2
-text44 0 11EA 23D4 25 2
-text45 0 10A6 214C 18 2
+text33 0 1037 206E 4 2
+text34 0 1059 20B2 F 2
+text35 0 1FFC 3FF8 4 2
+text37 0 10F0 21E0 1C 2
+text38 0 1078 20F0 15 2
+text39 0 1041 2082 A 2
+text42 0 1186 230C 20 2
+text43 0 1128 2250 1F 2
+text44 0 11E9 23D2 25 2
+text45 0 10A5 214A 18 2
 text47 0 1526 2A4C 57 2
 text48 0 1442 2884 48 2
 text49 0 E3F 1C7E 92 2
 text50 0 162F 2C5E 5B 2
 text51 0 17A0 2F40 60 2
 text52 0 DAE 1B5C 91 2
-text53 0 108E 211C 18 2
+text53 0 108D 211A 18 2
 text54 0 14D2 29A4 54 2
 text55 0 B21 1642 7F 2
-text57 0 1236 246C 30 2
+text57 0 1235 246A 30 2
 text58 0 1740 2E80 60 2
-text59 0 1296 252C 35 2
+text59 0 1295 252A 35 2
 text60 0 C1F 183E 80 2
-text61 0 1167 22CE 20 2
-text62 0 13BF 277E 41 2
-text63 0 12CB 2596 37 2
+text61 0 1166 22CC 20 2
+text62 0 137E 26FC 41 2
+text63 0 12CA 2594 37 2
 text64 0 F63 1EC6 9D 2
 text66 0 8F9 11F2 68 2
 text67 0 9C9 1392 72 2
-maintext 0 1069 20D2 10 2
+maintext 0 1068 20D0 10 2
 cstackBANK0h 1 58 58 8 1
 cstackCOMMON 1 70 70 E 1
 cstackBANK1 1 A0 A0 42 1
-stringtext3 0 1800 3000 AF 2
+stringtext3 0 1800 3000 9B 2
 intentry 0 4 8 7FB 2
 reset_vec 0 0 0 2 2
 bssBANK2 1 120 120 50 1
@@ -2337,5 +2342,5 @@ bssBANK4 1 220 220 40 1
 bssBANK5 1 2A0 2A0 40 1
 bssBANK6 1 320 320 40 1
 swtext1 0 1000 2000 34 2
-clrtext 0 103C 2078 6 2
+clrtext 0 103B 2076 6 2
 config 0 8007 1000E 2 2
