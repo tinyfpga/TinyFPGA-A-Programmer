@@ -37,8 +37,10 @@ class Pins(object):
         self.ser.write(array.array('B', self.byte_queue).tostring())
         self.byte_queue = []
         if self.pending_input > 0:
-            print str([hex(x) for x in array.array('B', self.ser.read(size = self.pending_input)).tolist()])
+            read_data = [x for x in array.array('B', self.ser.read(size = self.pending_input)).tolist()]
             self.pending_input = 0
+            return read_data
+        return []
 
 
     def set_direction(self, pin, new_direction):
@@ -262,7 +264,26 @@ class Jtag(object):
             out_data_shift_reg = out_data_shift_reg >> 1
             in_mask_shift_reg = in_mask_shift_reg >> 1
 
-        self.pins.send()
+        read_data = self.pins.send()
+
+        read_bits = 0
+        index = 0
+        for b in read_data:
+            bit = 0
+            if (b & 4) > 0:
+                bit = 1
+
+            read_bits = read_bits | (bit << index)
+            index += 1
+
+        if mask > 0:
+            print "    EXPECTED: %016X" % tdo
+            print "      ACTUAL: %016X" % read_bits
+            print "        MASK: %016X" % mask
+            match = (tdo & mask) == (read_bits & mask)
+            if not match:
+                print "ERROR: READ MISMATCH"
+                exit()
 
 
 
@@ -284,7 +305,10 @@ class JtagSvfParser(object):
                 if k == name:
                     return int(v, 16)
 
-            return 0
+            if name == "mask" and "tdo" in cmd:
+                return (2 ** num_bits) - 1
+            else:
+                return 0
 
         raw_svf_string = self.svf_file.read()
         no_comment_svf_string = re.sub('!.*?\r?\n', ' ', raw_svf_string)
@@ -359,9 +383,11 @@ class JtagSvfParser(object):
             if name == "sdr":
                 self.jtag.goto_state("DRSHIFT")
 
-                #tr_loc = int(self.hdr[1]) + int(cmd[1])
-                #r_loc = int(self.hdr[1])
-                #hr_loc = 0
+                shift_count = int(cmd[1])
+
+                tr_loc = int(self.hdr[1]) + shift_count
+                r_loc = int(self.hdr[1])
+                hr_loc = 0
 
                 self.jtag.shift(
                     int(cmd[1]), 
@@ -375,100 +401,17 @@ class JtagSvfParser(object):
 
                 self.jtag.goto_state(self.enddr)
 
+import sys
 
+serial_port_name = sys.argv[1]
+svf_filename = sys.argv[2]
 
-#with serial.Serial("COM20", 10000000, timeout=100000000, writeTimeout=100000000) as ser:
-#    with open('C:/Users/lvale/Documents/blink_project_2/impl/template_a2_impl.svf', 'r') as svf_file:
-#        pins = JtagPins(ser)
-#        jtag = Jtag(pins)
-#        parser = JtagSvfParser(jtag, svf_file)
-#        parser.run()
+with serial.Serial(serial_port_name, 12000000, timeout=10, writeTimeout=10) as ser:
+    with open(svf_filename, 'r') as svf_file:
+        pins = JtagPins(ser)
+        jtag = Jtag(pins)
+        parser = JtagSvfParser(jtag, svf_file)
+        parser.run()
 
-#    print "Done!"
-
-ser = serial.Serial("COM20", 10000000, timeout=100000000, writeTimeout=100000000)
-pins = JtagPins(ser)
-
-def go():
-    pins.tck = 1
-    pins.tdi = 1
-    pins.tms = 1
-    pins.update(True)
-
-    pins.tck = 0
-    pins.tdi = 0
-    pins.tms = 0
-    pins.update(True)
-
-    pins.tck = 1
-    pins.tdi = 1
-    pins.tms = 1
-    pins.update(True)
-
-    pins.tck = 0
-    pins.tdi = 0
-    pins.tms = 0
-    pins.update(True)
-
-    pins.tck = 1
-    pins.tdi = 1
-    pins.tms = 1
-    pins.update(True)
-
-    pins.tck = 0
-    pins.tdi = 0
-    pins.tms = 0
-    pins.update(True)
-
-    pins.tck = 1
-    pins.tdi = 1
-    pins.tms = 1
-    pins.update(True)
-
-    pins.tck = 0
-    pins.tdi = 0
-    pins.tms = 0
-    pins.update(True)
-
-    pins.tck = 1
-    pins.tdi = 1
-    pins.tms = 1
-    pins.update(True)
-
-    pins.tck = 0
-    pins.tdi = 0
-    pins.tms = 0
-    pins.update(True)
-
-    pins.tck = 1
-    pins.tdi = 1
-    pins.tms = 1
-    pins.update(True)
-
-    pins.tck = 0
-    pins.tdi = 0
-    pins.tms = 0
-    pins.update(True)
-
-    pins.tck = 1
-    pins.tdi = 1
-    pins.tms = 1
-    pins.update(True)
-
-    pins.tck = 0
-    pins.tdi = 0
-    pins.tms = 0
-    pins.update(True)
-
-    pins.tck = 1
-    pins.tdi = 1
-    pins.tms = 1
-    pins.update(True)
-
-    pins.tck = 0
-    pins.tdi = 0
-    pins.tms = 0
-    pins.update(True)
-
-    pins.send()
+    print "Done!"
 
