@@ -1,6 +1,6 @@
 import serial
 import array
-from time import sleep
+import time
 import re
 
 
@@ -113,7 +113,6 @@ class JtagStateMachine(object):
             "IREXIT2": ("IRSHIFT", "IRUPDATE"),
             "IRUPDATE": ("IDLE", "DRSELECT")
         }
-
 
     def shortest_path(self, source, target):
         """
@@ -248,10 +247,9 @@ class Jtag(object):
         self.current_state = target_state
 
 
-    def shift(self, num_bits, tdi, tdo = 0, mask = 0):
+    def shift(self, num_bits, tdi, tdo = 0, mask = 0, exit_on_mismatch = False):
         self.pins.tms = 0
         out_data_shift_reg = tdi
-        in_mask_shift_reg = mask
 
         for i in range(num_bits - 1):
             self.pins.tdi = out_data_shift_reg & 1
@@ -259,10 +257,22 @@ class Jtag(object):
             self.pins.update()
 
             self.pins.tck = 1
-            self.pins.update(in_mask_shift_reg & 1)
+            self.pins.update(mask > 0)
 
             out_data_shift_reg = out_data_shift_reg >> 1
-            in_mask_shift_reg = in_mask_shift_reg >> 1
+
+
+
+        # last shift
+        self.pins.tdi = out_data_shift_reg & 1
+        self.pins.tck = 0
+        self.pins.tms = 1
+        self.pins.update()
+
+        self.pins.tck = 1
+        self.pins.update(mask > 0)
+
+        self.current_state = self.sm.states[self.current_state][1]
 
         read_data = self.pins.send()
 
@@ -277,14 +287,23 @@ class Jtag(object):
             index += 1
 
         if mask > 0:
-            print "    EXPECTED: %016X" % tdo
-            print "      ACTUAL: %016X" % read_bits
-            print "        MASK: %016X" % mask
+            print ""
+            print num_bits
+            print "    EXPECTED: %032X" % tdo
+            print "      ACTUAL: %032X" % read_bits
+            print "        MASK: %032X" % mask
             match = (tdo & mask) == (read_bits & mask)
-            if not match:
+            if not match and exit_on_mismatch:
                 print "ERROR: READ MISMATCH"
                 exit()
 
+            return match
+        return True
+
+def do_for(num_seconds, function):
+    timeout = time.time() + num_seconds
+    while time.time() < timeout:
+        function()
 
 
 class JtagSvfParser(object):
@@ -308,7 +327,14 @@ class JtagSvfParser(object):
             if name == "mask" and "tdo" in cmd:
                 return (2 ** num_bits) - 1
             else:
-                return 0
+                return 0 
+            
+        def runtest_field(cmd, name):
+            for v, k in ntuples(cmd, 2):
+                if k == name:
+                    return v
+
+            return None
 
         raw_svf_string = self.svf_file.read()
         no_comment_svf_string = re.sub('!.*?\r?\n', ' ', raw_svf_string)
@@ -316,8 +342,14 @@ class JtagSvfParser(object):
         raw_cmd_strings = no_lines_string.lower().split(';')
         cmds = [re.sub(r'\(|\)', '', x).strip().split(' ') for x in raw_cmd_strings]
 
-        for cmd in cmds:
-            print str(cmd)
+        loop_index = None
+        loop_count = 0
+        cmd_index = 0
+
+        while cmd_index < len(cmds):
+            cmd = cmds[cmd_index]
+            cmd_index = cmd_index + 1
+
             name = cmd[0]
 
             if name == "hdr":
@@ -341,25 +373,35 @@ class JtagSvfParser(object):
             if name == "state":
                 self.jtag.goto_state(cmd[1].upper())
 
+            if name == "loop":
+                loop_count = int(cmd[1])
+                loop_index = cmd_index
+
+            if name == "endloop":
+                print "loop_count: %d" % loop_count
+                loop_count = loop_count - 1
+
+                if loop_count > 0:
+                    cmd_index = loop_index
+                else:
+                    loop_index = None
+                
+
             if name == "runtest":
                 self.jtag.goto_state(cmd[1].upper())
 
-                try:
-                    self.jtag.run(int(cmd[2]) - 1, 0)
-                except:
-                    try:
-                        sleep_time = float(cmd[2])
-                        print "Sleeping for %f seconds" % sleep_time
-                        sleep(sleep_time)
-                    except:
-                        pass
+                def runtest():
+                    self.jtag.run(64, 0)
 
-                try:
-                    sleep_time = float(cmd[4])
-                    print "Sleeping for %f seconds" % sleep_time
-                    sleep(sleep_time)
-                except:
-                    pass
+                sleep_time = runtest_field(cmd, "sec")
+                tck_count = runtest_field(cmd, "tck")
+
+                if tck_count is not None:
+                    self.jtag.run(int(tck_count), 0)   
+
+                if sleep_time is not None:
+                    do_for(float(sleep_time), runtest)
+
 
             if name == "sir":
                 self.jtag.goto_state("IRSHIFT")
@@ -368,17 +410,21 @@ class JtagSvfParser(object):
                 #r_loc = int(self.hir[1])
                 #hr_loc = 0
 
-                self.jtag.shift(
+                match = self.jtag.shift(
                     int(cmd[1]), 
                     #tdi =  (field(self.tir, "tdi")  << tr_loc) | (field(cmd, "tdi")  << r_loc) | (field(self.hir, "tdi")  << hr_loc), 
                     #tdo =  (field(self.tir, "tdo")  << tr_loc) | (field(cmd, "tdo")  << r_loc) | (field(self.hir, "tdo")  << hr_loc), 
                     #mask = (field(self.tir, "mask") << tr_loc) | (field(cmd, "mask") << r_loc) | (field(self.hir, "mask") << hr_loc)
                     tdi  = field(cmd, "tdi"), 
                     tdo  = field(cmd, "tdo"), 
-                    mask = field(cmd, "mask")
+                    mask = field(cmd, "mask"),
+                    exit_on_mismatch = loop_count <= 1
                 )
 
                 self.jtag.goto_state(self.endir)
+
+                if match:
+                    loop_count = 0
 
             if name == "sdr":
                 self.jtag.goto_state("DRSHIFT")
@@ -389,17 +435,21 @@ class JtagSvfParser(object):
                 r_loc = int(self.hdr[1])
                 hr_loc = 0
 
-                self.jtag.shift(
+                match = self.jtag.shift(
                     int(cmd[1]), 
                     #tdi =  (field(self.tdr, "tdi")  << tr_loc) | (field(cmd, "tdi")  << r_loc) | (field(self.hdr, "tdi")  << hr_loc), 
                     #tdo =  (field(self.tdr, "tdo")  << tr_loc) | (field(cmd, "tdo")  << r_loc) | (field(self.hdr, "tdo")  << hr_loc), 
                     #mask = (field(self.tdr, "mask") << tr_loc) | (field(cmd, "mask") << r_loc) | (field(self.hdr, "mask") << hr_loc)
                     tdi  = field(cmd, "tdi"), 
                     tdo  = field(cmd, "tdo"), 
-                    mask = field(cmd, "mask")
+                    mask = field(cmd, "mask"),
+                    exit_on_mismatch = loop_count <= 1
                 )
 
                 self.jtag.goto_state(self.enddr)
+
+                if match:
+                    loop_count = 0
 
 import sys
 
