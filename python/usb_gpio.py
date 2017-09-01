@@ -79,6 +79,10 @@ class Pins(object):
             self._queue(2, self.pin_output_values)
 
 
+    def shift(self, data_in, read_back = False):
+        self.byte_queue.append(0x40)
+
+
 
 
 class JtagPins(Pins):
@@ -113,6 +117,8 @@ class JtagStateMachine(object):
             "IREXIT2": ("IRSHIFT", "IRUPDATE"),
             "IRUPDATE": ("IDLE", "DRSELECT")
         }
+
+        self.memo = {}
 
     def shortest_path(self, source, target):
         """
@@ -157,6 +163,10 @@ class JtagStateMachine(object):
 
 
     def get_tms_sequence(self, source, target):
+        memo_key = (source, target)
+        if memo_key in self.memo:
+            return self.memo[memo_key]
+
         def get_tms(pair):
             (src, dst) = pair
             if self.states[src][0] == dst:
@@ -167,9 +177,10 @@ class JtagStateMachine(object):
                 return None
 
         path = self.shortest_path(source, target)
+        tms_sequence = [get_tms(p) for p in ntuples(path, 2)][:-1]
+        self.memo[memo_key] = tms_sequence
 
-        return [get_tms(p) for p in ntuples(path, 2)][:-1]
-            
+        return tms_sequence            
 
 
 
@@ -391,7 +402,7 @@ class JtagSvfParser(object):
                 self.jtag.goto_state(cmd[1].upper())
 
                 def runtest():
-                    self.jtag.run(64, 0)
+                    self.jtag.run(32, 0)
 
                 sleep_time = runtest_field(cmd, "sec")
                 tck_count = runtest_field(cmd, "tck")
@@ -459,9 +470,17 @@ svf_filename = sys.argv[2]
 with serial.Serial(serial_port_name, 12000000, timeout=10, writeTimeout=10) as ser:
     with open(svf_filename, 'r') as svf_file:
         pins = JtagPins(ser)
+        
         jtag = Jtag(pins)
         parser = JtagSvfParser(jtag, svf_file)
         parser.run()
+        
+        #pins.tck = 0
+        #pins.tdi = 0
+        #pins.tms = 0
+        #pins.update()
+        #pins.shift(None)
+        #pins.send()
 
     print "Done!"
 

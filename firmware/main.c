@@ -69,9 +69,13 @@ bool inline process_gpio_cmd(uint8_t cmd, uint8_t* rsp) {
         case CFG_CMD:
             gpio_dir = cmd & 0x3f;
             TRISC = gpio_dir;
-            return false;
+            return false; 
         
         case EXT_CMD:
+            for (uint8_t i = 0; i < 100; i++) {
+                LATC |= 0x10;
+                LATC &= 0xEF;
+            }
             return false;
         
         case SET_CMD:

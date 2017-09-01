@@ -58,7 +58,7 @@
 
 // CONFIG2
 #pragma config WRT = OFF    // Flash Memory Self-Write Protection->Write protection off
-#pragma config CPUDIV = CLKDIV6    // CPU System Clock Selection Bit->CPU system clock divided by 6
+#pragma config CPUDIV = NOCLKDIV    // CPU System Clock Selection Bit->NO CPU system divide
 #pragma config USBLSCLK = 48MHz    // USB Low SPeed Clock Selection bit->System clock expects 48 MHz, FS/LS USB CLKENs divide-by is set to 8.
 #pragma config PLLMULT = 3x    // PLL Multipler Selection Bit->3x Output Frequency Selected
 #pragma config PLLEN = ENABLED    // PLL Enable Bit->3x or 4x PLL Enabled

@@ -175,11 +175,11 @@ EVENT_TRANSFER_TERMINATED 5
 [v _usb_task usb_task `T(v  1 e 1 0 ]
 "64
 [v _process_gpio_cmd process_gpio_cmd `T(uc  1 e 1 0 ]
-"88
+"92
 [v _gpio_init gpio_init `T(v  1 e 1 0 ]
-"96
+"100
 [v _gpio_task gpio_task `T(v  1 e 1 0 ]
-"122
+"126
 [v _main main `(v  1 e 1 0 ]
 "51 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -378,7 +378,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USTAT USTAT `VEuc  1 e 1 @3727 ]
 "4740
 [v _UIR UIR `VEuc  1 e 1 @3728 ]
-[s S1253 . 1 `uc 1 URSTIF 1 0 :1:0 
+[s S1254 . 1 `uc 1 URSTIF 1 0 :1:0 
 `uc 1 UERRIF 1 0 :1:1 
 `uc 1 ACTVIF 1 0 :1:2 
 `uc 1 TRNIF 1 0 :1:3 
@@ -387,13 +387,13 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIF 1 0 :1:6 
 ]
 "4756
-[u S1261 . 1 `S1253 1 . 1 0 ]
-[v _UIRbits UIRbits `VES1261  1 e 1 @3728 ]
+[u S1262 . 1 `S1254 1 . 1 0 ]
+[v _UIRbits UIRbits `VES1262  1 e 1 @3728 ]
 "4796
 [v _UCFG UCFG `VEuc  1 e 1 @3729 ]
 "4850
 [v _UIE UIE `VEuc  1 e 1 @3730 ]
-[s S1272 . 1 `uc 1 URSTIE 1 0 :1:0 
+[s S1273 . 1 `uc 1 URSTIE 1 0 :1:0 
 `uc 1 UERRIE 1 0 :1:1 
 `uc 1 ACTVIE 1 0 :1:2 
 `uc 1 TRNIE 1 0 :1:3 
@@ -402,8 +402,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIE 1 0 :1:6 
 ]
 "4866
-[u S1280 . 1 `S1272 1 . 1 0 ]
-[v _UIEbits UIEbits `VES1280  1 e 1 @3730 ]
+[u S1281 . 1 `S1273 1 . 1 0 ]
+[v _UIEbits UIEbits `VES1281  1 e 1 @3730 ]
 "4906
 [v _UEIR UEIR `VEuc  1 e 1 @3731 ]
 "5058
@@ -412,33 +412,33 @@ EVENT_TRANSFER_TERMINATED 5
 [v _UEIE UEIE `VEuc  1 e 1 @3735 ]
 "5165
 [v _UEP0 UEP0 `VEuc  1 e 1 @3736 ]
-[s S1428 . 1 `uc 1 EPSTALL 1 0 :1:0 
+[s S1429 . 1 `uc 1 EPSTALL 1 0 :1:0 
 `uc 1 EPINEN 1 0 :1:1 
 `uc 1 EPOUTEN 1 0 :1:2 
 `uc 1 EPCONDIS 1 0 :1:3 
 `uc 1 EPHSHK 1 0 :1:4 
 ]
 "5179
-[u S1434 . 1 `S1428 1 . 1 0 ]
-[v _UEP0bits UEP0bits `VES1434  1 e 1 @3736 ]
+[u S1435 . 1 `S1429 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES1435  1 e 1 @3736 ]
 "5209
 [v _UEP1 UEP1 `VEuc  1 e 1 @3737 ]
 "6224
 [v _PLLRDY PLLRDY `VEb  1 e 0 @1238 ]
-[s S867 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+[s S868 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
 "155 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_descriptors.c
-[v _device_dsc device_dsc `DCCS867  1 e 18 0 ]
+[v _device_dsc device_dsc `DCCS868  1 e 18 0 ]
 "174
 [v _configDescriptor1 configDescriptor1 `DCC[67]uc  1 e 67 0 ]
-[s S904 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
+[s S905 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
 "259
-[v _sd000 sd000 `DCCS904  1 e 4 0 ]
-[s S908 . 18 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[8]ui 1 string 16 2 ]
+[v _sd000 sd000 `DCCS905  1 e 4 0 ]
+[s S909 . 18 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[8]ui 1 string 16 2 ]
 "263
-[v _sd001 sd001 `DCCS908  1 e 18 0 ]
-[s S912 . 40 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[19]ui 1 string 38 2 ]
+[v _sd001 sd001 `DCCS909  1 e 18 0 ]
+[s S913 . 40 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[19]ui 1 string 38 2 ]
 "269
-[v _sd002 sd002 `DCCS912  1 e 40 0 ]
+[v _sd002 sd002 `DCCS913  1 e 40 0 ]
 "275
 [v _USB_CD_Ptr USB_CD_Ptr `DCC[1]*.25DCCuc  1 e 2 0 ]
 "281
@@ -513,26 +513,26 @@ EVENT_TRANSFER_TERMINATED 5
 [v _RemoteWakeup RemoteWakeup `VEuc  1 e 1 0 ]
 "154
 [v _USBBusIsSuspended USBBusIsSuspended `VEuc  1 e 1 0 ]
-[s S1089 . 1 `uc 1 filler1 1 0 :1:0 
+[s S1090 . 1 `uc 1 filler1 1 0 :1:0 
 `uc 1 ping_pong 1 0 :1:1 
 `uc 1 direction 1 0 :1:2 
 `uc 1 endpoint_number 1 0 :4:3 
 ]
 "155
-[u S1094 __USTAT 1 `S1089 1 . 1 0 `uc 1 Val 1 0 ]
-[v _USTATcopy USTATcopy `VES1094  1 e 1 0 ]
+[u S1095 __USTAT 1 `S1090 1 . 1 0 `uc 1 Val 1 0 ]
+[v _USTATcopy USTATcopy `VES1095  1 e 1 0 ]
 "156
 [v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
 "157
 [v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEuc  1 e 1 0 ]
-[s S1097 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S1098 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "158
-[u S1100 . 1 `S1097 1 bits 1 0 `uc 1 Val 1 0 ]
-[v _ep_data_in ep_data_in `VE[3]S1100  1 e 3 0 ]
+[u S1101 . 1 `S1098 1 bits 1 0 `uc 1 Val 1 0 ]
+[v _ep_data_in ep_data_in `VE[3]S1101  1 e 3 0 ]
 "159
-[v _ep_data_out ep_data_out `VE[3]S1100  1 e 3 0 ]
+[v _ep_data_out ep_data_out `VE[3]S1101  1 e 3 0 ]
 "160
 [v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
 "161
@@ -653,10 +653,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v _control_signal_bitmap control_signal_bitmap `S46  1 e 1 0 ]
 "109
 [v _dummy_encapsulated_cmd_response dummy_encapsulated_cmd_response `[8]uc  1 e 8 0 ]
-"122 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+"126 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"131
+"135
 } 0
 "28
 [v _usb_task usb_task `T(v  1 e 1 0 ]
@@ -720,7 +720,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "1976
 [v USBStdSetCfgHandler@p p `*.39uc  1 a 2 0 ]
-[v USBStdSetCfgHandler@i_2173 i `uc  1 a 1 2 ]
+[v USBStdSetCfgHandler@i_2174 i `uc  1 a 1 2 ]
 "1970
 [v USBStdSetCfgHandler@i i `uc  1 a 1 3 ]
 "2024
@@ -807,12 +807,12 @@ EVENT_TRANSFER_TERMINATED 5
 [v USBStdFeatureReqHandler@p p `*.39S401  1 a 2 3 ]
 "2761
 [v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 0 ]
-[s S1097 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S1098 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "2757
-[u S1100 . 1 `S1097 1 bits 1 0 `uc 1 Val 1 0 ]
-[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S1100  1 a 1 2 ]
+[u S1101 . 1 `S1098 1 bits 1 0 `uc 1 Val 1 0 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S1101  1 a 1 2 ]
 "2980
 } 0
 "49 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
@@ -927,22 +927,22 @@ EVENT_TRANSFER_TERMINATED 5
 [v CDCTxService@i i `uc  1 a 1 26 ]
 "931
 } 0
-"96 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+"100 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 [v _gpio_task gpio_task `T(v  1 e 1 0 ]
 {
-"105
+"109
 [v gpio_task@has_output has_output `uc  1 a 1 32 ]
-"104
+"108
 [v gpio_task@rx_ptr rx_ptr `uc  1 a 1 33 ]
-"102
+"106
 [v gpio_task@tx_ptr tx_ptr `uc  1 a 1 34 ]
-"101
+"105
 [v gpio_task@bytes_rcvd bytes_rcvd `uc  1 a 1 31 ]
-"97
+"101
 [v gpio_task@usb_rx_buf usb_rx_buf `[64]uc  1 s 64 usb_rx_buf ]
-"98
+"102
 [v gpio_task@usb_tx_buf usb_tx_buf `[64]uc  1 s 64 usb_tx_buf ]
-"116
+"120
 } 0
 "555 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 [v _putUSBUSART putUSBUSART `(v  1 e 1 0 ]
@@ -958,6 +958,8 @@ EVENT_TRANSFER_TERMINATED 5
 [v _process_gpio_cmd process_gpio_cmd `T(uc  1 e 1 0 ]
 {
 [v process_gpio_cmd@cmd cmd `uc  1 a 1 wreg ]
+"75
+[v process_gpio_cmd@i i `uc  1 a 1 17 ]
 "66
 [v process_gpio_cmd@cmd_type cmd_type `uc  1 a 1 16 ]
 "64
@@ -965,8 +967,8 @@ EVENT_TRANSFER_TERMINATED 5
 [v process_gpio_cmd@rsp rsp `*.7uc  1 p 1 14 ]
 "65
 [v process_gpio_cmd@gpio_dir gpio_dir `uc  1 s 1 gpio_dir ]
-[v process_gpio_cmd@cmd cmd `uc  1 a 1 17 ]
-"86
+[v process_gpio_cmd@cmd cmd `uc  1 a 1 18 ]
+"90
 } 0
 "484 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 [v _getsUSBUSART getsUSBUSART `(uc  1 e 1 0 ]
@@ -1019,10 +1021,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v USBTransferOnePacket@ep ep `uc  1 a 1 22 ]
 "1047
 } 0
-"88 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+"92 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 [v _gpio_init gpio_init `T(v  1 e 1 0 ]
 {
-"90
+"94
 } 0
 "72 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1039,7 +1041,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "296
 [v USBDeviceInit@p p `*.39uc  1 a 2 15 ]
-[v USBDeviceInit@i_1508 i `uc  1 a 1 17 ]
+[v USBDeviceInit@i_1509 i `uc  1 a 1 17 ]
 "279
 [v USBDeviceInit@i i `uc  1 a 1 18 ]
 "371
@@ -1095,7 +1097,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 [v i1USBDeviceInit@p USBDeviceInit `*.39uc  1 a 2 1 ]
 [v i1USBDeviceInit@i USBDeviceInit `uc  1 a 1 4 ]
-[v i1USBDeviceInit@i_1508 USBDeviceInit `uc  1 a 1 3 ]
+[v i1USBDeviceInit@i_1509 USBDeviceInit `uc  1 a 1 3 ]
 "371
 } 0
 "2372
@@ -1128,7 +1130,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 [v i1USBStdSetCfgHandler@p USBStdSetCfgHandler `*.39uc  1 a 2 0 ]
 [v i1USBStdSetCfgHandler@i USBStdSetCfgHandler `uc  1 a 1 3 ]
-[v i1USBStdSetCfgHandler@i_2173 USBStdSetCfgHandler `uc  1 a 1 2 ]
+[v i1USBStdSetCfgHandler@i_2174 USBStdSetCfgHandler `uc  1 a 1 2 ]
 "2024
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
@@ -1208,11 +1210,11 @@ EVENT_TRANSFER_TERMINATED 5
 [u S401 __BDT 4 `S392 1 . 4 0 `S397 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
 [v i1USBStdFeatureReqHandler@p USBStdFeatureReqHandler `*.39S401  1 a 2 3 ]
 [v i1USBStdFeatureReqHandler@pUEP USBStdFeatureReqHandler `*.39uc  1 a 2 0 ]
-[s S1097 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S1098 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
-[u S1100 . 1 `S1097 1 bits 1 0 `uc 1 Val 1 0 ]
-[v i1USBStdFeatureReqHandler@current_ep_data USBStdFeatureReqHandler `S1100  1 a 1 2 ]
+[u S1101 . 1 `S1098 1 bits 1 0 `uc 1 Val 1 0 ]
+[v i1USBStdFeatureReqHandler@current_ep_data USBStdFeatureReqHandler `S1101  1 a 1 2 ]
 "2980
 } 0
 "49 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c

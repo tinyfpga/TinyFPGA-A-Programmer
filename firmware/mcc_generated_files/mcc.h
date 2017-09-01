@@ -52,7 +52,7 @@
 #include "interrupt_manager.h"
 #include "usb/usb.h"
 
-#define _XTAL_FREQ  8000000
+#define _XTAL_FREQ  48000000
 
 
 /**
