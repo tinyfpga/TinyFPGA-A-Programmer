@@ -1,4 +1,4 @@
-[p LITE_MODE AUTOSTATIC PIC14 PIC14E ]
+[p PRO_MODE GLOBOPT AUTOSTATIC PIC14 PIC14E SPEEDOPT ]
 [d version 1.1 ]
 [d edition pro ]
 [d chip 16F1455 ]
@@ -50,8 +50,8 @@ EVENT_EP0_REQUEST 3
 EVENT_ATTACH 4
 EVENT_TRANSFER_TERMINATED 5
 ]
-"34 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-[e E2725 . `uc
+"88 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+[e E2727 . `uc
 DETACHED_STATE 0
 ATTACHED_STATE 1
 POWERED_STATE 2
@@ -171,15 +171,17 @@ EVENT_TRANSFER_TERMINATED 5
 "8 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 1 0 ]
 [v i1_memset memset `(*.39v  1 e 1 0 ]
-"28 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+"82 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 [v _usb_task usb_task `T(v  1 e 1 0 ]
-"64
-[v _process_gpio_cmd process_gpio_cmd `T(uc  1 e 1 0 ]
-"92
+"120
 [v _gpio_init gpio_init `T(v  1 e 1 0 ]
-"100
-[v _gpio_task gpio_task `T(v  1 e 1 0 ]
-"126
+"127
+[v _cmd_task cmd_task `(uc  1 e 1 0 ]
+"548
+[v _cmd_rx_buffer_task cmd_rx_buffer_task `T(v  1 e 1 0 ]
+"558
+[v _cmd_tx_buffer_task cmd_tx_buffer_task `T(v  1 e 1 0 ]
+"569
 [v _main main `(v  1 e 1 0 ]
 "51 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
@@ -363,7 +365,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _ACTCON ACTCON `VEuc  1 e 1 @923 ]
 "4629
 [v _UCON UCON `VEuc  1 e 1 @3726 ]
-[s S801 . 1 `uc 1 . 1 0 :1:0 
+[s S810 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 SUSPND 1 0 :1:1 
 `uc 1 RESUME 1 0 :1:2 
 `uc 1 USBEN 1 0 :1:3 
@@ -372,13 +374,13 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 PPBRST 1 0 :1:6 
 ]
 "4645
-[u S809 . 1 `S801 1 . 1 0 ]
-[v _UCONbits UCONbits `VES809  1 e 1 @3726 ]
+[u S818 . 1 `S810 1 . 1 0 ]
+[v _UCONbits UCONbits `VES818  1 e 1 @3726 ]
 "4680
 [v _USTAT USTAT `VEuc  1 e 1 @3727 ]
 "4740
 [v _UIR UIR `VEuc  1 e 1 @3728 ]
-[s S1254 . 1 `uc 1 URSTIF 1 0 :1:0 
+[s S1312 . 1 `uc 1 URSTIF 1 0 :1:0 
 `uc 1 UERRIF 1 0 :1:1 
 `uc 1 ACTVIF 1 0 :1:2 
 `uc 1 TRNIF 1 0 :1:3 
@@ -387,13 +389,13 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIF 1 0 :1:6 
 ]
 "4756
-[u S1262 . 1 `S1254 1 . 1 0 ]
-[v _UIRbits UIRbits `VES1262  1 e 1 @3728 ]
+[u S1320 . 1 `S1312 1 . 1 0 ]
+[v _UIRbits UIRbits `VES1320  1 e 1 @3728 ]
 "4796
 [v _UCFG UCFG `VEuc  1 e 1 @3729 ]
 "4850
 [v _UIE UIE `VEuc  1 e 1 @3730 ]
-[s S1273 . 1 `uc 1 URSTIE 1 0 :1:0 
+[s S1331 . 1 `uc 1 URSTIE 1 0 :1:0 
 `uc 1 UERRIE 1 0 :1:1 
 `uc 1 ACTVIE 1 0 :1:2 
 `uc 1 TRNIE 1 0 :1:3 
@@ -402,8 +404,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIE 1 0 :1:6 
 ]
 "4866
-[u S1281 . 1 `S1273 1 . 1 0 ]
-[v _UIEbits UIEbits `VES1281  1 e 1 @3730 ]
+[u S1339 . 1 `S1331 1 . 1 0 ]
+[v _UIEbits UIEbits `VES1339  1 e 1 @3730 ]
 "4906
 [v _UEIR UEIR `VEuc  1 e 1 @3731 ]
 "5058
@@ -412,39 +414,52 @@ EVENT_TRANSFER_TERMINATED 5
 [v _UEIE UEIE `VEuc  1 e 1 @3735 ]
 "5165
 [v _UEP0 UEP0 `VEuc  1 e 1 @3736 ]
-[s S1429 . 1 `uc 1 EPSTALL 1 0 :1:0 
+[s S1487 . 1 `uc 1 EPSTALL 1 0 :1:0 
 `uc 1 EPINEN 1 0 :1:1 
 `uc 1 EPOUTEN 1 0 :1:2 
 `uc 1 EPCONDIS 1 0 :1:3 
 `uc 1 EPHSHK 1 0 :1:4 
 ]
 "5179
-[u S1435 . 1 `S1429 1 . 1 0 ]
-[v _UEP0bits UEP0bits `VES1435  1 e 1 @3736 ]
+[u S1493 . 1 `S1487 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES1493  1 e 1 @3736 ]
 "5209
 [v _UEP1 UEP1 `VEuc  1 e 1 @3737 ]
 "6224
 [v _PLLRDY PLLRDY `VEb  1 e 0 @1238 ]
-[s S868 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+"20 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+[v _usb_rx_buf usb_rx_buf `[64]uc  1 s 64 usb_rx_buf ]
+"32
+[v _usb_tx_buf usb_tx_buf `[64]uc  1 s 64 usb_tx_buf ]
+"39
+[v _usb_rx_bytes_avail usb_rx_bytes_avail `uc  1 s 1 usb_rx_bytes_avail ]
+"40
+[v _usb_rx_ptr usb_rx_ptr `uc  1 s 1 usb_rx_ptr ]
+"41
+[v _usb_tx_ptr usb_tx_ptr `uc  1 s 1 usb_tx_ptr ]
+[s S791 sie_config_t 8 `uc 1 config_byte 1 0 `uc 1 input_mask 1 1 `uc 1 do0p0 1 2 `uc 1 do0p1 1 3 `uc 1 do1p0 1 4 `uc 1 do1p1 1 5 `uc 1 last_phase_overlay 1 6 `uc 1 dummy 1 7 ]
+"55
+[v _sie_configs sie_configs `[8]S791  1 s 64 sie_configs ]
+[s S926 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
 "155 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_descriptors.c
-[v _device_dsc device_dsc `DCCS868  1 e 18 0 ]
+[v _device_dsc device_dsc `DCCS926  1 e 18 0 ]
 "174
 [v _configDescriptor1 configDescriptor1 `DCC[67]uc  1 e 67 0 ]
-[s S905 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
+[s S963 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
 "259
-[v _sd000 sd000 `DCCS905  1 e 4 0 ]
-[s S909 . 18 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[8]ui 1 string 16 2 ]
+[v _sd000 sd000 `DCCS963  1 e 4 0 ]
+[s S967 . 18 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[8]ui 1 string 16 2 ]
 "263
-[v _sd001 sd001 `DCCS909  1 e 18 0 ]
-[s S913 . 40 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[19]ui 1 string 38 2 ]
+[v _sd001 sd001 `DCCS967  1 e 18 0 ]
+[s S971 . 22 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[10]ui 1 string 20 2 ]
 "269
-[v _sd002 sd002 `DCCS913  1 e 40 0 ]
+[v _sd002 sd002 `DCCS971  1 e 22 0 ]
 "275
 [v _USB_CD_Ptr USB_CD_Ptr `DCC[1]*.25DCCuc  1 e 2 0 ]
 "281
 [v _USB_SD_Ptr USB_SD_Ptr `DCC[3]*.25DCCuc  1 e 6 0 ]
 "141 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-[v _USBDeviceState USBDeviceState `VEE2725  1 e 1 0 ]
+[v _USBDeviceState USBDeviceState `VEE2727  1 e 1 0 ]
 "142
 [v _USBActiveConfiguration USBActiveConfiguration `VEuc  1 e 1 0 ]
 "143
@@ -513,26 +528,26 @@ EVENT_TRANSFER_TERMINATED 5
 [v _RemoteWakeup RemoteWakeup `VEuc  1 e 1 0 ]
 "154
 [v _USBBusIsSuspended USBBusIsSuspended `VEuc  1 e 1 0 ]
-[s S1090 . 1 `uc 1 filler1 1 0 :1:0 
+[s S1148 . 1 `uc 1 filler1 1 0 :1:0 
 `uc 1 ping_pong 1 0 :1:1 
 `uc 1 direction 1 0 :1:2 
 `uc 1 endpoint_number 1 0 :4:3 
 ]
 "155
-[u S1095 __USTAT 1 `S1090 1 . 1 0 `uc 1 Val 1 0 ]
-[v _USTATcopy USTATcopy `VES1095  1 e 1 0 ]
+[u S1153 __USTAT 1 `S1148 1 . 1 0 `uc 1 Val 1 0 ]
+[v _USTATcopy USTATcopy `VES1153  1 e 1 0 ]
 "156
 [v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
 "157
 [v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEuc  1 e 1 0 ]
-[s S1098 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S1156 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "158
-[u S1101 . 1 `S1098 1 bits 1 0 `uc 1 Val 1 0 ]
-[v _ep_data_in ep_data_in `VE[3]S1101  1 e 3 0 ]
+[u S1159 . 1 `S1156 1 bits 1 0 `uc 1 Val 1 0 ]
+[v _ep_data_in ep_data_in `VE[3]S1159  1 e 3 0 ]
 "159
-[v _ep_data_out ep_data_out `VE[3]S1101  1 e 3 0 ]
+[v _ep_data_out ep_data_out `VE[3]S1159  1 e 3 0 ]
 "160
 [v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
 "161
@@ -645,23 +660,20 @@ EVENT_TRANSFER_TERMINATED 5
 [v _CDCDataOutHandle CDCDataOutHandle `*.39v  1 e 2 0 ]
 "90
 [v _CDCDataInHandle CDCDataInHandle `*.39v  1 e 2 0 ]
-[s S43 . 1 `uc 1 DTE_PRESENT 1 0 :1:0 
-`uc 1 CARRIER_CONTROL 1 0 :1:1 
-]
-"93
-[u S46 _CONTROL_SIGNAL_BITMAP 1 `uc 1 _byte 1 0 `S43 1 . 1 0 ]
-[v _control_signal_bitmap control_signal_bitmap `S46  1 e 1 0 ]
 "109
 [v _dummy_encapsulated_cmd_response dummy_encapsulated_cmd_response `[8]uc  1 e 8 0 ]
-"126 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+"569 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"135
+[s S831 pt 2 `us 1 lc 2 0 ]
+"570
+[v main@cmd_pt cmd_pt `S831  1 a 2 9 ]
+"587
 } 0
-"28
+"82
 [v _usb_task usb_task `T(v  1 e 1 0 ]
 {
-"37
+"91
 } 0
 "477 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 [v _USBDeviceTasks USBDeviceTasks `(v  1 e 1 0 ]
@@ -719,21 +731,21 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBStdSetCfgHandler USBStdSetCfgHandler `(v  1 s 1 USBStdSetCfgHandler ]
 {
 "1976
-[v USBStdSetCfgHandler@p p `*.39uc  1 a 2 0 ]
-[v USBStdSetCfgHandler@i_2174 i `uc  1 a 1 2 ]
+[v USBStdSetCfgHandler@p p `*.39uc  1 a 2 25 ]
+[v USBStdSetCfgHandler@i_2232 i `uc  1 a 1 27 ]
 "1970
-[v USBStdSetCfgHandler@i i `uc  1 a 1 3 ]
+[v USBStdSetCfgHandler@i i `uc  1 a 1 28 ]
 "2024
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 1 0 ]
 {
 "15
-[v memset@p p `*.39uc  1 a 2 20 ]
+[v memset@p p `*.39uc  1 a 2 14 ]
 "8
-[v memset@p1 p1 `*.39v  1 p 2 14 ]
-[v memset@c c `i  1 p 2 16 ]
-[v memset@n n `ui  1 p 2 18 ]
+[v memset@p1 p1 `*.39v  1 p 2 8 ]
+[v memset@c c `i  1 p 2 10 ]
+[v memset@n n `ui  1 p 2 12 ]
 "22
 } 0
 "2129 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -766,7 +778,7 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
 [u S401 __BDT 4 `S392 1 . 4 0 `S397 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdGetStatusHandler@p p `*.39S401  1 a 2 15 ]
+[v USBStdGetStatusHandler@p p `*.39S401  1 a 2 8 ]
 "2184
 } 0
 "2043
@@ -807,20 +819,20 @@ EVENT_TRANSFER_TERMINATED 5
 [v USBStdFeatureReqHandler@p p `*.39S401  1 a 2 3 ]
 "2761
 [v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 0 ]
-[s S1098 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S1156 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "2757
-[u S1101 . 1 `S1098 1 bits 1 0 `uc 1 Val 1 0 ]
-[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S1101  1 a 1 2 ]
+[u S1159 . 1 `S1156 1 bits 1 0 `uc 1 Val 1 0 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S1159  1 a 1 2 ]
 "2980
 } 0
 "49 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
 [v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(uc  1 e 1 0 ]
 {
-[v USER_USB_CALLBACK_EVENT_HANDLER@event event `E34  1 p 2 28 ]
-[v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.39v  1 p 2 30 ]
-[v USER_USB_CALLBACK_EVENT_HANDLER@size size `ui  1 p 2 32 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@event event `E34  1 p 2 19 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@pdata pdata `*.39v  1 p 2 21 ]
+[v USER_USB_CALLBACK_EVENT_HANDLER@size size `ui  1 p 2 23 ]
 "98
 } 0
 "146 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
@@ -838,12 +850,12 @@ EVENT_TRANSFER_TERMINATED 5
 {
 [v USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
 "880
-[v USBEnableEndpoint@p p `*.39uc  1 a 2 24 ]
+[v USBEnableEndpoint@p p `*.39uc  1 a 2 15 ]
 "878
 [v USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
-[v USBEnableEndpoint@options options `uc  1 p 1 21 ]
+[v USBEnableEndpoint@options options `uc  1 p 1 12 ]
 "884
-[v USBEnableEndpoint@ep ep `uc  1 a 1 26 ]
+[v USBEnableEndpoint@ep ep `uc  1 a 1 17 ]
 "902
 } 0
 "1543
@@ -877,12 +889,12 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
 [u S401 __BDT 4 `S392 1 . 4 0 `S397 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBConfigureEndpoint@handle handle `*.4VES401  1 a 1 20 ]
+[v USBConfigureEndpoint@handle handle `*.4VES401  1 a 1 11 ]
 "1543
 [v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
-[v USBConfigureEndpoint@direction direction `uc  1 p 1 14 ]
+[v USBConfigureEndpoint@direction direction `uc  1 p 1 8 ]
 "1549
-[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 19 ]
+[v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 10 ]
 "1585
 } 0
 "2538
@@ -894,9 +906,9 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBCtrlTrfRxService USBCtrlTrfRxService `(v  1 s 1 USBCtrlTrfRxService ]
 {
 "1854
-[v USBCtrlTrfRxService@byteToRead byteToRead `uc  1 a 1 19 ]
+[v USBCtrlTrfRxService@byteToRead byteToRead `uc  1 a 1 13 ]
 "1855
-[v USBCtrlTrfRxService@i i `uc  1 a 1 18 ]
+[v USBCtrlTrfRxService@i i `uc  1 a 1 12 ]
 "1947
 } 0
 "1416
@@ -908,76 +920,136 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBCtrlTrfInHandler USBCtrlTrfInHandler `(v  1 s 1 USBCtrlTrfInHandler ]
 {
 "2594
-[v USBCtrlTrfInHandler@lastDTS lastDTS `uc  1 a 1 19 ]
+[v USBCtrlTrfInHandler@lastDTS lastDTS `uc  1 a 1 13 ]
 "2667
 } 0
 "1771
 [v _USBCtrlTrfTxService USBCtrlTrfTxService `(v  1 s 1 USBCtrlTrfTxService ]
 {
 "1773
-[v USBCtrlTrfTxService@byteToSend byteToSend `uc  1 a 1 16 ]
+[v USBCtrlTrfTxService@byteToSend byteToSend `uc  1 a 1 10 ]
 "1825
 } 0
 "835 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 [v _CDCTxService CDCTxService `(v  1 e 1 0 ]
 {
 "837
-[v CDCTxService@byte_to_send byte_to_send `uc  1 a 1 27 ]
+[v CDCTxService@byte_to_send byte_to_send `uc  1 a 1 20 ]
 "838
-[v CDCTxService@i i `uc  1 a 1 26 ]
+[v CDCTxService@i i `uc  1 a 1 19 ]
 "931
 } 0
-"100 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-[v _gpio_task gpio_task `T(v  1 e 1 0 ]
+"120 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+[v _gpio_init gpio_init `T(v  1 e 1 0 ]
 {
-"109
-[v gpio_task@has_output has_output `uc  1 a 1 32 ]
-"108
-[v gpio_task@rx_ptr rx_ptr `uc  1 a 1 33 ]
-"106
-[v gpio_task@tx_ptr tx_ptr `uc  1 a 1 34 ]
-"105
-[v gpio_task@bytes_rcvd bytes_rcvd `uc  1 a 1 31 ]
-"101
-[v gpio_task@usb_rx_buf usb_rx_buf `[64]uc  1 s 64 usb_rx_buf ]
-"102
-[v gpio_task@usb_tx_buf usb_tx_buf `[64]uc  1 s 64 usb_tx_buf ]
-"120
+"122
+} 0
+"558
+[v _cmd_tx_buffer_task cmd_tx_buffer_task `T(v  1 e 1 0 ]
+{
+"563
 } 0
 "555 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 [v _putUSBUSART putUSBUSART `(v  1 e 1 0 ]
 {
 [v putUSBUSART@data data `*.7uc  1 a 1 wreg ]
 [v putUSBUSART@data data `*.7uc  1 a 1 wreg ]
-[v putUSBUSART@length length `uc  1 p 1 14 ]
+[v putUSBUSART@length length `uc  1 p 1 8 ]
 "580
-[v putUSBUSART@data data `*.7uc  1 a 1 16 ]
+[v putUSBUSART@data data `*.7uc  1 a 1 9 ]
 "586
 } 0
-"64 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-[v _process_gpio_cmd process_gpio_cmd `T(uc  1 e 1 0 ]
+"127 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+[v _cmd_task cmd_task `(uc  1 e 1 0 ]
 {
-[v process_gpio_cmd@cmd cmd `uc  1 a 1 wreg ]
-"75
-[v process_gpio_cmd@i i `uc  1 a 1 17 ]
-"66
-[v process_gpio_cmd@cmd_type cmd_type `uc  1 a 1 16 ]
-"64
-[v process_gpio_cmd@cmd cmd `uc  1 a 1 wreg ]
-[v process_gpio_cmd@rsp rsp `*.7uc  1 p 1 14 ]
-"65
-[v process_gpio_cmd@gpio_dir gpio_dir `uc  1 s 1 gpio_dir ]
-[v process_gpio_cmd@cmd cmd `uc  1 a 1 18 ]
-"90
+[s S831 pt 2 `us 1 lc 2 0 ]
+[v cmd_task@pt pt `*.5S831  1 a 1 wreg ]
+"356
+[v cmd_task@data_903 data `uc  1 a 1 20 ]
+"437
+[v cmd_task@last_phase_overlay_905 last_phase_overlay `uc  1 a 1 19 ]
+"423
+[v cmd_task@data_904 data `uc  1 a 1 17 ]
+"333
+[v cmd_task@bit_to_set_901 bit_to_set `uc  1 a 1 16 ]
+"343
+[v cmd_task@last_phase_overlay_902 last_phase_overlay `uc  1 a 1 13 ]
+"250
+[v cmd_task@bit_to_set bit_to_set `uc  1 a 1 15 ]
+"260
+[v cmd_task@last_phase_overlay last_phase_overlay `uc  1 a 1 12 ]
+"475
+[v cmd_task@tmp tmp `uc  1 a 1 18 ]
+"186
+[v cmd_task@op1 op1 `uc  1 a 1 14 ]
+"163
+[v cmd_task@PT_YIELD_FLAG PT_YIELD_FLAG `uc  1 a 1 11 ]
+"127
+[v cmd_task@pt pt `*.5S831  1 a 1 wreg ]
+"128
+[v cmd_task@gpio_dir gpio_dir `uc  1 s 1 gpio_dir ]
+"130
+[v cmd_task@cmd cmd `uc  1 s 1 cmd ]
+"131
+[v cmd_task@op0 op0 `uc  1 s 1 op0 ]
+"132
+[v cmd_task@sie sie `uc  1 s 1 sie ]
+"133
+[v cmd_task@num_bits num_bits `uc  1 s 1 num_bits ]
+"134
+[v cmd_task@num_bytes num_bytes `uc  1 s 1 num_bytes ]
+"135
+[v cmd_task@input_mask input_mask `uc  1 s 1 input_mask ]
+"136
+[v cmd_task@do0p0 do0p0 `uc  1 s 1 do0p0 ]
+"137
+[v cmd_task@do0p1 do0p1 `uc  1 s 1 do0p1 ]
+"138
+[v cmd_task@do1p0 do1p0 `uc  1 s 1 do1p0 ]
+"139
+[v cmd_task@do1p1 do1p1 `uc  1 s 1 do1p1 ]
+"140
+[v cmd_task@inout_cfg inout_cfg `uc  1 s 1 inout_cfg ]
+"141
+[v cmd_task@i i `uc  1 s 1 i ]
+"144
+[v cmd_task@loop_count loop_count `ui  1 s 2 loop_count ]
+"145
+[v cmd_task@loop_is_active loop_is_active `uc  1 s 1 loop_is_active ]
+"148
+[v cmd_task@actual_data actual_data `uc  1 s 1 actual_data ]
+"149
+[v cmd_task@expected_data expected_data `uc  1 s 1 expected_data ]
+"150
+[v cmd_task@mask mask `uc  1 s 1 mask ]
+"152
+[v cmd_task@byte_to_send byte_to_send `uc  1 s 1 byte_to_send ]
+"155
+[v cmd_task@compare_data_matches compare_data_matches `uc  1 s 1 compare_data_matches ]
+"156
+[v cmd_task@data data `uc  1 s 1 data ]
+"160
+[v cmd_task@status status `uc  1 s 1 status ]
+"161
+[v cmd_task@status_sent status_sent `uc  1 s 1 status_sent ]
+"163
+"127
+[v cmd_task@pt pt `*.5S831  1 a 1 21 ]
+"543
+} 0
+"548
+[v _cmd_rx_buffer_task cmd_rx_buffer_task `T(v  1 e 1 0 ]
+{
+"553
 } 0
 "484 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_cdc.c
 [v _getsUSBUSART getsUSBUSART `(uc  1 e 1 0 ]
 {
-[v getsUSBUSART@buffer buffer `*.6uc  1 a 1 wreg ]
-[v getsUSBUSART@buffer buffer `*.6uc  1 a 1 wreg ]
-[v getsUSBUSART@len len `uc  1 p 1 25 ]
+[v getsUSBUSART@buffer buffer `*.5uc  1 a 1 wreg ]
+[v getsUSBUSART@buffer buffer `*.5uc  1 a 1 wreg ]
+[v getsUSBUSART@len len `uc  1 p 1 19 ]
 "486
-[v getsUSBUSART@buffer buffer `*.6uc  1 a 1 28 ]
+[v getsUSBUSART@buffer buffer `*.5uc  1 a 1 21 ]
 "513
 } 0
 "995 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -1011,20 +1083,15 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
 [u S401 __BDT 4 `S392 1 . 4 0 `S397 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBTransferOnePacket@handle handle `*.39VES401  1 a 2 23 ]
+[v USBTransferOnePacket@handle handle `*.39VES401  1 a 2 17 ]
 "995
 [v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
-[v USBTransferOnePacket@dir dir `uc  1 p 1 14 ]
-[v USBTransferOnePacket@data data `*.39uc  1 p 2 15 ]
-[v USBTransferOnePacket@len len `uc  1 p 1 17 ]
+[v USBTransferOnePacket@dir dir `uc  1 p 1 8 ]
+[v USBTransferOnePacket@data data `*.39uc  1 p 2 9 ]
+[v USBTransferOnePacket@len len `uc  1 p 1 11 ]
 "1000
-[v USBTransferOnePacket@ep ep `uc  1 a 1 22 ]
+[v USBTransferOnePacket@ep ep `uc  1 a 1 16 ]
 "1047
-} 0
-"92 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-[v _gpio_init gpio_init `T(v  1 e 1 0 ]
-{
-"94
 } 0
 "72 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -1040,10 +1107,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
 {
 "296
-[v USBDeviceInit@p p `*.39uc  1 a 2 15 ]
-[v USBDeviceInit@i_1509 i `uc  1 a 1 17 ]
+[v USBDeviceInit@p p `*.39uc  1 a 2 8 ]
+[v USBDeviceInit@i_1567 i `uc  1 a 1 10 ]
 "279
-[v USBDeviceInit@i i `uc  1 a 1 18 ]
+[v USBDeviceInit@i i `uc  1 a 1 11 ]
 "371
 } 0
 "1352
@@ -1069,7 +1136,7 @@ EVENT_TRANSFER_TERMINATED 5
 "477 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 [v i1_USBDeviceTasks USBDeviceTasks `(v  1 e 1 0 ]
 {
-[v i1USBDeviceTasks@i USBDeviceTasks `uc  1 a 1 12 ]
+[v i1USBDeviceTasks@i USBDeviceTasks `uc  1 a 1 6 ]
 "827
 } 0
 "2303
@@ -1095,9 +1162,9 @@ EVENT_TRANSFER_TERMINATED 5
 "277
 [v i1_USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
 {
-[v i1USBDeviceInit@p USBDeviceInit `*.39uc  1 a 2 1 ]
-[v i1USBDeviceInit@i USBDeviceInit `uc  1 a 1 4 ]
-[v i1USBDeviceInit@i_1509 USBDeviceInit `uc  1 a 1 3 ]
+[v i1USBDeviceInit@p USBDeviceInit `*.39uc  1 a 2 0 ]
+[v i1USBDeviceInit@i USBDeviceInit `uc  1 a 1 3 ]
+[v i1USBDeviceInit@i_1567 USBDeviceInit `uc  1 a 1 2 ]
 "371
 } 0
 "2372
@@ -1130,7 +1197,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 [v i1USBStdSetCfgHandler@p USBStdSetCfgHandler `*.39uc  1 a 2 0 ]
 [v i1USBStdSetCfgHandler@i USBStdSetCfgHandler `uc  1 a 1 3 ]
-[v i1USBStdSetCfgHandler@i_2174 USBStdSetCfgHandler `uc  1 a 1 2 ]
+[v i1USBStdSetCfgHandler@i_2232 USBStdSetCfgHandler `uc  1 a 1 2 ]
 "2024
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
@@ -1171,7 +1238,7 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
 [u S401 __BDT 4 `S392 1 . 4 0 `S397 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v i1USBStdGetStatusHandler@p USBStdGetStatusHandler `*.39S401  1 a 2 1 ]
+[v i1USBStdGetStatusHandler@p USBStdGetStatusHandler `*.39S401  1 a 2 0 ]
 "2184
 } 0
 "2043
@@ -1210,11 +1277,11 @@ EVENT_TRANSFER_TERMINATED 5
 [u S401 __BDT 4 `S392 1 . 4 0 `S397 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
 [v i1USBStdFeatureReqHandler@p USBStdFeatureReqHandler `*.39S401  1 a 2 3 ]
 [v i1USBStdFeatureReqHandler@pUEP USBStdFeatureReqHandler `*.39uc  1 a 2 0 ]
-[s S1098 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S1156 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
-[u S1101 . 1 `S1098 1 bits 1 0 `uc 1 Val 1 0 ]
-[v i1USBStdFeatureReqHandler@current_ep_data USBStdFeatureReqHandler `S1101  1 a 1 2 ]
+[u S1159 . 1 `S1156 1 bits 1 0 `uc 1 Val 1 0 ]
+[v i1USBStdFeatureReqHandler@current_ep_data USBStdFeatureReqHandler `S1159  1 a 1 2 ]
 "2980
 } 0
 "49 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
@@ -1278,11 +1345,11 @@ EVENT_TRANSFER_TERMINATED 5
 [v i1_USBEnableEndpoint USBEnableEndpoint `(v  1 e 1 0 ]
 {
 [v i1USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
-[v i1USBEnableEndpoint@p USBEnableEndpoint `*.39uc  1 a 2 10 ]
+[v i1USBEnableEndpoint@p USBEnableEndpoint `*.39uc  1 a 2 7 ]
 [v i1USBEnableEndpoint@ep ep `uc  1 a 1 wreg ]
-[v i1USBEnableEndpoint@options options `uc  1 p 1 7 ]
+[v i1USBEnableEndpoint@options options `uc  1 p 1 4 ]
 "884
-[v i1USBEnableEndpoint@ep ep `uc  1 a 1 12 ]
+[v i1USBEnableEndpoint@ep ep `uc  1 a 1 9 ]
 "902
 } 0
 "1543
@@ -1315,11 +1382,11 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
 [u S401 __BDT 4 `S392 1 . 4 0 `S397 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v i1USBConfigureEndpoint@handle USBConfigureEndpoint `*.4VES401  1 a 1 6 ]
+[v i1USBConfigureEndpoint@handle USBConfigureEndpoint `*.4VES401  1 a 1 3 ]
 [v i1USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
 [v i1USBConfigureEndpoint@direction direction `uc  1 p 1 0 ]
 "1549
-[v i1USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 5 ]
+[v i1USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 2 ]
 "1585
 } 0
 "2538
