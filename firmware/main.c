@@ -15,28 +15,23 @@
 #include "stdint.h"
 
 #define MAX_PKT_SIZE 64
-//static uint8_t usb_rx_buf[MAX_PKT_SIZE];
 
-static uint8_t usb_rx_buf[MAX_PKT_SIZE] = {
-    0, 7,
-    8, 0, 0, 0, 16, 0, 16, 0,
-    9, 1, 0, 0, 16, 32, 48, 0,
-    10, 1, 0, 0, 16, 8, 24, 32,
-    11, 4, 4, 0, 16, 0, 16, 32,
-    12, 12, 4, 0, 16, 0, 16, 32,
-    0, 15,
-    
-    28, 8, 3, 67, 255, 160, 255, 43, 255, 1, 255
-};
+volatile uint8_t usb_tx_buf_0[MAX_PKT_SIZE] __at(0x0A0);
+volatile uint8_t usb_rx_buf_0[MAX_PKT_SIZE] __at(0x120);
+volatile uint8_t usb_tx_buf_1[MAX_PKT_SIZE] __at(0x1A0);
+volatile uint8_t usb_rx_buf_1[MAX_PKT_SIZE] __at(0x220);
 
-static uint8_t usb_tx_buf[MAX_PKT_SIZE];
+uint8_t* usb_tx_buf = usb_tx_buf_0;
+uint8_t* usb_rx_buf = usb_rx_buf_0;
+
+uint8_t* usb_tx_buf_array[2] = {usb_tx_buf_0, usb_tx_buf_1};
+uint8_t* usb_rx_buf_array[2] = {usb_rx_buf_0, usb_rx_buf_1};
 
 #include "mcc_generated_files/mcc.h"
 #include "pt.h"
 #include "stdio.h"
 
-
-static uint8_t usb_rx_bytes_avail = 55;
+static uint8_t usb_rx_bytes_avail = 0;
 static uint8_t usb_rx_ptr = 0;
 static uint8_t usb_tx_ptr = 0;
 
@@ -51,44 +46,30 @@ struct sie_config_t {
     uint8_t dummy;
 };
 
-
 static struct sie_config_t sie_configs[8];
-
-
 
 #define GET_BYTE(pt, dst)\
     PT_WAIT_UNTIL(pt, usb_rx_ptr < usb_rx_bytes_avail);\
     dst = usb_rx_buf[usb_rx_ptr];\
     usb_rx_ptr += 1;
 
-
-
 #define SEND_BYTE(pt, src)\
     PT_WAIT_UNTIL(pt, USBUSARTIsTxTrfReady() && (usb_tx_ptr < MAX_PKT_SIZE));\
     usb_tx_buf[usb_tx_ptr] = src;\
     usb_tx_ptr += 1;
 
-
-
-void putch(char data) {
-    usb_tx_buf[usb_tx_ptr] = data;
-    usb_tx_ptr += 1;
+void inline gpio_init() {
+    TRISC = 0b111111;
 }
 
-/**
- * Give some CPU time to the generic USB and CDC tasks so they can manage
- * generic USB device tasks and CDC UART data transfers.
- */
-void inline usb_task() {
-    USBDeviceTasks();
-        
-    if (
-        (USBGetDeviceState() >= CONFIGURED_STATE) &&
-        (USBIsDeviceSuspended() == false)
-    ) {
-        CDCTxService();
-    } 
-}
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+///
+/// Process GPIO and SIE commands from host.
+///
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 
 /**
  * FIXME: this is outdated, please update with latest command definitions
@@ -116,15 +97,7 @@ void inline usb_task() {
  *     Same encoding as SET but a bitmap representing current state of input
  *     pins is returned.
  */
-
-void inline gpio_init() {
-    TRISC = 0b111111;
-}
-
-/**
- * Process GPIO and SIE commands from host.
- */
-PT_THREAD(cmd_task(struct pt* pt)) {
+PT_THREAD(inline cmd_task(struct pt* pt)) {
     static uint8_t gpio_dir = 0b111111;
     
     static uint8_t cmd;
@@ -542,46 +515,163 @@ PT_THREAD(cmd_task(struct pt* pt)) {
     PT_END(pt); 
 }
 
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+///
+/// Manage RX buffer
+///
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////
+// RX buffer ping-pong management variables
+static BDT_ENTRY* usb_rx_pp_handle[2] = {(BDT_ENTRY*) 0x2020, (BDT_ENTRY*) 0x2024}; // EP2_OUT_EVEN, EP2_OUT_ODD
+static uint8_t usb_rx_pp_size = 0;
+static uint8_t usb_rx_pp_put_ptr;
+static uint8_t usb_rx_pp_get_ptr;
+static uint8_t bytes_recieved;
+static BDT_ENTRY* current_rx_handle = 0x2020;
+
 /**
- * Manage CMD RX buffer
+ * Continuously attempts to fill as many of the two RX buffers as
+ * possible.  It uses the usb_rx_pp_size variable to determine how many of the
+ * buffers it is allowed to fill.
  */
-void inline cmd_rx_buffer_task() {
-    if (usb_rx_ptr >= usb_rx_bytes_avail) {
-        usb_rx_bytes_avail = getsUSBUSART(usb_rx_buf, MAX_PKT_SIZE);
+PT_THREAD(inline cmd_rx_buf_put_task(struct pt* pt)) {
+    PT_BEGIN(pt);
+    
+    usb_rx_pp_put_ptr = 0;
+    
+    while (1) {
+        // wait until there is a data buffer available to fill
+        PT_WAIT_UNTIL(pt, usb_rx_pp_size < 2);
+        
+        current_rx_handle = usb_rx_pp_handle[usb_rx_pp_put_ptr];
+        
+        do {
+            bytes_recieved = 0;
+            
+            // setup rx buffer descriptor and give it to the USB controller
+            current_rx_handle->ADR = ConvertToPhysicalAddress(usb_rx_buf_array[usb_rx_pp_put_ptr]);
+            current_rx_handle->CNT = MAX_PKT_SIZE;
+            current_rx_handle->STAT.Val &= _DTSMASK;
+            current_rx_handle->STAT.Val |= _DTSEN;
+            current_rx_handle->STAT.Val |= _USIE;
+
+            PT_WAIT_UNTIL(pt, current_rx_handle->STAT.UOWN == 0);
+            bytes_recieved = current_rx_handle->CNT;
+                    
+            PT_YIELD(pt);
+        } while (bytes_recieved == 0);
+        
+        usb_rx_pp_size += 1;
+        usb_rx_pp_put_ptr ^= 1;
+    }
+    
+    PT_END(pt);
+}
+
+/**
+ * Manages updating the usb_rx_ptr and usb_rx_buf variables when new data is
+ * available to process.  Updates usb_rx_pp_size to let the put_task know more
+ * space is available to put data from USB.
+ */
+PT_THREAD(inline cmd_rx_buf_get_task(struct pt* pt)) {
+    PT_BEGIN(pt);
+    
+    usb_rx_pp_get_ptr = 0;
+    
+    while (1) {
+        // wait until there is a data buffer that's been filled
+        PT_WAIT_UNTIL(pt, usb_rx_pp_size > 0);
+        
+        // setup buffer for GPIO engine to consume its contents
+        usb_rx_buf = usb_rx_buf_array[usb_rx_pp_get_ptr];
         usb_rx_ptr = 0;
+        usb_rx_bytes_avail = usb_rx_pp_handle[usb_rx_pp_get_ptr]->CNT;
+        
+        // wait until the data has been drained from this buffer
+        PT_WAIT_UNTIL(pt, usb_rx_ptr >= usb_rx_bytes_avail);
+        
+        usb_rx_pp_size -= 1;
+        usb_rx_pp_get_ptr ^= 1;
     }
+    
+    PT_END(pt);
 }
 
-/**
- * Manage CMD TX buffer
- */
-void inline cmd_tx_buffer_task() {    
-    if (USBUSARTIsTxTrfReady() && usb_tx_ptr > 0) {
-        putUSBUSART(usb_tx_buf, usb_tx_ptr);
-        usb_tx_ptr = 0;  
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+///
+/// Manage TX buffer
+///
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+PT_THREAD(inline cmd_tx_buffer_task(struct pt* pt)) {
+    static BDT_ENTRY* usb_tx_handle;
+
+    PT_BEGIN(pt);
+    
+    while (1) {
+        if (usb_tx_ptr > 0) {
+            USBMaskInterrupts();       
+            usb_tx_handle = USBTransferOnePacket(CDC_DATA_EP, IN_TO_HOST, usb_tx_buf, usb_tx_ptr);
+            USBUnmaskInterrupts();
+            
+            // wait until the USB interface is done with the transfer
+            PT_WAIT_UNTIL(pt, usb_tx_handle->STAT.UOWN == 0);
+            usb_tx_ptr = 0;
+            
+        } else {
+            PT_YIELD(pt);
+        }    
     }
+    
+    PT_END(pt);
 }
 
-/**
- * Main program.  Initialize the system and USB device, then process GPIO
- * commands from USB forever.
- */
+
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+///
+/// Main Firmware Loop
+///
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
 void main(void) {
     struct pt cmd_pt;
     PT_INIT(&cmd_pt);
     
-    usb_rx_bytes_avail = 55;
-    usb_rx_ptr = 0;
-    usb_tx_ptr = 0;
+    struct pt tx_pt;
+    PT_INIT(&tx_pt);
+    
+    struct pt rx_put_pt;
+    PT_INIT(&rx_put_pt);
+    
+    struct pt rx_get_pt;
+    PT_INIT(&rx_get_pt);
     
     SYSTEM_Initialize();
     USBDeviceInit();
     gpio_init();
     
     while (1) {
-        usb_task();
-        cmd_rx_buffer_task();
-        cmd_tx_buffer_task();
-        cmd_task(&cmd_pt);
+        USBDeviceTasks();
+        
+        if (
+            (USBGetDeviceState() >= CONFIGURED_STATE) &&
+            (USBIsDeviceSuspended() == false)
+        ) {
+            cmd_rx_buf_put_task(&rx_put_pt);
+            cmd_rx_buf_get_task(&rx_get_pt);
+            cmd_tx_buffer_task(&tx_pt);
+            cmd_task(&cmd_pt);
+        }
     }
 }
