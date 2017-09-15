@@ -14,7 +14,7 @@ class AsyncSerial(object):
     function to process each individual read request data.  Read and write 
     order is strictly maintained in FIFO order.
     """
-    def __init__(self, ser, write_buffer_size = 64, write_flush_timeout = 0.001):
+    def __init__(self, ser, write_buffer_size = 63, write_flush_timeout = 0.001):
         self.ser = ser
         self.write_buffer_size = write_buffer_size
         self.write_flush_timeout = write_flush_timeout
