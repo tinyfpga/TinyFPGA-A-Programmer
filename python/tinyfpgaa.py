@@ -6,6 +6,46 @@ import math
 import itertools
 
 
+class SyncSerial(object):
+    def __init__(self, ser, write_buffer_size = 64, write_flush_timeout = 0.001):
+        self.ser = ser
+        self.pending_write_data = []
+        self.write_buffer_size = write_buffer_size
+
+        ser.flushInput()
+        ser.flushOutput()
+
+
+    def write(self, data):
+        if isinstance(data, (int, long)):
+            self.pending_write_data.append(data)
+        else:
+            self.pending_write_data.extend(data)
+
+        while len(self.pending_write_data) > self.write_buffer_size:
+            write_data = self.pending_write_data[0:63]
+            self.pending_write_data = self.pending_write_data[63:]
+            self.ser.write(array.array('B', write_data).tostring())
+            self.ser.flush()
+        
+
+    def read(self, num_bytes, callback, blocking = False):
+        self.flush()
+        read_data = [x for x in array.array('B', self.ser.read(size = num_bytes)).tolist()]
+        callback(read_data)
+        
+
+    def task(self):
+        return 0
+
+    def flush(self):
+        if len(self.pending_write_data) > 0:
+            self.ser.write(array.array('B', self.pending_write_data).tostring())
+            self.pending_write_data = []
+
+        self.ser.flush()
+
+
 
 class AsyncSerial(object):
     """
@@ -14,7 +54,7 @@ class AsyncSerial(object):
     function to process each individual read request data.  Read and write 
     order is strictly maintained in FIFO order.
     """
-    def __init__(self, ser, write_buffer_size = 63, write_flush_timeout = 0.001):
+    def __init__(self, ser, write_buffer_size = 64, write_flush_timeout = 0.001):
         self.ser = ser
         self.write_buffer_size = write_buffer_size
         self.write_flush_timeout = write_flush_timeout
@@ -96,22 +136,36 @@ class AsyncSerial(object):
 
         while len(self.pending_write_data) >= self.write_buffer_size:
             #print "writing pending write data: " + str(len(self.pending_write_data))
-            write_data = self.pending_write_data[0:64]
-            self.pending_write_data = self.pending_write_data[64:]
-            self.ser.write( array.array('B', write_data).tostring())
+            write_data = self.pending_write_data[0:63]
+            self.pending_write_data = self.pending_write_data[63:]
+            self.ser.write(array.array('B', write_data).tostring())
+            self.ser.flush()
 
         flush_timeout_expired = (time.time() - self.last_write_time) >= self.write_flush_timeout
         more_data_to_write = len(self.pending_write_data) > 0
 
         if flush_timeout_expired and more_data_to_write:
-            self.ser.write(self.pending_write_data)
-            self.pending_write_data = []
+            self.flush()
 
         return len(self.pending_reads) + len(self.pending_write_data)
 
     def flush(self):
-        self.ser.write(self.pending_write_data)
-        self.pending_write_data = []
+        if len(self.pending_write_data) > 0:
+            self.ser.write(array.array('B', self.pending_write_data).tostring())
+            self.ser.flush()
+            self.pending_write_data = []
+
+        #while len(self.pending_write_data) >= self.write_buffer_size:
+        #    #print "writing pending write data: " + str(len(self.pending_write_data))
+        #    write_data = self.pending_write_data[0:63]
+        #    self.pending_write_data = self.pending_write_data[63:]
+        #    self.ser.write(array.array('B', write_data).tostring())
+        #    self.ser.flush()
+        #
+        #if len(self.pending_write_data) > 0:
+        #    self.ser.write(self.pending_write_data)
+        #    self.pending_write_data = []
+        #    self.ser.flush()
 
 
 
@@ -184,6 +238,7 @@ class TinyFpgaProgrammer(object):
             num_bytes_to_read = num_read_bytes
 
         if num_bytes_to_read > 0:
+            self.ser.flush()
             self.ser.read(num_bytes = num_bytes_to_read, callback = read_callback, blocking = blocking)
             self.pending_input = 0
 
@@ -231,6 +286,7 @@ class TinyFpgaProgrammer(object):
     def get_status(self, status_callback, blocking = True):
         self.ser.write(0x21)
         self.ser.read(1, status_callback, blocking = blocking)
+        
             
 
 
