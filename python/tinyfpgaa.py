@@ -4,7 +4,7 @@ import time
 import re
 import math
 import itertools
-
+import traceback
 
 class SyncSerial(object):
     def __init__(self, ser, write_buffer_size = 64, write_flush_timeout = 0.001):
@@ -1042,6 +1042,7 @@ class JedecFile(object):
             try:
                 return int(line[::-1], 2)
             except:
+                traceback.print_exc()
                 return None
 
         def line_is_end_of_field(line):
@@ -1245,7 +1246,7 @@ class JtagCustomProgrammer(object):
         self.runtest(1000)
 
         row_count = num_rows
-        for line in jed_file.cfg_data:
+        for line in jed_file.cfg_data + jed_file.ebr_data:
             # LSC_PROG_INCR_NV
             self.write_ir(8, 0x70)
             self.write_dr(128, line)
@@ -1296,7 +1297,7 @@ class JtagCustomProgrammer(object):
         self.feature_row = None
         self.feature_bits = None
 
-        for line in jed_file.cfg_data:
+        for line in jed_file.cfg_data + jed_file.ebr_data:
             self.runtest(2)
             self.check_dr(128, line, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF)
 
