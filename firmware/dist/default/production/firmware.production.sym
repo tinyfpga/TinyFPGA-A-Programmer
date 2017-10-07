@@ -1,20 +1,21 @@
 _USBDeviceTasks 9D0 0 CODE 0
 cmd_rx_buf_get_task@pt 162 0 BANK2 1
-i1USBDeviceInit@i_1661 72 0 COMMON 1
+i1USBStdSetCfgHandler@i_2033 7C 0 COMMON 1
 i1USBDeviceTasks@i 5F 0 BANK0 1
 __end_ofi1_USBIncrement1msInternalTimers FB7 0 CODE 0
 _USBStdFeatureReqHandler 8B1 0 CODE 0
+i1USBDeviceInit@i_1358 72 0 COMMON 1
 __CFG_WRT$OFF 0 0 ABS 0
-_usb_rx_bytes_avail 26C 0 BANK4 1
+_usb_rx_bytes_avail 26B 0 BANK4 1
 i1USBEnableEndpoint@ep 79 0 COMMON 1
 USBStdFeatureReqHandler@p 1E5 0 BANK3 1
 __S0 8009 0 ABS 0
 __S1 3E0 0 ABS 0
 __S2 0 0 ABS 0
-_RemoteWakeup 2C7 0 BANK5 1
+_RemoteWakeup 2DB 0 BANK5 1
 _line_coding 2DF 0 BANK5 1
 _UIE E92 0 ABS 0
-_endpoint_number 2C5 0 BANK5 1
+_endpoint_number 2D9 0 BANK5 1
 _BDT 20 0 ABS 1
 _UIR E90 0 ABS 0
 __Hintentry 12 0 CODE 0
@@ -24,8 +25,9 @@ __CFG_BOREN$ON 0 0 ABS 0
 __pintentry 4 0 CODE 0
 USBEnableEndpoint@p 167 0 BANK2 1
 _dummy_encapsulated_cmd_response 324 0 BANK6 1
-cmd_task@bit_to_set_870 168 0 BANK2 1
 _UEP0 E98 0 ABS 0
+cmd_task@data_2366 16C 0 BANK2 1
+cmd_task@data_2367 169 0 BANK2 1
 _UEP1 E99 0 ABS 0
 i1_USBConfigureEndpoint 1B6D 0 CODE 0
 _LATA 10C 0 ABS 0
@@ -36,7 +38,7 @@ i1USBCtrlTrfRxService@byteToRead 75 0 COMMON 1
 _WPUA 20C 0 ABS 0
 USBEnableEndpoint@ep 169 0 BANK2 1
 cmd_tx_buffer_task@PT_YIELD_FLAG 16C 0 BANK2 1
-cmd_task@i 2D6 0 BANK5 1
+cmd_task@i 2C9 0 BANK5 1
 _UCON E8E 0 ABS 0
 _UEIR E93 0 ABS 0
 USBStdSetCfgHandler@i 1E3 0 BANK3 1
@@ -55,7 +57,7 @@ _USBStallHandler BD3 0 CODE 0
 i1_USBEnableEndpoint 1B50 0 CODE 0
 _main 11F7 0 CODE 0
 __end_of_sd001 18F7 0 STRCODE 0
-_pDst 2C8 0 BANK5 1
+_pDst 2DC 0 BANK5 1
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 _sd000 190F 0 STRCODE 0
@@ -64,8 +66,8 @@ _sd002 18CF 0 STRCODE 0
 start 12 0 CODE 0
 __end_ofi1_USBCtrlEPService F29 0 CODE 0
 USBCtrlTrfTxService@byteToSend 162 0 BANK2 1
-_USBDeferINDataStagePackets 2BF 0 BANK5 1
-_USBBusIsSuspended 2C6 0 BANK5 1
+_USBDeferINDataStagePackets 2D3 0 BANK5 1
+_USBBusIsSuspended 2DA 0 BANK5 1
 _TRISA 8C 0 ABS 0
 __end_ofi1_USBCtrlEPServiceComplete 152F 0 CODE 0
 _TRISC 8E 0 ABS 0
@@ -77,7 +79,7 @@ _UADDR E96 0 ABS 0
 wtemp0 7E 0 ABS 0
 _USTAT E8F 0 ABS 0
 __end_ofi1_USBCtrlTrfSetupHandler C4F 0 CODE 0
-_usb_rx_pp_size 2CD 0 BANK5 1
+_usb_rx_pp_size 2C0 0 BANK5 1
 USBCtrlTrfRxService@i 164 0 BANK2 1
 __size_ofi1_USBConfigureEndpoint 0 0 ABS 0
 __Hconfig 8009 0 CONFIG 0
@@ -92,6 +94,7 @@ __pstringtext1 1909 0 STRCODE 0
 __Hbigram 0 0 ABS 0
 __Lbigram 0 0 ABS 0
 i1USER_USB_CALLBACK_EVENT_HANDLER@size 5C 0 BANK0 1
+USBStdSetCfgHandler@i_2033 1E2 0 BANK3 1
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
 i1memset@p 76 0 COMMON 1
@@ -102,7 +105,6 @@ __CFG_STVREN$ON 0 0 ABS 0
 __LidataBANK6 0 0 ABS 0
 _cmd_rx_buf_get_task 0 0 CODE 0
 __pidataBANK6 0 0 CODE 0
-i1USBStdSetCfgHandler@i_2326 7C 0 COMMON 1
 i1USBStdFeatureReqHandler@p EB 0 BANK1 1
 __Hstringtext7 0 0 ABS 0
 __Lstringtext7 0 0 ABS 0
@@ -119,7 +121,6 @@ __end_of_USBTransferOnePacket 1CE8 0 CODE 0
 _INTERRUPT_InterruptManager 4 0 CODE 0
 i1USBCtrlTrfInHandler@lastDTS 75 0 COMMON 1
 __end_of_cmd_tx_buffer_task 0 0 CODE 0
-USBStdSetCfgHandler@i_2326 1E2 0 BANK3 1
 _outPipes 2A0 0 BANK5 1
 __Hcommon 0 0 ABS 0
 __Lcommon 0 0 ABS 0
@@ -129,6 +130,7 @@ __Heeprom_data 0 0 EEDATA 3
 __Leeprom_data 0 0 EEDATA 3
 _UEP0bits E98 0 ABS 0
 __size_of_USBConfigureEndpoint 0 0 ABS 0
+cmd_task@bit_to_set_2364 168 0 BANK2 1
 _PIR2bits 12 0 ABS 0
 ___int_sp 0 0 STACK 2
 __CFG_CLKOUTEN$OFF 0 0 ABS 0
@@ -152,7 +154,7 @@ __Hsfr0 0 0 ABS 0
 __Lsfr0 0 0 ABS 0
 __Hsfr1 0 0 ABS 0
 __Lsfr1 0 0 ABS 0
-_USBDeferOUTDataStagePackets 2BE 0 BANK5 1
+_USBDeferOUTDataStagePackets 2D2 0 BANK5 1
 __Hsfr2 0 0 ABS 0
 __Lsfr2 0 0 ABS 0
 __Hsfr3 0 0 ABS 0
@@ -160,7 +162,7 @@ __Lsfr3 0 0 ABS 0
 __Hsfr4 0 0 ABS 0
 __Lsfr4 0 0 ABS 0
 __Hsfr5 0 0 ABS 0
-_usb_rx_pp_get_ptr 2CB 0 BANK5 1
+_usb_rx_pp_get_ptr 2BE 0 BANK5 1
 __Lsfr5 0 0 ABS 0
 __Hsfr6 0 0 ABS 0
 __Lsfr6 0 0 ABS 0
@@ -174,7 +176,7 @@ __Lsfr9 0 0 ABS 0
 i1_CDCInitEP 1B3A 0 CODE 0
 USBEnableEndpoint@options 164 0 BANK2 1
 __size_of_gpio_init 0 0 ABS 0
-USBDeviceInit@i_1661 162 0 BANK2 1
+USBDeviceInit@i_1358 162 0 BANK2 1
 _USBCtrlTrfSetupHandler 837 0 CODE 0
 __size_of_cmd_rx_buf_get_task 0 0 ABS 0
 USBTransferOnePacket@data 161 0 BANK2 1
@@ -188,7 +190,7 @@ USBDeviceTasks@i 1EB 0 BANK3 1
 __end_of_CDCInitEP 1BB4 0 CODE 0
 _USBCtrlEPService B80 0 CODE 0
 __end_of_memset 1E5E 0 CODE 0
-cmd_task@num_bits 2DB 0 BANK5 1
+cmd_task@num_bits 2CE 0 BANK5 1
 USBDeviceInit@p 160 0 BANK2 1
 _inlined$_cmd_tx_buffer_task 1 0 ABS 0
 __size_of_USBCtrlEPService 0 0 ABS 0
@@ -224,7 +226,7 @@ __end_of_USBStdFeatureReqHandler 9D0 0 CODE 0
 end_of_initialization 63 0 CODE 0
 cmd_task@last_phase_overlay 164 0 BANK2 1
 __size_ofi1_USBIncrement1msInternalTimers 0 0 ABS 0
-cmd_task@mask 2D2 0 BANK5 1
+cmd_task@mask 2C5 0 BANK5 1
 psplit$0 1D0065 0 ABS 0
 _cdc_trf_state 2DE 0 BANK5 1
 cmd_task@tmp 16A 0 BANK2 1
@@ -281,11 +283,11 @@ __Lsfr19 0 0 ABS 0
 __size_ofi1_USBStdFeatureReqHandler 0 0 ABS 0
 __Hsfr29 0 0 ABS 0
 __Lsfr29 0 0 ABS 0
-cmd_task@actual_data 2D4 0 BANK5 1
+cmd_task@actual_data 2C7 0 BANK5 1
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
 i1_USBCtrlTrfRxService 1E91 0 CODE 0
-cmd_task@do1p0 2D9 0 BANK5 1
+cmd_task@do1p0 2CC 0 BANK5 1
 __end_of_cmd_task 0 0 CODE 0
 _gpio_init 0 0 CODE 0
 __end_ofi1_USBWakeFromSuspend 1000 0 CODE 0
@@ -301,7 +303,7 @@ i1_USBStdGetStatusHandler 1A9B 0 CODE 0
 __Lbank0 0 0 ABS 0
 __Hbank1 0 0 ABS 0
 __Lbank1 0 0 ABS 0
-cmd_task@data 2D0 0 BANK5 1
+cmd_task@data 2C3 0 BANK5 1
 _sie_configs 3A0 0 BANK7 1
 __Hbank2 0 0 ABS 0
 __Lbank2 0 0 ABS 0
@@ -363,7 +365,7 @@ USER_USB_CALLBACK_EVENT_HANDLER@size 16E 0 BANK2 1
 cmd_task@gpio_dir 2EC 0 BANK5 1
 __end_of_USBCtrlEPServiceComplete 16D1 0 CODE 0
 _USBCtrlEPAllowDataStage 16D1 0 CODE 0
-cmd_task@status 2CF 0 BANK5 1
+cmd_task@status 2C2 0 BANK5 1
 __HdataBANK4 0 0 ABS 0
 __LdataBANK4 0 0 ABS 0
 __end_of_cmd_rx_buf_put_task 0 0 CODE 0
@@ -373,12 +375,13 @@ __end_of__initialization 63 0 CODE 0
 i1USBStdFeatureReqHandler@pUEP E8 0 BANK1 1
 memset@c 162 0 BANK2 1
 _USBCtrlTrfInHandler 1732 0 CODE 0
-_USBTicksSinceSuspendEnd 2BD 0 BANK5 1
+_USBTicksSinceSuspendEnd 2D1 0 BANK5 1
 __end_of_USBStdSetCfgHandler 1E47 0 CODE 0
 USER_USB_CALLBACK_EVENT_HANDLER@pdata 16C 0 BANK2 1
 cmd_task@do0p1 E5 0 BANK1 1
 USER_USB_CALLBACK_EVENT_HANDLER@event 16A 0 BANK2 1
 __end_of_USBStdGetStatusHandler 1B3A 0 CODE 0
+cmd_task@last_phase_overlay_2365 165 0 BANK2 1
 __end_ofi1_USBStallHandler FD7 0 CODE 0
 _usb_rx_buf_array 330 0 BANK6 1
 i1_USBStdSetCfgHandler 1D62 0 CODE 0
@@ -391,9 +394,8 @@ __pdataBANK5 2E9 0 BANK5 1
 __end_of_USBWakeFromSuspend C1A 0 CODE 0
 memset@p 166 0 BANK2 1
 _usb_rx_buf 26E 0 BANK4 1
-cmd_task@last_phase_overlay_871 165 0 BANK2 1
 __size_of_cmd_task 0 0 ABS 0
-cmd_task@do1p1 2D8 0 BANK5 1
+cmd_task@do1p1 2CB 0 BANK5 1
 __Hidloc 0 0 IDLOC 0
 _ep_data_in 2B6 0 BANK5 1
 __Lidloc 0 0 IDLOC 0
@@ -409,7 +411,6 @@ __Lmaintext_split_3 0 0 ABS 0
 __end_of_device_dsc 1909 0 STRCODE 0
 __Hspace_0 8009 0 ABS 0
 __Lspace_0 0 0 ABS 0
-cmd_task@last_phase_overlay_874 16B 0 BANK2 1
 __CFG_IESO$ON 0 0 ABS 0
 __HdataBANK6 0 0 ABS 0
 __LdataBANK6 0 0 ABS 0
@@ -419,10 +420,11 @@ USBTransferOnePacket@handle 168 0 BANK2 1
 _USB_CD_Ptr 1913 0 STRCODE 0
 __Hspace_1 3E0 0 ABS 0
 __Lspace_1 0 0 ABS 0
+cmd_task@last_phase_overlay_2368 16B 0 BANK2 1
 _USBCheckStdRequest 86A 0 CODE 0
 _inPipes E0 0 BANK1 1
 _USB_SD_Ptr 1909 0 STRCODE 0
-cmd_task@op0 2DC 0 BANK5 1
+cmd_task@op0 2CF 0 BANK5 1
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
 __Hcinit 67 0 CODE 0
@@ -444,10 +446,10 @@ _CtrlTrfData 60 0 ABS 1
 __HcstackBANK2 0 0 ABS 0
 __LcstackBANK2 0 0 ABS 0
 _USBStdGetDscHandler 1CE8 0 CODE 0
-cmd_task@cmd 2DD 0 BANK5 1
+cmd_task@cmd 2D0 0 BANK5 1
 cmd_task@op1 166 0 BANK2 1
 _USER_USB_CALLBACK_EVENT_HANDLER A75 0 CODE 0
-_shortPacketStatus 2C9 0 BANK5 1
+_shortPacketStatus 2DD 0 BANK5 1
 __pcstackBANK2 160 0 BANK2 1
 i1_USBCtrlEPAllowStatusStage E82 0 CODE 0
 __end_of_USBCtrlTrfRxService 2000 0 CODE 0
@@ -457,7 +459,7 @@ __Lstringtext4 0 0 ABS 0
 __size_ofi1_USBCheckCDCRequest 0 0 ABS 0
 __size_of_cmd_tx_buffer_task 0 0 ABS 0
 __pstringtext4 18CF 0 STRCODE 0
-cmd_task@expected_data 2D3 0 BANK5 1
+cmd_task@expected_data 2C6 0 BANK5 1
 __size_ofi1_USBCtrlTrfSetupHandler 0 0 ABS 0
 i1_USBCtrlEPServiceComplete 14AD 0 CODE 0
 __size_of_USBCtrlEPAllowStatusStage 0 0 ABS 0
@@ -493,7 +495,7 @@ __Lbank12 0 0 ABS 0
 __end_of_SYSTEM_Initialize 19C9 0 CODE 0
 pnum$maintext_split_1 65 0 ABS 0
 pnum$maintext_split_2 66 0 ABS 0
-_USBStatusStageEnabledFlag1 2C1 0 BANK5 1
+_USBStatusStageEnabledFlag1 2D5 0 BANK5 1
 pnum$maintext_split_3 67 0 ABS 0
 __Hbank22 0 0 BANK22 1
 __Lbank22 0 0 BANK22 1
@@ -524,7 +526,7 @@ __ptext11 BC1 0 CODE 0
 __ptext30 1732 0 CODE 0
 __Hbank16 0 0 BANK16 1
 __Lbank16 0 0 BANK16 1
-_USBStatusStageEnabledFlag2 2C0 0 BANK5 1
+_USBStatusStageEnabledFlag2 2D4 0 BANK5 1
 __ptext21 8B1 0 CODE 0
 __ptext40 FE9 0 CODE 0
 __Hbank26 0 0 BANK26 1
@@ -535,7 +537,7 @@ __ptext31 179D 0 CODE 0
 __ptext50 1D62 0 CODE 0
 __Hbank17 0 0 BANK17 1
 __Lbank17 0 0 BANK17 1
-_bytes_recieved 2CA 0 BANK5 1
+_bytes_recieved 2BD 0 BANK5 1
 __ptext22 A75 0 CODE 0
 __ptext41 FD7 0 CODE 0
 __ptext60 1E5E 0 CODE 0
@@ -589,7 +591,7 @@ __ptext55 E60 0 CODE 0
 __Hpa_nodes0 0 0 ABS 0
 __pbssBANK3 1EC 0 BANK3 1
 __Lpa_nodes0 0 0 ABS 0
-cmd_task@loop_is_active 2D5 0 BANK5 1
+cmd_task@loop_is_active 2C8 0 BANK5 1
 __ptext27 1F21 0 CODE 0
 __size_ofi1_USBStdGetStatusHandler 0 0 ABS 0
 __ptext46 C1A 0 CODE 0
@@ -620,17 +622,17 @@ _ep_data_out 2B3 0 BANK5 1
 __ptext59 1B6D 0 CODE 0
 __pbssBANK4 268 0 BANK4 1
 __end_ofi1_CDCInitEP 1B50 0 CODE 0
-_controlTransferState 268 0 BANK4 1
+_controlTransferState 26C 0 BANK4 1
 __size_of_USBCtrlEPServiceComplete 0 0 ABS 0
 __Hend_init 14 0 CODE 0
 __Lend_init 12 0 CODE 0
-cmd_task@sie 26A 0 BANK4 1
+cmd_task@sie 269 0 BANK4 1
 __end_of_USBConfigureEndpoint 1C01 0 CODE 0
 _USBActiveConfiguration 2E8 0 BANK5 1
 __pswtext1 800 0 CONST 0
 _USBCtrlTrfRxService 1F59 0 CODE 0
 cmd_rx_buf_put_task@pt 165 0 BANK2 1
-cmd_task@num_bytes 2DA 0 BANK5 1
+cmd_task@num_bytes 2CD 0 BANK5 1
 cmd_task@compare_data_matches 2EB 0 BANK5 1
 _pBDTEntryIn 2A7 0 BANK5 1
 __end_ofi1_USER_USB_CALLBACK_EVENT_HANDLER E82 0 CODE 0
@@ -644,9 +646,9 @@ i1_USBDeviceTasks DBA 0 CODE 0
 __pswtext3 1800 0 CONST 0
 __end_ofi1_USBStdFeatureReqHandler DBA 0 CODE 0
 __end_of_gpio_init 0 0 CODE 0
-_USBDeferStatusStagePacket 2C2 0 BANK5 1
+_USBDeferStatusStagePacket 2D6 0 BANK5 1
 _OSCILLATOR_Initialize 19C9 0 CODE 0
-_USBStatusStageTimeoutCounter 2C3 0 BANK5 1
+_USBStatusStageTimeoutCounter 2D7 0 BANK5 1
 __pswtext4 81A 0 CONST 0
 __end_of_USBDeviceInit B15 0 CODE 0
 __HbssBANK6 0 0 ABS 0
@@ -694,20 +696,18 @@ intlevel3 0 0 CODE 0
 _USBCtrlTrfTxService 179D 0 CODE 0
 USBDeviceInit@i 163 0 BANK2 1
 intlevel4 0 0 CODE 0
-cmd_task@data_872 16C 0 BANK2 1
-cmd_task@data_873 169 0 BANK2 1
 i1USBCtrlTrfRxService@i 74 0 COMMON 1
 __end_ofi1_memset 1DDE 0 CODE 0
 __CFG_LPBOR$OFF 0 0 ABS 0
 USBStdFeatureReqHandler@pUEP 1E2 0 BANK3 1
 _usb_rx_ptr E7 0 BANK1 1
 intlevel5 0 0 CODE 0
-_usb_tx_ptr 26B 0 BANK4 1
+_usb_tx_ptr 26A 0 BANK4 1
 __size_of_WDT_Initialize 0 0 ABS 0
 _inlined$_cmd_rx_buf_get_task 1 0 ABS 0
 __end_ofi1_USBCheckCDCRequest 1A4F 0 CODE 0
 cmd_rx_buf_put_task@PT_YIELD_FLAG 164 0 BANK2 1
-cmd_task@status_sent 2CE 0 BANK5 1
+cmd_task@status_sent 2C1 0 BANK5 1
 __size_of_USBSuspend 0 0 ABS 0
 __size_ofi1_USBCtrlTrfOutHandler 0 0 ABS 0
 USBConfigureEndpoint@handle 163 0 BANK2 1
@@ -726,7 +726,7 @@ __end_of_sd000 1913 0 STRCODE 0
 __end_ofi1_USBCtrlTrfTxService 1644 0 CODE 0
 cmd_task@bit_to_set 167 0 BANK2 1
 __end_ofi1_USBCheckStdRequest C9C 0 CODE 0
-_BothEP0OutUOWNsSet 2C4 0 BANK5 1
+_BothEP0OutUOWNsSet 2D8 0 BANK5 1
 USBCtrlTrfRxService@byteToRead 165 0 BANK2 1
 _USBTransferOnePacket 1C71 0 CODE 0
 __size_of_CDCInitEP 0 0 ABS 0
@@ -737,12 +737,12 @@ __Lmaintext 0 0 ABS 0
 __pmaintext 11F7 0 CODE 0
 __CFG_PLLEN$ENABLED 0 0 ABS 0
 __CFG_MCLRE$ON 0 0 ABS 0
-cmd_task@byte_to_send 2D1 0 BANK5 1
+cmd_task@byte_to_send 2C4 0 BANK5 1
 __size_of_OSCILLATOR_Initialize 0 0 ABS 0
 _OPTION_REGbits 95 0 ABS 0
 __end_of_USBCtrlEPService BC1 0 CODE 0
 __size_of_USBDeviceAttach 0 0 ABS 0
-cmd_task@input_mask 269 0 BANK4 1
+cmd_task@input_mask 268 0 BANK4 1
 __CFG_FOSC$INTOSC 0 0 ABS 0
 __end_ofi1_USBCtrlTrfInHandler 15EC 0 CODE 0
 __end_of_USBStallHandler BF3 0 CODE 0
@@ -767,14 +767,14 @@ __CFG_CP$OFF 0 0 ABS 0
 __pcstackBANK4 260 0 BANK4 1
 __CFG_FCMEN$ON 0 0 ABS 0
 __pidataBANK4 0 0 CODE 0
-_usb_rx_pp_put_ptr 2CC 0 BANK5 1
+_usb_rx_pp_put_ptr 2BF 0 BANK5 1
 __Hstringtext6 0 0 ABS 0
 __Lstringtext6 0 0 ABS 0
 _USBDeviceState 26D 0 BANK4 1
 __pstringtext6 18F7 0 STRCODE 0
 __size_of_USBTransferOnePacket 0 0 ABS 0
 __size_ofi1_USBCtrlEPServiceComplete 0 0 ABS 0
-cmd_task@inout_cfg 2D7 0 BANK5 1
+cmd_task@inout_cfg 2CA 0 BANK5 1
 i1_USBIncrement1msInternalTimers FA5 0 CODE 0
 cmd_task@PT_YIELD_FLAG 163 0 BANK2 1
 i1memset@c 72 0 COMMON 1
@@ -820,72 +820,72 @@ swtext1 1000 1067 CONST 1000 0
 clrtext FF0 FFB CODE FF0 0
 %locals
 dist/default/production\firmware.production.obj
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 2781 14 0 CODE 0
 2784 14 0 CODE 0
 3042 14 0 CODE 0
 main.c
 25 15 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3044 16 0 CODE 0
 main.c
 25 17 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3046 18 0 CODE 0
 3050 19 0 CODE 0
 main.c
 534 1A 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3052 1B 0 CODE 0
 3054 1C 0 CODE 0
 main.c
 128 1D 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3056 1E 0 CODE 0
 main.c
 101 1F 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3058 20 0 CODE 0
 main.c
 24 21 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3060 22 0 CODE 0
 3064 23 0 CODE 0
 main.c
 529 24 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3066 25 0 CODE 0
 3068 26 0 CODE 0
 main.c
 529 27 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3070 28 0 CODE 0
 main.c
 529 29 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3072 2A 0 CODE 0
 3074 2B 0 CODE 0
 main.c
 28 2C 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3076 2D 0 CODE 0
 main.c
 28 2E 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3078 2F 0 CODE 0
 main.c
 28 30 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3080 31 0 CODE 0
 main.c
 27 32 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3082 33 0 CODE 0
 3084 34 0 CODE 0
 3086 35 0 CODE 0
 main.c
 27 36 0 CODE 0
-C:\Users\lvale\AppData\Local\Temp\s13ks.
+C:\Users\lvale\AppData\Local\Temp\s1i0.
 3088 37 0 CODE 0
 3105 38 0 CODE 0
 3106 39 0 CODE 0

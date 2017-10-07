@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v1.42\dat\en_msgs.txt -cs \
   -h+dist/default/production\firmware.production.sym \
   --cmf=dist/default/production\firmware.production.cmf -z -Q16F1455 \
-  -oC:\Users\lvale\AppData\Local\Temp\s13ks.2 \
+  -oC:\Users\lvale\AppData\Local\Temp\s1i0.2 \
   -Mdist/default/production/firmware.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=02270h-023efh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -31,7 +31,7 @@ Linker command line:
   -ppowerup=CODE -pcinit=CODE -pfunctab=CODE -ACONFIG=08007h-08008h \
   -pconfig=CONFIG -DCONFIG=2 -AIDLOC=08000h-08003h -pidloc=IDLOC -DIDLOC=2 \
   -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\lvale\AppData\Local\Temp\s13ks.obj \
+  C:\Users\lvale\AppData\Local\Temp\s1i0.obj \
   dist/default/production\firmware.production.obj 
 
 Object code version is 3.11
@@ -41,7 +41,7 @@ Machine type is 16F1455
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\lvale\AppData\Local\Temp\s13ks.obj
+C:\Users\lvale\AppData\Local\Temp\s1i0.obj
                 end_init                             12       12        2        8       0
                 reset_vec                             0        0        2        0       0
                 config                             8007     8007        2    1000E       0
@@ -454,7 +454,7 @@ USBCtrlTrfRxService@byteToRead              cstackBANK2      000165
 USBCtrlTrfRxService@i                       cstackBANK2      000164
 USBCtrlTrfTxService@byteToSend              cstackBANK2      000162
 USBDeviceInit@i                             cstackBANK2      000163
-USBDeviceInit@i_1661                        cstackBANK2      000162
+USBDeviceInit@i_1358                        cstackBANK2      000162
 USBDeviceInit@p                             cstackBANK2      000160
 USBDeviceTasks@i                            cstackBANK3      0001EB
 USBEnableEndpoint@ep                        cstackBANK2      000169
@@ -465,7 +465,7 @@ USBStdFeatureReqHandler@p                   cstackBANK3      0001E5
 USBStdFeatureReqHandler@pUEP                cstackBANK3      0001E2
 USBStdGetStatusHandler@p                    cstackBANK2      000160
 USBStdSetCfgHandler@i                       cstackBANK3      0001E3
-USBStdSetCfgHandler@i_2326                  cstackBANK3      0001E2
+USBStdSetCfgHandler@i_2033                  cstackBANK3      0001E2
 USBStdSetCfgHandler@p                       cstackBANK3      0001E0
 USBTransferOnePacket@data                   cstackBANK2      000161
 USBTransferOnePacket@dir                    cstackBANK2      000160
@@ -480,7 +480,7 @@ _ANSELA                                     (abs)            00018C
 _ANSELC                                     (abs)            00018E
 _APFCON                                     (abs)            00011D
 _BDT                                        (abs)            000020
-_BothEP0OutUOWNsSet                         bssBANK5         0002C4
+_BothEP0OutUOWNsSet                         bssBANK5         0002D8
 _CDCInitEP                                  text24           001B9D
 _CtrlTrfData                                (abs)            000060
 _INTCONbits                                 (abs)            00000B
@@ -496,7 +496,7 @@ _PIN_MANAGER_Initialize                     text32           0019D3
 _PIR2bits                                   (abs)            000012
 _PLLRDY                                     (abs)            0004D6
 _PORTC                                      (abs)            00000E
-_RemoteWakeup                               bssBANK5         0002C7
+_RemoteWakeup                               bssBANK5         0002DB
 _SYSTEM_Initialize                          text32           0019C0
 _SetupPkt                                   (abs)            000050
 _TRISA                                      (abs)            00008C
@@ -517,7 +517,7 @@ _UIRbits                                    (abs)            000E90
 _USB1msTickCount                            bssBANK6         000320
 _USBActiveConfiguration                     bssBANK5         0002E8
 _USBAlternateInterface                      bssBANK5         0002E6
-_USBBusIsSuspended                          bssBANK5         0002C6
+_USBBusIsSuspended                          bssBANK5         0002DA
 _USBCheckCDCRequest                         text23           001A4F
 _USBCheckStdRequest                         text13           00086A
 _USBConfigureEndpoint                       text24           001BD1
@@ -530,9 +530,9 @@ _USBCtrlTrfOutHandler                       text27           001F21
 _USBCtrlTrfRxService                        text27           001F59
 _USBCtrlTrfSetupHandler                     text13           000837
 _USBCtrlTrfTxService                        text14           00179D
-_USBDeferINDataStagePackets                 bssBANK5         0002BF
-_USBDeferOUTDataStagePackets                bssBANK5         0002BE
-_USBDeferStatusStagePacket                  bssBANK5         0002C2
+_USBDeferINDataStagePackets                 bssBANK5         0002D3
+_USBDeferOUTDataStagePackets                bssBANK5         0002D2
+_USBDeferStatusStagePacket                  bssBANK5         0002D6
 _USBDeviceAttach                            text32           0019EB
 _USBDeviceInit                              text13           000A94
 _USBDeviceState                             bssBANK4         00026D
@@ -540,15 +540,15 @@ _USBDeviceTasks                             text13           0009D0
 _USBEnableEndpoint                          text24           001BB4
 _USBIncrement1msInternalTimers              text13           000BC1
 _USBStallHandler                            text13           000BD3
-_USBStatusStageEnabledFlag1                 bssBANK5         0002C1
-_USBStatusStageEnabledFlag2                 bssBANK5         0002C0
-_USBStatusStageTimeoutCounter               bssBANK5         0002C3
+_USBStatusStageEnabledFlag1                 bssBANK5         0002D5
+_USBStatusStageEnabledFlag2                 bssBANK5         0002D4
+_USBStatusStageTimeoutCounter               bssBANK5         0002D7
 _USBStdFeatureReqHandler                    text13           0008B1
 _USBStdGetDscHandler                        text20           001CE8
 _USBStdGetStatusHandler                     text19           001AE9
 _USBStdSetCfgHandler                        text17           001DDE
 _USBSuspend                                 text13           000BF3
-_USBTicksSinceSuspendEnd                    bssBANK5         0002BD
+_USBTicksSinceSuspendEnd                    bssBANK5         0002D1
 _USBTransferOnePacket                       text3            001C71
 _USBWakeFromSuspend                         text13           000C03
 _USB_CD_Ptr                                 stringtext2      001913
@@ -1052,18 +1052,18 @@ __size_ofi1_USBSuspend                      (abs)            000000
 __size_ofi1_USBWakeFromSuspend              (abs)            000000
 __size_ofi1_USER_USB_CALLBACK_EVENT_HANDLER (abs)            000000
 __size_ofi1_memset                          (abs)            000000
-_bytes_recieved                             bssBANK5         0002CA
+_bytes_recieved                             bssBANK5         0002BD
 _cdc_trf_state                              bssBANK5         0002DE
 _cmd_rx_buf_get_task                        text6            000000
 _cmd_rx_buf_put_task                        text5            000000
 _cmd_task                                   text4            000000
 _cmd_tx_buffer_task                         text2            000000
 _configDescriptor1                          stringtext3      00188C
-_controlTransferState                       bssBANK4         000268
+_controlTransferState                       bssBANK4         00026C
 _current_rx_handle                          dataBANK5        0002E9
 _device_dsc                                 stringtext6      0018F7
 _dummy_encapsulated_cmd_response            bssBANK6         000324
-_endpoint_number                            bssBANK5         0002C5
+_endpoint_number                            bssBANK5         0002D9
 _ep_data_in                                 bssBANK5         0002B6
 _ep_data_out                                bssBANK5         0002B3
 _gpio_init                                  text1            000000
@@ -1081,63 +1081,63 @@ _pBDTEntryEP0OutCurrent                     bssBANK3         0001EE
 _pBDTEntryEP0OutNext                        bssBANK3         0001EC
 _pBDTEntryIn                                bssBANK5         0002A7
 _pBDTEntryOut                               bssBANK5         0002AD
-_pDst                                       bssBANK5         0002C8
+_pDst                                       bssBANK5         0002DC
 _sd000                                      stringtext7      00190F
 _sd001                                      stringtext5      0018E5
 _sd002                                      stringtext4      0018CF
-_shortPacketStatus                          bssBANK5         0002C9
+_shortPacketStatus                          bssBANK5         0002DD
 _sie_configs                                bssBANK7         0003A0
 _usb_rx_buf                                 dataBANK4        00026E
 _usb_rx_buf_0                               (abs)            000120
 _usb_rx_buf_1                               (abs)            000220
 _usb_rx_buf_array                           dataBANK6        000330
-_usb_rx_bytes_avail                         bssBANK4         00026C
-_usb_rx_pp_get_ptr                          bssBANK5         0002CB
+_usb_rx_bytes_avail                         bssBANK4         00026B
+_usb_rx_pp_get_ptr                          bssBANK5         0002BE
 _usb_rx_pp_handle                           dataBANK6        00032C
-_usb_rx_pp_put_ptr                          bssBANK5         0002CC
-_usb_rx_pp_size                             bssBANK5         0002CD
+_usb_rx_pp_put_ptr                          bssBANK5         0002BF
+_usb_rx_pp_size                             bssBANK5         0002C0
 _usb_rx_ptr                                 bssBANK1         0000E7
 _usb_tx_buf_0                               (abs)            0000A0
 _usb_tx_buf_1                               (abs)            0001A0
-_usb_tx_ptr                                 bssBANK4         00026B
+_usb_tx_ptr                                 bssBANK4         00026A
 btemp                                       (abs)            00007E
 clear_ram0                                  clrtext          0007F8
 cmd_rx_buf_get_task@pt                      cstackBANK2      000162
 cmd_rx_buf_put_task@PT_YIELD_FLAG           cstackBANK2      000164
 cmd_rx_buf_put_task@pt                      cstackBANK2      000165
 cmd_task@PT_YIELD_FLAG                      cstackBANK2      000163
-cmd_task@actual_data                        bssBANK5         0002D4
+cmd_task@actual_data                        bssBANK5         0002C7
 cmd_task@bit_to_set                         cstackBANK2      000167
-cmd_task@bit_to_set_870                     cstackBANK2      000168
-cmd_task@byte_to_send                       bssBANK5         0002D1
-cmd_task@cmd                                bssBANK5         0002DD
+cmd_task@bit_to_set_2364                    cstackBANK2      000168
+cmd_task@byte_to_send                       bssBANK5         0002C4
+cmd_task@cmd                                bssBANK5         0002D0
 cmd_task@compare_data_matches               dataBANK5        0002EB
-cmd_task@data                               bssBANK5         0002D0
-cmd_task@data_872                           cstackBANK2      00016C
-cmd_task@data_873                           cstackBANK2      000169
+cmd_task@data                               bssBANK5         0002C3
+cmd_task@data_2366                          cstackBANK2      00016C
+cmd_task@data_2367                          cstackBANK2      000169
 cmd_task@do0p0                              bssBANK1         0000E6
 cmd_task@do0p1                              bssBANK1         0000E5
-cmd_task@do1p0                              bssBANK5         0002D9
-cmd_task@do1p1                              bssBANK5         0002D8
-cmd_task@expected_data                      bssBANK5         0002D3
+cmd_task@do1p0                              bssBANK5         0002CC
+cmd_task@do1p1                              bssBANK5         0002CB
+cmd_task@expected_data                      bssBANK5         0002C6
 cmd_task@gpio_dir                           dataBANK5        0002EC
-cmd_task@i                                  bssBANK5         0002D6
-cmd_task@inout_cfg                          bssBANK5         0002D7
-cmd_task@input_mask                         bssBANK4         000269
+cmd_task@i                                  bssBANK5         0002C9
+cmd_task@inout_cfg                          bssBANK5         0002CA
+cmd_task@input_mask                         bssBANK4         000268
 cmd_task@last_phase_overlay                 cstackBANK2      000164
-cmd_task@last_phase_overlay_871             cstackBANK2      000165
-cmd_task@last_phase_overlay_874             cstackBANK2      00016B
+cmd_task@last_phase_overlay_2365            cstackBANK2      000165
+cmd_task@last_phase_overlay_2368            cstackBANK2      00016B
 cmd_task@loop_count                         bssBANK5         0002BB
-cmd_task@loop_is_active                     bssBANK5         0002D5
-cmd_task@mask                               bssBANK5         0002D2
-cmd_task@num_bits                           bssBANK5         0002DB
-cmd_task@num_bytes                          bssBANK5         0002DA
-cmd_task@op0                                bssBANK5         0002DC
+cmd_task@loop_is_active                     bssBANK5         0002C8
+cmd_task@mask                               bssBANK5         0002C5
+cmd_task@num_bits                           bssBANK5         0002CE
+cmd_task@num_bytes                          bssBANK5         0002CD
+cmd_task@op0                                bssBANK5         0002CF
 cmd_task@op1                                cstackBANK2      000166
 cmd_task@pt                                 cstackBANK2      00016D
-cmd_task@sie                                bssBANK4         00026A
-cmd_task@status                             bssBANK5         0002CF
-cmd_task@status_sent                        bssBANK5         0002CE
+cmd_task@sie                                bssBANK4         000269
+cmd_task@status                             bssBANK5         0002C2
+cmd_task@status_sent                        bssBANK5         0002C1
 cmd_task@tmp                                cstackBANK2      00016A
 cmd_tx_buffer_task@PT_YIELD_FLAG            cstackBANK2      00016C
 cmd_tx_buffer_task@pt                       cstackBANK2      00016D
@@ -1151,7 +1151,7 @@ i1USBCtrlTrfRxService@byteToRead            cstackCOMMON     000075
 i1USBCtrlTrfRxService@i                     cstackCOMMON     000074
 i1USBCtrlTrfTxService@byteToSend            cstackCOMMON     000072
 i1USBDeviceInit@i                           cstackCOMMON     000073
-i1USBDeviceInit@i_1661                      cstackCOMMON     000072
+i1USBDeviceInit@i_1358                      cstackCOMMON     000072
 i1USBDeviceInit@p                           cstackCOMMON     000070
 i1USBDeviceTasks@i                          cstackBANK0h     00005F
 i1USBEnableEndpoint@ep                      cstackCOMMON     000079
@@ -1162,7 +1162,7 @@ i1USBStdFeatureReqHandler@p                 cstackBANK1      0000EB
 i1USBStdFeatureReqHandler@pUEP              cstackBANK1      0000E8
 i1USBStdGetStatusHandler@p                  cstackCOMMON     000070
 i1USBStdSetCfgHandler@i                     cstackCOMMON     00007D
-i1USBStdSetCfgHandler@i_2326                cstackCOMMON     00007C
+i1USBStdSetCfgHandler@i_2033                cstackCOMMON     00007C
 i1USBStdSetCfgHandler@p                     cstackCOMMON     00007A
 i1USER_USB_CALLBACK_EVENT_HANDLER@event     cstackBANK0h     000058
 i1USER_USB_CALLBACK_EVENT_HANDLER@pdata     cstackBANK0h     00005A
@@ -2369,8 +2369,8 @@ Total ram usage:        4 bytes
 		Nothing
  This function is called by:
 		_SYSTEM_Initialize
-		_main
 		_USBDeviceTasks
+		_main
  This function uses a non-reentrant model
 
 
