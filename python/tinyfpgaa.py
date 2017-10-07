@@ -4,6 +4,46 @@ import time
 import re
 import math
 import itertools
+import traceback
+
+class SyncSerial(object):
+    def __init__(self, ser, write_buffer_size = 64, write_flush_timeout = 0.001):
+        self.ser = ser
+        self.pending_write_data = []
+        self.write_buffer_size = write_buffer_size
+
+        ser.flushInput()
+        ser.flushOutput()
+
+
+    def write(self, data):
+        if isinstance(data, (int, long)):
+            self.pending_write_data.append(data)
+        else:
+            self.pending_write_data.extend(data)
+
+        while len(self.pending_write_data) > self.write_buffer_size:
+            write_data = self.pending_write_data[0:63]
+            self.pending_write_data = self.pending_write_data[63:]
+            self.ser.write(array.array('B', write_data).tostring())
+            self.ser.flush()
+        
+
+    def read(self, num_bytes, callback, blocking = False):
+        self.flush()
+        read_data = [x for x in array.array('B', self.ser.read(size = num_bytes)).tolist()]
+        callback(read_data)
+        
+
+    def task(self):
+        return 0
+
+    def flush(self):
+        if len(self.pending_write_data) > 0:
+            self.ser.write(array.array('B', self.pending_write_data).tostring())
+            self.pending_write_data = []
+
+        self.ser.flush()
 
 
 
@@ -14,7 +54,7 @@ class AsyncSerial(object):
     function to process each individual read request data.  Read and write 
     order is strictly maintained in FIFO order.
     """
-    def __init__(self, ser, write_buffer_size = 64, write_flush_timeout = 0.001):
+    def __init__(self, ser, write_buffer_size = 63, write_flush_timeout = 0.001):
         self.ser = ser
         self.write_buffer_size = write_buffer_size
         self.write_flush_timeout = write_flush_timeout
@@ -48,20 +88,33 @@ class AsyncSerial(object):
             self.task()
 
 
-    def read(self, num_bytes, callback):
+    def read(self, num_bytes, callback, blocking = False):
         """
         Issue an asynchronous read.  This read callback is inserted into the 
         read queue in the order it was issued.  Once all previous read requests
         have been satisfied and enough bytes are ready for this request the
         callback will be called with the read data.
         """
-        print "    read(%d, %s)" % (num_bytes, str(callback))
-        self.pending_reads.append((num_bytes, callback))
-        #read_data = [x for x in array.array('B', self.ser.read(size = num_bytes)).tolist()]
-        #callback(read_data)
-        #print str(read_data)
-        #print "got it"
+        if blocking:
+            self.flush()
+            read_data = [x for x in array.array('B', self.ser.read(size = num_bytes)).tolist()]
+            callback(read_data)
 
+        else:
+            self.pending_reads.append((num_bytes, callback))
+
+        #self.pending_reads.append((num_bytes, callback))
+        #if blocking:
+        #    self.flush()
+        #    while self.task() > 0:
+        #        time.sleep(0.1)
+        #    read_data = [x for x in array.array('B', self.ser.read(size = num_bytes)).tolist()]
+        #    callback(read_data)
+
+        #else:
+        #    self.pending_reads.append((num_bytes, callback))
+
+        
 
     def task(self):
         """
@@ -70,12 +123,12 @@ class AsyncSerial(object):
         while len(self.pending_reads) > 0:
             num_bytes = self.pending_reads[0][0]
             callback = self.pending_reads[0][1]
-            ser_in_waiting = ser.inWaiting()
+            ser_in_waiting = self.ser.inWaiting()
             #print "ser.inWaiting(): " + str(ser_in_waiting)
             if ser_in_waiting >= num_bytes:
                 #print "reading pending read data: " + str(num_bytes)
                 read_data = [x for x in array.array('B', self.ser.read(size = num_bytes)).tolist()]
-                print "    read callback: %d, %s = %s" % (num_bytes, str(callback), str(read_data))
+                #print "    read callback: %d, %s = %s" % (num_bytes, str(callback), str(read_data))
                 callback(read_data)
                 self.pending_reads.pop(0)
             else:
@@ -83,22 +136,36 @@ class AsyncSerial(object):
 
         while len(self.pending_write_data) >= self.write_buffer_size:
             #print "writing pending write data: " + str(len(self.pending_write_data))
-            write_data = self.pending_write_data[0:64]
-            self.pending_write_data = self.pending_write_data[64:]
-            self.ser.write( array.array('B', write_data).tostring())
+            write_data = self.pending_write_data[0:63]
+            self.pending_write_data = self.pending_write_data[63:]
+            self.ser.write(array.array('B', write_data).tostring())
+            self.ser.flush()
 
         flush_timeout_expired = (time.time() - self.last_write_time) >= self.write_flush_timeout
         more_data_to_write = len(self.pending_write_data) > 0
 
         if flush_timeout_expired and more_data_to_write:
-            self.ser.write(self.pending_write_data)
-            self.pending_write_data = []
+            self.flush()
 
         return len(self.pending_reads) + len(self.pending_write_data)
 
-    def flush(self) :
-        self.ser.write(self.pending_write_data)
-        self.pending_write_data = []
+    def flush(self):
+        if len(self.pending_write_data) > 0:
+            self.ser.write(array.array('B', self.pending_write_data).tostring())
+            self.ser.flush()
+            self.pending_write_data = []
+
+        #while len(self.pending_write_data) >= self.write_buffer_size:
+        #    #print "writing pending write data: " + str(len(self.pending_write_data))
+        #    write_data = self.pending_write_data[0:63]
+        #    self.pending_write_data = self.pending_write_data[63:]
+        #    self.ser.write(array.array('B', write_data).tostring())
+        #    self.ser.flush()
+        #
+        #if len(self.pending_write_data) > 0:
+        #    self.ser.write(self.pending_write_data)
+        #    self.pending_write_data = []
+        #    self.ser.flush()
 
 
 
@@ -157,7 +224,7 @@ class TinyFpgaProgrammer(object):
             self.ser.write(byte)
 
 
-    def send(self, num_read_bytes = None, read_callback = None):
+    def send(self, num_read_bytes = None, read_callback = None, blocking = False):
         """
         Asynchronously sends any pending commands.  If you sent a series
         of GPIO commands expecting read data you must also send a read_callback
@@ -171,7 +238,8 @@ class TinyFpgaProgrammer(object):
             num_bytes_to_read = num_read_bytes
 
         if num_bytes_to_read > 0:
-            self.ser.read(num_bytes = num_bytes_to_read, callback = read_callback)
+            self.ser.flush()
+            self.ser.read(num_bytes = num_bytes_to_read, callback = read_callback, blocking = blocking)
             self.pending_input = 0
 
 
@@ -215,9 +283,10 @@ class TinyFpgaProgrammer(object):
     def clear_status(self):
         self.ser.write(0x20)
 
-    def get_status(self, status_callback):
+    def get_status(self, status_callback, blocking = True):
         self.ser.write(0x21)
-        self.ser.read(1, status_callback)
+        self.ser.read(1, status_callback, blocking = blocking)
+        
             
 
 
@@ -254,7 +323,7 @@ class TinyFpgaProgrammer(object):
         return [num_bits, num_bytes]
 
 
-    def shift(self, sie_id, num_bits, data = 0, mask = 0, read_callback = None):
+    def shift(self, sie_id, num_bits, data = 0, mask = 0, read_callback = None, blocking = False):
         """
         Issue an accelerated shift operation.  For shifting serial data in
         and out of the TinyFPGA Programmer, this is the prefered method.  It
@@ -293,13 +362,13 @@ class TinyFpgaProgrammer(object):
             self.ser.write(shift_cmd_bytes)
 
             if do_input:
-                self.send(num_read_bytes = num_bytes, read_callback = read_callback)
+                self.send(num_read_bytes = num_bytes, read_callback = read_callback, blocking = blocking)
 
             elif do_output and do_mask:
                 if read_callback is None:
                     self.send()
                 else:
-                    self.send(num_read_bytes = 1, read_callback = read_callback)
+                    self.send(num_read_bytes = 1, read_callback = read_callback, blocking = blocking)
 
 
     def configure_sie(self, 
@@ -489,8 +558,8 @@ class JtagTinyFpgaProgrammer(TinyFpgaProgrammer):
         self.shift(sie_id = 2, num_bits = num_bits, data = data)
 
 
-    def shift_tdo(self, num_bits, read_callback):
-        self.shift(sie_id = 3, num_bits = num_bits, read_callback = read_callback)
+    def shift_tdo(self, num_bits, read_callback, blocking = False):
+        self.shift(sie_id = 3, num_bits = num_bits, read_callback = read_callback, blocking = blocking)
 
 
     def shift_tdo_poll(self, num_bits, data, mask, status_callback):
@@ -949,13 +1018,95 @@ class JtagSvfParser(object):
 
 
 
+class JedecFile(object):
+    def __init__(self, jed_file):
+        self.cfg_data = None
+        self.ebr_data = None
+        self.ufm_data = None
+        self.feature_row = None
+        self.feature_bits = None
+        self.last_note = ""
+        self._parse(jed_file)
+
+    def numRows(self):
+        def toInt(list_or_none):
+            if list_or_none is None:
+                return 0
+            else:
+                return len(list_or_none)
+
+        return toInt(self.cfg_data) + toInt(self.ebr_data) + toInt(self.ufm_data)
+
+    def _parse(self, jed):
+        def line_to_int(line):
+            try:
+                return int(line[::-1], 2)
+            except:
+                traceback.print_exc()
+                return None
+
+        def line_is_end_of_field(line):
+            return "*" in line
+
+        def line_is_end_of_file(line):
+            return r"\x03" in line
+
+        def process_field(field):
+            if field[0][0:4] == "NOTE":
+                self.last_note = field[0][5:-1]
+
+            elif field[0][0] == "L":
+                data = []
+
+                for fuse_string in field[1:-1]:
+                    fuse_data = line_to_int(fuse_string)
+
+                    if fuse_data is not None:
+                        data.append(fuse_data)
+
+                if "EBR_INIT DATA" in self.last_note:
+                    self.ebr_data = data
+
+                elif "END CONFIG DATA" in self.last_note:
+                    pass # ignore this data
+
+                elif "TAG DATA" in self.last_note:
+                    self.ufm_data = data
+
+                else:
+                    self.cfg_data = data
+
+            elif field[0][0] == "E":
+                self.feature_row = line_to_int(field[0][1:])
+                self.feature_bits = line_to_int(field[1][:-1])
 
 
 
-class JtagJedParser(object):
-    def __init__(self, jtag, jed_file):
+        lines = iter(jed)
+
+        try:
+            line = lines.next().strip()
+
+            while True:
+                current_field = [line]
+
+                while not line_is_end_of_field(line):
+                    line = lines.next().strip()
+                    current_field.append(line)
+
+                process_field(current_field)
+
+                line = lines.next().strip()
+
+        except StopIteration:
+            pass 
+        
+        
+        
+
+class JtagCustomProgrammer(object):
+    def __init__(self, jtag):
         self.jtag = jtag
-        self.jed_file = jed_file
         self.enddr = "DRPAUSE"
         self.endir = "IRPAUSE"
         self.config_data = None
@@ -966,9 +1117,9 @@ class JtagJedParser(object):
          self.jtag.current_state = self.jtag.sm.states[self.jtag.current_state][1]
          self.jtag.goto_state("IRPAUSE")
 
-    def read_dr(self, num_bits, read_callback):
+    def read_dr(self, num_bits, read_callback, blocking = False):
          self.jtag.goto_state("DRSHIFT")                
-         self.jtag.pins.shift_tdo(num_bits, read_callback)
+         self.jtag.pins.shift_tdo(num_bits, read_callback, blocking = blocking)
          self.jtag.current_state = self.jtag.sm.states[self.jtag.current_state][1]
          self.jtag.goto_state("DRPAUSE")
 
@@ -999,53 +1150,43 @@ class JtagJedParser(object):
         self.jtag.pins.end_loop(None)
 
 
-    def get_config_data(self):
-        if self.config_data is None:
-            self.config_data = self.load(self.jed_file)
 
-        return self.config_data
+    def program(self, jed_file, progress = None):
+        num_rows = jed_file.numRows()
+        prog_update_freq = 20
+        prog_update_cnt = 0
 
-    def load(self, jed_file):
-        def line_to_int(line):
-            try:
-                return int(line[::-1], 2)
-            except:
-                return None
+        def default_progress(v):
+            pass
 
-        data = []
-        in_config_data = False
+        if progress is None:
+            progress = default_progress
 
-        for line in jed_file:
-            if "NOTE END CONFIG DATA" in line:
-                break
-            
-            if in_config_data:
-                line_data = line_to_int(line)
-
-                if line_data is not None:
-                    data.append(line_data)
-
-            else:
-                if "L000000" in line:
-                    in_config_data = True
-                
-
-
-        return data
-
-    def run(self):
-        def status(description):
+        def status(description, amount):
             def status_callback(status):
-                print "STATUS: %d" % status[0]
-                #exit()
+                if len(status) == 0:
+                    progress(description)
+                    progress(amount)
+
+                elif status[0] == 0:
+                    progress(description)
+                    progress(amount)
+
+                else:
+                    progress(description + " - Failed!")
 
             return status_callback
        
+        # drain any lingering read data before continuing
+        if self.jtag.pins.ser.ser.inWaiting() > 0:
+            print str([x for x in array.array('B', self.jtag.pins.ser.ser.read(size = self.jtag.pins.ser.ser.inWaiting())).tolist()])
+
         self.jtag.pins.clear_status()
 
         ### read idcode
-        self.write_ir(8, 0xE0)
-        self.check_dr(32, 0x012BA043, 0xFFFFFFFF, status("CHECK ID CODE"))
+        # This is constantly being checked in the GUI
+        #self.write_ir(8, 0xE0)
+        #self.check_dr(32, 0x012BA043, 0xFFFFFFFF)
 
         ### program bscan register
         self.write_ir(8, 0x1C)
@@ -1054,7 +1195,7 @@ class JtagJedParser(object):
         ### check key protection fuses
         self.write_ir(8, 0x3C)   
         self.runtest(1000)
-        self.check_dr(32, 0x00000000, 0x00010000, status("CHECK KEY PROTECTION FUSES"))
+        self.check_dr(32, 0x00000000, 0x00010000)
         
         ### enable the flash
         # ISC ENABLE
@@ -1076,8 +1217,9 @@ class JtagJedParser(object):
         # LSC_READ_STATUS
         self.write_ir(8, 0x3C) 
         self.runtest(1000)
-        self.check_dr(32, 0x00000000, 0x00024040, status("CHECK OTP FUSES"))
+        self.check_dr(32, 0x00000000, 0x00024040)
 
+        progress("Erasing configuration flash")
         ### erase the flash
         # ISC ERASE
         self.write_ir(8, 0x0E)
@@ -1087,14 +1229,15 @@ class JtagJedParser(object):
         self.write_ir(8, 0xF0)
         self.loop(10000)
         self.runtest(1000)
-        self.check_dr(1, 0, 1, status("POLL"))
+        self.check_dr(1, 0, 1)
         self.endloop()
+        self.jtag.pins.get_status(status("Writing bitstream", num_rows), blocking = True)
 
         ### read the status bit
         # LSC_READ_STATUS
         self.write_ir(8, 0x3C)
         self.runtest(1000)
-        self.check_dr(32, 0x00000000, 0x00003000, status("READ STATUS BIT"))
+        self.check_dr(32, 0x00000000, 0x00003000)
 
         ### program config flash
         # LSC_INIT_ADDRESS
@@ -1102,7 +1245,8 @@ class JtagJedParser(object):
         self.write_dr(8, 0x04)
         self.runtest(1000)
 
-        for line in self.get_config_data():
+        row_count = num_rows
+        for line in jed_file.cfg_data + jed_file.ebr_data:
             # LSC_PROG_INCR_NV
             self.write_ir(8, 0x70)
             self.write_dr(128, line)
@@ -1111,8 +1255,36 @@ class JtagJedParser(object):
             self.write_ir(8, 0xF0)
             self.loop(10000)
             self.runtest(100)
-            self.check_dr(1, 0, 1, status("POLL"))
+            self.check_dr(1, 0, 1)
             self.endloop()
+
+            prog_update_cnt += 1
+
+            if prog_update_cnt % prog_update_freq == 0:
+                self.jtag.pins.get_status(status("Writing bitstream", prog_update_freq), blocking = True)
+
+        if jed_file.ufm_data is not None:
+            ### program user flash
+            # LSC_INIT_ADDRESS
+            self.write_ir(8, 0x47)
+            self.runtest(1000)
+
+            for line in jed_file.ufm_data:
+                # LSC_PROG_INCR_NV
+                self.write_ir(8, 0x70)
+                self.write_dr(128, line)
+                self.runtest(2)
+                # LSC_CHECK_BUSY
+                self.write_ir(8, 0xF0)
+                self.loop(10000)
+                self.runtest(100)
+                self.check_dr(1, 0, 1)
+                self.endloop()
+
+                prog_update_cnt += 1
+
+                if prog_update_cnt % prog_update_freq == 0:
+                    self.jtag.pins.get_status(status("Writing bitstream", prog_update_freq), blocking = True)
 
         ### verify config flash
         # LSC_INIT_ADDRESS
@@ -1120,11 +1292,78 @@ class JtagJedParser(object):
         self.write_dr(8, 0x04)
         self.runtest(1000)
 
-        for line in self.get_config_data():
+        # LSC_READ_INCR_NV
+        self.write_ir(8, 0x73)
+        self.feature_row = None
+        self.feature_bits = None
+
+        for line in jed_file.cfg_data + jed_file.ebr_data:
+            self.runtest(2)
+            self.check_dr(128, line, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF)
+
+            prog_update_cnt += 1
+
+            if prog_update_cnt % prog_update_freq == 0:
+                self.jtag.pins.get_status(status("Verifying bitstream", prog_update_freq), blocking = True)
+
+        if jed_file.ufm_data is not None:
+            ### verify user flash
+            # LSC_INIT_ADDRESS
+            self.write_ir(8, 0x47)
+            self.runtest(1000)
+
             # LSC_READ_INCR_NV
             self.write_ir(8, 0x73)
-            self.runtest(2)
-            self.check_dr(128, line, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF, status("READ VERIFY"))
+
+            for line in jed_file.ufm_data:
+                self.runtest(2)
+                self.check_dr(128, line, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF)
+
+                prog_update_cnt += 1
+
+                if prog_update_cnt % prog_update_freq == 0:
+                    self.jtag.pins.get_status(status("Verifying bitstream", prog_update_freq), blocking = True)
+
+        
+        self.jtag.pins.get_status(status("Writing and verifying feature rows", 0), blocking = True)
+        ### program feature rows
+        # LSC_INIT_ADDRESS
+        self.write_ir(8, 0x46)
+        self.write_dr(8, 0x02)
+        self.runtest(2)
+        # LSC_PROG_FEATURE
+        self.write_ir(8, 0xE4)
+        self.write_dr(64, jed_file.feature_row)
+        self.runtest(2)
+        # LSC_CHECK_BUSY
+        self.write_ir(8, 0xF0)
+        self.loop(10000)
+        self.runtest(100)
+        self.check_dr(1, 0, 1)
+        self.endloop()
+        # LSC_READ_FEATURE
+        self.write_ir(8, 0xE7)
+        self.runtest(2)
+        self.check_dr(64, jed_file.feature_row, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF)
+        # LSC_PROG_FEABITS
+        self.write_ir(8, 0xF8)
+        self.write_dr(16, jed_file.feature_bits)
+        self.runtest(2)
+        # LSC_CHECK_BUSY
+        self.write_ir(8, 0xF0)
+        self.loop(10000)
+        self.runtest(100)
+        self.check_dr(1, 0, 1)
+        self.endloop()
+        # LSC_READ_FEABITS
+        self.write_ir(8, 0xFB)
+        self.runtest(2)
+        self.check_dr(16, jed_file.feature_bits, 0xFFFF)
+
+        ### read the status bit
+        self.write_ir(8, 0x3C)
+        self.runtest(2)
+        self.check_dr(32, 0x00000000, 0x00003000)
 
         ### program done bit
         # ISC PROGRAM DONE
@@ -1135,7 +1374,7 @@ class JtagJedParser(object):
         self.write_ir(8, 0xF0)
         self.loop(10000)
         self.runtest(100)
-        self.check_dr(1, 0, 1, status("POLL"))
+        self.check_dr(1, 0, 1)
         self.endloop()
         # BYPASS
         self.write_ir(8, 0xFF)
@@ -1152,43 +1391,35 @@ class JtagJedParser(object):
         self.runtest(10000)
         # LSC_READ_STATUS
         self.write_ir(8, 0x3C)
-        self.check_dr(32, 0x00000100, 0x00002100, status("SRAM DONE BIT"))
+        self.check_dr(32, 0x00000100, 0x00002100)
 
         self.jtag.goto_state("RESET") 
 
-
-
-
-
-        self.jtag.pins.get_status(status("STATUS_CALLBACK"))
-
-
-
-
-
-        while self.jtag.pins.ser.task() > 0:
-            pass
-        time.sleep(0.1)
-        if self.jtag.pins.ser.ser.inWaiting() > 0:
-            print str([x for x in array.array('B', self.jtag.pins.ser.ser.read(size = self.jtag.pins.ser.ser.inWaiting())).tolist()])
+        self.jtag.pins.get_status(status("Done", 0), blocking = True)
 
 
 
 
 
-import sys
 
-serial_port_name = sys.argv[1]
-svf_filename = sys.argv[2]
 
-with serial.Serial(serial_port_name, 12000000, timeout=10, writeTimeout=10) as ser:
-    with open(svf_filename, 'r') as svf_file:
-        async_serial = AsyncSerial(ser)
-        pins = JtagTinyFpgaProgrammer(async_serial)
-        jtag = Jtag(pins)
-        #parser = JtagSvfParser(jtag, svf_file)
-        parser = JtagJedParser(jtag, svf_file)
-        parser.run()
+
+
+
+
+#import sys
+
+#serial_port_name = sys.argv[1]
+#svf_filename = sys.argv[2]
+
+#with serial.Serial(serial_port_name, 12000000, timeout=10, writeTimeout=10) as ser:
+#    with open(svf_filename, 'r') as svf_file:
+#        async_serial = AsyncSerial(ser)
+#        pins = JtagTinyFpgaProgrammer(async_serial)
+#        jtag = Jtag(pins)
+#        #parser = JtagSvfParser(jtag, svf_file)
+#        programmer = JtagCustomProgrammer(jtag)
+#        programmer.program(JedecFile(svf_file))
 
             
         
@@ -1199,5 +1430,5 @@ with serial.Serial(serial_port_name, 12000000, timeout=10, writeTimeout=10) as s
         #pins.shift(None)
         #pins.send()
 
-    print "Done!"
+#    print "Done!"
 
