@@ -50,16 +50,6 @@ EVENT_EP0_REQUEST 3
 EVENT_ATTACH 4
 EVENT_TRANSFER_TERMINATED 5
 ]
-"670 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-[e E2733 . `uc
-DETACHED_STATE 0
-ATTACHED_STATE 1
-POWERED_STATE 2
-DEFAULT_STATE 4
-ADR_PENDING_STATE 8
-ADDRESS_STATE 16
-CONFIGURED_STATE 32
-]
 "50 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
 [e E34 . `ui
 EVENT_NONE 0
@@ -163,6 +153,16 @@ EVENT_SET_DESCRIPTOR 2
 EVENT_EP0_REQUEST 3
 EVENT_ATTACH 4
 EVENT_TRANSFER_TERMINATED 5
+]
+"670 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
+[e E2733 . `uc
+DETACHED_STATE 0
+ATTACHED_STATE 1
+POWERED_STATE 2
+DEFAULT_STATE 4
+ADR_PENDING_STATE 8
+ADDRESS_STATE 16
+CONFIGURED_STATE 32
 ]
 "8 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
 [v _memset memset `(*.39v  1 e 1 0 ]
@@ -358,7 +358,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _ACTCON ACTCON `VEuc  1 e 1 @923 ]
 "4629
 [v _UCON UCON `VEuc  1 e 1 @3726 ]
-[s S795 . 1 `uc 1 . 1 0 :1:0 
+[s S1083 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 SUSPND 1 0 :1:1 
 `uc 1 RESUME 1 0 :1:2 
 `uc 1 USBEN 1 0 :1:3 
@@ -367,13 +367,13 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 PPBRST 1 0 :1:6 
 ]
 "4645
-[u S803 . 1 `S795 1 . 1 0 ]
-[v _UCONbits UCONbits `VES803  1 e 1 @3726 ]
+[u S1091 . 1 `S1083 1 . 1 0 ]
+[v _UCONbits UCONbits `VES1091  1 e 1 @3726 ]
 "4680
 [v _USTAT USTAT `VEuc  1 e 1 @3727 ]
 "4740
 [v _UIR UIR `VEuc  1 e 1 @3728 ]
-[s S1406 . 1 `uc 1 URSTIF 1 0 :1:0 
+[s S1103 . 1 `uc 1 URSTIF 1 0 :1:0 
 `uc 1 UERRIF 1 0 :1:1 
 `uc 1 ACTVIF 1 0 :1:2 
 `uc 1 TRNIF 1 0 :1:3 
@@ -382,13 +382,13 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIF 1 0 :1:6 
 ]
 "4756
-[u S1414 . 1 `S1406 1 . 1 0 ]
-[v _UIRbits UIRbits `VES1414  1 e 1 @3728 ]
+[u S1111 . 1 `S1103 1 . 1 0 ]
+[v _UIRbits UIRbits `VES1111  1 e 1 @3728 ]
 "4796
 [v _UCFG UCFG `VEuc  1 e 1 @3729 ]
 "4850
 [v _UIE UIE `VEuc  1 e 1 @3730 ]
-[s S1425 . 1 `uc 1 URSTIE 1 0 :1:0 
+[s S1122 . 1 `uc 1 URSTIE 1 0 :1:0 
 `uc 1 UERRIE 1 0 :1:1 
 `uc 1 ACTVIE 1 0 :1:2 
 `uc 1 TRNIE 1 0 :1:3 
@@ -397,8 +397,8 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 SOFIE 1 0 :1:6 
 ]
 "4866
-[u S1433 . 1 `S1425 1 . 1 0 ]
-[v _UIEbits UIEbits `VES1433  1 e 1 @3730 ]
+[u S1130 . 1 `S1122 1 . 1 0 ]
+[v _UIEbits UIEbits `VES1130  1 e 1 @3730 ]
 "4906
 [v _UEIR UEIR `VEuc  1 e 1 @3731 ]
 "5058
@@ -407,15 +407,15 @@ EVENT_TRANSFER_TERMINATED 5
 [v _UEIE UEIE `VEuc  1 e 1 @3735 ]
 "5165
 [v _UEP0 UEP0 `VEuc  1 e 1 @3736 ]
-[s S1581 . 1 `uc 1 EPSTALL 1 0 :1:0 
+[s S1278 . 1 `uc 1 EPSTALL 1 0 :1:0 
 `uc 1 EPINEN 1 0 :1:1 
 `uc 1 EPOUTEN 1 0 :1:2 
 `uc 1 EPCONDIS 1 0 :1:3 
 `uc 1 EPHSHK 1 0 :1:4 
 ]
 "5179
-[u S1587 . 1 `S1581 1 . 1 0 ]
-[v _UEP0bits UEP0bits `VES1587  1 e 1 @3736 ]
+[u S1284 . 1 `S1278 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES1284  1 e 1 @3736 ]
 "5209
 [v _UEP1 UEP1 `VEuc  1 e 1 @3737 ]
 "6224
@@ -438,10 +438,10 @@ EVENT_TRANSFER_TERMINATED 5
 [v _usb_rx_ptr usb_rx_ptr `uc  1 s 1 usb_rx_ptr ]
 "36
 [v _usb_tx_ptr usb_tx_ptr `uc  1 s 1 usb_tx_ptr ]
-[s S709 sie_config_t 8 `uc 1 config_byte 1 0 `uc 1 input_mask 1 1 `uc 1 do0p0 1 2 `uc 1 do0p1 1 3 `uc 1 do1p0 1 4 `uc 1 do1p1 1 5 `uc 1 last_phase_overlay 1 6 `uc 1 dummy 1 7 ]
+[s S2218 sie_config_t 8 `uc 1 config_byte 1 0 `uc 1 input_mask 1 1 `uc 1 do0p0 1 2 `uc 1 do0p1 1 3 `uc 1 do1p0 1 4 `uc 1 do1p1 1 5 `uc 1 last_phase_overlay 1 6 `uc 1 dummy 1 7 ]
 "49
-[v _sie_configs sie_configs `[8]S709  1 s 64 sie_configs ]
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[v _sie_configs sie_configs `[8]S2218  1 s 64 sie_configs ]
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -451,24 +451,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "529
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v _usb_rx_pp_handle usb_rx_pp_handle `[2]*.39S758  1 s 4 usb_rx_pp_handle ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v _usb_rx_pp_handle usb_rx_pp_handle `[2]*.39S887  1 s 4 usb_rx_pp_handle ]
 "530
 [v _usb_rx_pp_size usb_rx_pp_size `uc  1 s 1 usb_rx_pp_size ]
 "531
@@ -478,32 +478,32 @@ EVENT_TRANSFER_TERMINATED 5
 "533
 [v _bytes_recieved bytes_recieved `uc  1 s 1 bytes_recieved ]
 "534
-[v _current_rx_handle current_rx_handle `*.39S758  1 s 2 current_rx_handle ]
-[s S1020 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+[v _current_rx_handle current_rx_handle `*.39S887  1 s 2 current_rx_handle ]
+[s S709 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
 "155 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_descriptors.c
-[v _device_dsc device_dsc `DCCS1020  1 e 18 0 ]
+[v _device_dsc device_dsc `DCCS709  1 e 18 0 ]
 "174
 [v _configDescriptor1 configDescriptor1 `DCC[67]uc  1 e 67 0 ]
-[s S1057 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
+[s S746 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
 "259
-[v _sd000 sd000 `DCCS1057  1 e 4 0 ]
-[s S1061 . 18 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[8]ui 1 string 16 2 ]
+[v _sd000 sd000 `DCCS746  1 e 4 0 ]
+[s S750 . 18 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[8]ui 1 string 16 2 ]
 "263
-[v _sd001 sd001 `DCCS1061  1 e 18 0 ]
-[s S1065 . 22 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[10]ui 1 string 20 2 ]
+[v _sd001 sd001 `DCCS750  1 e 18 0 ]
+[s S754 . 22 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[10]ui 1 string 20 2 ]
 "269
-[v _sd002 sd002 `DCCS1065  1 e 22 0 ]
+[v _sd002 sd002 `DCCS754  1 e 22 0 ]
 "275
 [v _USB_CD_Ptr USB_CD_Ptr `DCC[1]*.25DCCuc  1 e 2 0 ]
 "281
 [v _USB_SD_Ptr USB_SD_Ptr `DCC[3]*.25DCCuc  1 e 6 0 ]
 "141 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
-[v _USBDeviceState USBDeviceState `VEE2733  1 e 1 0 ]
+[v _USBDeviceState USBDeviceState `VEE2808  1 e 1 0 ]
 "142
 [v _USBActiveConfiguration USBActiveConfiguration `VEuc  1 e 1 0 ]
 "143
 [v _USBAlternateInterface USBAlternateInterface `VE[2]uc  1 e 2 0 ]
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -513,30 +513,30 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "144
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.4VES758  1 e 1 0 ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.4VES887  1 e 1 0 ]
 "145
-[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES758  1 e 2 0 ]
+[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES887  1 e 2 0 ]
 "146
-[v _pBDTEntryOut pBDTEntryOut `[3]*.39VES758  1 e 6 0 ]
+[v _pBDTEntryOut pBDTEntryOut `[3]*.39VES887  1 e 6 0 ]
 "147
-[v _pBDTEntryIn pBDTEntryIn `[3]*.39VES758  1 e 6 0 ]
+[v _pBDTEntryIn pBDTEntryIn `[3]*.39VES887  1 e 6 0 ]
 "148
 [v _shortPacketStatus shortPacketStatus `VEuc  1 e 1 0 ]
 "149
@@ -567,26 +567,26 @@ EVENT_TRANSFER_TERMINATED 5
 [v _RemoteWakeup RemoteWakeup `VEuc  1 e 1 0 ]
 "154
 [v _USBBusIsSuspended USBBusIsSuspended `VEuc  1 e 1 0 ]
-[s S1242 . 1 `uc 1 filler1 1 0 :1:0 
+[s S931 . 1 `uc 1 filler1 1 0 :1:0 
 `uc 1 ping_pong 1 0 :1:1 
 `uc 1 direction 1 0 :1:2 
 `uc 1 endpoint_number 1 0 :4:3 
 ]
 "155
-[u S1247 __USTAT 1 `S1242 1 . 1 0 `uc 1 Val 1 0 ]
-[v _USTATcopy USTATcopy `VES1247  1 e 1 0 ]
+[u S936 __USTAT 1 `S931 1 . 1 0 `uc 1 Val 1 0 ]
+[v _USTATcopy USTATcopy `VES936  1 e 1 0 ]
 "156
 [v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
 "157
 [v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEuc  1 e 1 0 ]
-[s S1250 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S939 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "158
-[u S1253 . 1 `S1250 1 bits 1 0 `uc 1 Val 1 0 ]
-[v _ep_data_in ep_data_in `VE[3]S1253  1 e 3 0 ]
+[u S942 . 1 `S939 1 bits 1 0 `uc 1 Val 1 0 ]
+[v _ep_data_in ep_data_in `VE[3]S942  1 e 3 0 ]
 "159
-[v _ep_data_out ep_data_out `VE[3]S1253  1 e 3 0 ]
+[v _ep_data_out ep_data_out `VE[3]S942  1 e 3 0 ]
 "160
 [v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
 "161
@@ -604,7 +604,7 @@ EVENT_TRANSFER_TERMINATED 5
 "167
 [v _USBTicksSinceSuspendEnd USBTicksSinceSuspendEnd `VEuc  1 e 1 0 ]
 "174
-[v _BDT BDT `VE[12]S758  1 e 48 @32 ]
+[v _BDT BDT `VE[12]S887  1 e 48 @32 ]
 [s S49 . 8 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
 "179
 [s S76 . 8 `uc 1 . 1 0 :8:0 
@@ -684,15 +684,15 @@ EVENT_TRANSFER_TERMINATED 5
 "647 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-[s S719 pt 2 `us 1 lc 2 0 ]
+[s S2228 pt 2 `us 1 lc 2 0 ]
 "648
-[v main@cmd_pt cmd_pt `S719  1 a 2 6 ]
+[v main@cmd_pt cmd_pt `S2228  1 a 2 6 ]
 "654
-[v main@rx_put_pt rx_put_pt `S719  1 a 2 4 ]
+[v main@rx_put_pt rx_put_pt `S2228  1 a 2 4 ]
 "657
-[v main@rx_get_pt rx_get_pt `S719  1 a 2 2 ]
+[v main@rx_get_pt rx_get_pt `S2228  1 a 2 2 ]
 "651
-[v main@tx_pt tx_pt `S719  1 a 2 0 ]
+[v main@tx_pt tx_pt `S2228  1 a 2 0 ]
 "677
 } 0
 "61
@@ -703,13 +703,13 @@ EVENT_TRANSFER_TERMINATED 5
 "614
 [v _cmd_tx_buffer_task cmd_tx_buffer_task `T(uc  1 e 1 0 ]
 {
-[s S719 pt 2 `us 1 lc 2 0 ]
-[v cmd_tx_buffer_task@pt pt `*.6S719  1 a 1 wreg ]
+[s S2228 pt 2 `us 1 lc 2 0 ]
+[v cmd_tx_buffer_task@pt pt `*.6S2228  1 a 1 wreg ]
 "617
 [v cmd_tx_buffer_task@PT_YIELD_FLAG PT_YIELD_FLAG `uc  1 a 1 12 ]
 "614
-[v cmd_tx_buffer_task@pt pt `*.6S719  1 a 1 wreg ]
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[v cmd_tx_buffer_task@pt pt `*.6S2228  1 a 1 wreg ]
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -719,34 +719,34 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "615
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v cmd_tx_buffer_task@usb_tx_handle usb_tx_handle `*.39S758  1 s 2 usb_tx_handle ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v cmd_tx_buffer_task@usb_tx_handle usb_tx_handle `*.39S887  1 s 2 usb_tx_handle ]
 "617
 "614
-[v cmd_tx_buffer_task@pt pt `*.6S719  1 a 1 13 ]
+[v cmd_tx_buffer_task@pt pt `*.6S2228  1 a 1 13 ]
 "635
 } 0
 "995 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 [v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 1 0 ]
 {
 [v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -756,24 +756,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "997
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBTransferOnePacket@handle handle `*.39VES758  1 a 2 8 ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBTransferOnePacket@handle handle `*.39VES887  1 a 2 8 ]
 "995
 [v USBTransferOnePacket@ep ep `uc  1 a 1 wreg ]
 [v USBTransferOnePacket@dir dir `uc  1 p 1 0 ]
@@ -786,18 +786,18 @@ EVENT_TRANSFER_TERMINATED 5
 "100 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 [v _cmd_task cmd_task `T(uc  1 e 1 0 ]
 {
-[s S719 pt 2 `us 1 lc 2 0 ]
-[v cmd_task@pt pt `*.6S719  1 a 1 wreg ]
+[s S2228 pt 2 `us 1 lc 2 0 ]
+[v cmd_task@pt pt `*.6S2228  1 a 1 wreg ]
 "329
-[v cmd_task@data_872 data `uc  1 a 1 12 ]
+[v cmd_task@data_2366 data `uc  1 a 1 12 ]
 "410
-[v cmd_task@last_phase_overlay_874 last_phase_overlay `uc  1 a 1 11 ]
+[v cmd_task@last_phase_overlay_2368 last_phase_overlay `uc  1 a 1 11 ]
 "396
-[v cmd_task@data_873 data `uc  1 a 1 9 ]
+[v cmd_task@data_2367 data `uc  1 a 1 9 ]
 "306
-[v cmd_task@bit_to_set_870 bit_to_set `uc  1 a 1 8 ]
+[v cmd_task@bit_to_set_2364 bit_to_set `uc  1 a 1 8 ]
 "316
-[v cmd_task@last_phase_overlay_871 last_phase_overlay `uc  1 a 1 5 ]
+[v cmd_task@last_phase_overlay_2365 last_phase_overlay `uc  1 a 1 5 ]
 "223
 [v cmd_task@bit_to_set bit_to_set `uc  1 a 1 7 ]
 "233
@@ -809,7 +809,7 @@ EVENT_TRANSFER_TERMINATED 5
 "136
 [v cmd_task@PT_YIELD_FLAG PT_YIELD_FLAG `uc  1 a 1 3 ]
 "100
-[v cmd_task@pt pt `*.6S719  1 a 1 wreg ]
+[v cmd_task@pt pt `*.6S2228  1 a 1 wreg ]
 "101
 [v cmd_task@gpio_dir gpio_dir `uc  1 s 1 gpio_dir ]
 "103
@@ -858,28 +858,28 @@ EVENT_TRANSFER_TERMINATED 5
 [v cmd_task@status_sent status_sent `uc  1 s 1 status_sent ]
 "136
 "100
-[v cmd_task@pt pt `*.6S719  1 a 1 13 ]
+[v cmd_task@pt pt `*.6S2228  1 a 1 13 ]
 "516
 } 0
 "541
 [v _cmd_rx_buf_put_task cmd_rx_buf_put_task `T(uc  1 e 1 0 ]
 {
-[s S719 pt 2 `us 1 lc 2 0 ]
-[v cmd_rx_buf_put_task@pt pt `*.6S719  1 a 1 wreg ]
+[s S2228 pt 2 `us 1 lc 2 0 ]
+[v cmd_rx_buf_put_task@pt pt `*.6S2228  1 a 1 wreg ]
 "542
 [v cmd_rx_buf_put_task@PT_YIELD_FLAG PT_YIELD_FLAG `uc  1 a 1 4 ]
 "541
-[v cmd_rx_buf_put_task@pt pt `*.6S719  1 a 1 wreg ]
-[v cmd_rx_buf_put_task@pt pt `*.6S719  1 a 1 5 ]
+[v cmd_rx_buf_put_task@pt pt `*.6S2228  1 a 1 wreg ]
+[v cmd_rx_buf_put_task@pt pt `*.6S2228  1 a 1 5 ]
 "573
 } 0
 "580
 [v _cmd_rx_buf_get_task cmd_rx_buf_get_task `T(uc  1 e 1 0 ]
 {
-[s S719 pt 2 `us 1 lc 2 0 ]
-[v cmd_rx_buf_get_task@pt pt `*.6S719  1 a 1 wreg ]
-[v cmd_rx_buf_get_task@pt pt `*.6S719  1 a 1 wreg ]
-[v cmd_rx_buf_get_task@pt pt `*.6S719  1 a 1 2 ]
+[s S2228 pt 2 `us 1 lc 2 0 ]
+[v cmd_rx_buf_get_task@pt pt `*.6S2228  1 a 1 wreg ]
+[v cmd_rx_buf_get_task@pt pt `*.6S2228  1 a 1 wreg ]
+[v cmd_rx_buf_get_task@pt pt `*.6S2228  1 a 1 2 ]
 "602
 } 0
 "477 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
@@ -939,7 +939,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "1976
 [v USBStdSetCfgHandler@p p `*.39uc  1 a 2 0 ]
-[v USBStdSetCfgHandler@i_2326 i `uc  1 a 1 2 ]
+[v USBStdSetCfgHandler@i_2033 i `uc  1 a 1 2 ]
 "1970
 [v USBStdSetCfgHandler@i i `uc  1 a 1 3 ]
 "2024
@@ -958,7 +958,7 @@ EVENT_TRANSFER_TERMINATED 5
 "2129 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 [v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 USBStdGetStatusHandler ]
 {
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -968,24 +968,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "2161
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdGetStatusHandler@p p `*.39S758  1 a 2 0 ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdGetStatusHandler@p p `*.39S887  1 a 2 0 ]
 "2184
 } 0
 "2043
@@ -996,7 +996,7 @@ EVENT_TRANSFER_TERMINATED 5
 "2754
 [v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
 {
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1006,32 +1006,32 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "2756
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBStdFeatureReqHandler@p p `*.39S758  1 a 2 5 ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBStdFeatureReqHandler@p p `*.39S887  1 a 2 5 ]
 "2761
 [v USBStdFeatureReqHandler@pUEP pUEP `*.39uc  1 a 2 2 ]
-[s S1250 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S939 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
 "2757
-[u S1253 . 1 `S1250 1 bits 1 0 `uc 1 Val 1 0 ]
-[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S1253  1 a 1 4 ]
+[u S942 . 1 `S939 1 bits 1 0 `uc 1 Val 1 0 ]
+[v USBStdFeatureReqHandler@current_ep_data current_ep_data `S942  1 a 1 4 ]
 "2980
 } 0
 "49 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
@@ -1069,7 +1069,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 1 USBConfigureEndpoint ]
 {
 [v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1079,24 +1079,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 UOWN 1 0 :1:7 
 ]
 "1545
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v USBConfigureEndpoint@handle handle `*.4VES758  1 a 1 3 ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v USBConfigureEndpoint@handle handle `*.4VES887  1 a 1 3 ]
 "1543
 [v USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
 [v USBConfigureEndpoint@direction direction `uc  1 p 1 0 ]
@@ -1152,7 +1152,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 "296
 [v USBDeviceInit@p p `*.39uc  1 a 2 0 ]
-[v USBDeviceInit@i_1661 i `uc  1 a 1 2 ]
+[v USBDeviceInit@i_1358 i `uc  1 a 1 2 ]
 "279
 [v USBDeviceInit@i i `uc  1 a 1 3 ]
 "371
@@ -1208,7 +1208,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 [v i1USBDeviceInit@p USBDeviceInit `*.39uc  1 a 2 0 ]
 [v i1USBDeviceInit@i USBDeviceInit `uc  1 a 1 3 ]
-[v i1USBDeviceInit@i_1661 USBDeviceInit `uc  1 a 1 2 ]
+[v i1USBDeviceInit@i_1358 USBDeviceInit `uc  1 a 1 2 ]
 "371
 } 0
 "2372
@@ -1241,7 +1241,7 @@ EVENT_TRANSFER_TERMINATED 5
 {
 [v i1USBStdSetCfgHandler@p USBStdSetCfgHandler `*.39uc  1 a 2 10 ]
 [v i1USBStdSetCfgHandler@i USBStdSetCfgHandler `uc  1 a 1 13 ]
-[v i1USBStdSetCfgHandler@i_2326 USBStdSetCfgHandler `uc  1 a 1 12 ]
+[v i1USBStdSetCfgHandler@i_2033 USBStdSetCfgHandler `uc  1 a 1 12 ]
 "2024
 } 0
 "8 C:\Program Files (x86)\Microchip\xc8\v1.42\sources\common\memset.c
@@ -1256,7 +1256,7 @@ EVENT_TRANSFER_TERMINATED 5
 "2129 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device.c
 [v i1_USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 i1_USBStdGetStatusHandler ]
 {
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1265,24 +1265,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 DTS 1 0 :1:6 
 `uc 1 UOWN 1 0 :1:7 
 ]
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v i1USBStdGetStatusHandler@p USBStdGetStatusHandler `*.39S758  1 a 2 0 ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v i1USBStdGetStatusHandler@p USBStdGetStatusHandler `*.39S887  1 a 2 0 ]
 "2184
 } 0
 "2043
@@ -1293,7 +1293,7 @@ EVENT_TRANSFER_TERMINATED 5
 "2754
 [v i1_USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 i1_USBStdFeatureReqHandler ]
 {
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1302,30 +1302,30 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 DTS 1 0 :1:6 
 `uc 1 UOWN 1 0 :1:7 
 ]
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v i1USBStdFeatureReqHandler@p USBStdFeatureReqHandler `*.39S758  1 a 2 3 ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v i1USBStdFeatureReqHandler@p USBStdFeatureReqHandler `*.39S887  1 a 2 3 ]
 [v i1USBStdFeatureReqHandler@pUEP USBStdFeatureReqHandler `*.39uc  1 a 2 0 ]
-[s S1250 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+[s S939 . 1 `uc 1 ping_pong_state 1 0 :1:0 
 `uc 1 transfer_terminated 1 0 :1:1 
 ]
-[u S1253 . 1 `S1250 1 bits 1 0 `uc 1 Val 1 0 ]
-[v i1USBStdFeatureReqHandler@current_ep_data USBStdFeatureReqHandler `S1253  1 a 1 2 ]
+[u S942 . 1 `S939 1 bits 1 0 `uc 1 Val 1 0 ]
+[v i1USBStdFeatureReqHandler@current_ep_data USBStdFeatureReqHandler `S942  1 a 1 2 ]
 "2980
 } 0
 "49 C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/usb/usb_device_events.c
@@ -1361,7 +1361,7 @@ EVENT_TRANSFER_TERMINATED 5
 [v i1_USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 1 i1_USBConfigureEndpoint ]
 {
 [v i1USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
-[s S724 . 1 `uc 1 BC8 1 0 :1:0 
+[s S853 . 1 `uc 1 BC8 1 0 :1:0 
 `uc 1 BC9 1 0 :1:1 
 `uc 1 BSTALL 1 0 :1:2 
 `uc 1 DTSEN 1 0 :1:3 
@@ -1370,24 +1370,24 @@ EVENT_TRANSFER_TERMINATED 5
 `uc 1 DTS 1 0 :1:6 
 `uc 1 UOWN 1 0 :1:7 
 ]
-[s S733 . 1 `uc 1 . 1 0 :2:0 
+[s S862 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID0 1 0 :1:2 
 `uc 1 PID1 1 0 :1:3 
 `uc 1 PID2 1 0 :1:4 
 `uc 1 PID3 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 ]
-[s S740 . 1 `uc 1 . 1 0 :2:0 
+[s S869 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 PID 1 0 :4:2 
 `uc 1 . 1 0 :2:6 
 ]
-[u S744 _BD_STAT 1 `uc 1 Val 1 0 `S724 1 . 1 0 `S733 1 . 1 0 `S740 1 . 1 0 ]
-[s S749 . 4 `S744 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
-[s S754 . 4 `uc 1 filler1 1 0 :8:0 
+[u S873 _BD_STAT 1 `uc 1 Val 1 0 `S853 1 . 1 0 `S862 1 . 1 0 `S869 1 . 1 0 ]
+[s S878 . 4 `S873 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S883 . 4 `uc 1 filler1 1 0 :8:0 
 `uc 1 filler2 1 1 :8:0 
 `ui 1 ADR 2 2 ]
-[u S758 __BDT 4 `S749 1 . 4 0 `S754 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
-[v i1USBConfigureEndpoint@handle USBConfigureEndpoint `*.4VES758  1 a 1 3 ]
+[u S887 __BDT 4 `S878 1 . 4 0 `S883 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v i1USBConfigureEndpoint@handle USBConfigureEndpoint `*.4VES887  1 a 1 3 ]
 [v i1USBConfigureEndpoint@EPNum EPNum `uc  1 a 1 wreg ]
 [v i1USBConfigureEndpoint@direction direction `uc  1 p 1 0 ]
 "1549

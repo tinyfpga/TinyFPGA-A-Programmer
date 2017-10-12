@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\lvale\AppData\Local\Temp\s13ks.obj
+$C:\Users\lvale\AppData\Local\Temp\s1i0.obj
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 12 12 2 2
 config CONFIG 0 8007 8007 2 2
@@ -165,84 +165,84 @@ STRING 1915-19BF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\firmware.production.obj
-14 cinit CODE >2781:C:\Users\lvale\AppData\Local\Temp\s13ks.
-14 cinit CODE >2784:C:\Users\lvale\AppData\Local\Temp\s13ks.
-14 cinit CODE >3042:C:\Users\lvale\AppData\Local\Temp\s13ks.
+14 cinit CODE >2781:C:\Users\lvale\AppData\Local\Temp\s1i0.
+14 cinit CODE >2784:C:\Users\lvale\AppData\Local\Temp\s1i0.
+14 cinit CODE >3042:C:\Users\lvale\AppData\Local\Temp\s1i0.
 15 cinit CODE >25:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-16 cinit CODE >3044:C:\Users\lvale\AppData\Local\Temp\s13ks.
+16 cinit CODE >3044:C:\Users\lvale\AppData\Local\Temp\s1i0.
 17 cinit CODE >25:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-18 cinit CODE >3046:C:\Users\lvale\AppData\Local\Temp\s13ks.
-19 cinit CODE >3050:C:\Users\lvale\AppData\Local\Temp\s13ks.
+18 cinit CODE >3046:C:\Users\lvale\AppData\Local\Temp\s1i0.
+19 cinit CODE >3050:C:\Users\lvale\AppData\Local\Temp\s1i0.
 1A cinit CODE >534:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1B cinit CODE >3052:C:\Users\lvale\AppData\Local\Temp\s13ks.
-1C cinit CODE >3054:C:\Users\lvale\AppData\Local\Temp\s13ks.
+1B cinit CODE >3052:C:\Users\lvale\AppData\Local\Temp\s1i0.
+1C cinit CODE >3054:C:\Users\lvale\AppData\Local\Temp\s1i0.
 1D cinit CODE >128:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-1E cinit CODE >3056:C:\Users\lvale\AppData\Local\Temp\s13ks.
+1E cinit CODE >3056:C:\Users\lvale\AppData\Local\Temp\s1i0.
 1F cinit CODE >101:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-20 cinit CODE >3058:C:\Users\lvale\AppData\Local\Temp\s13ks.
+20 cinit CODE >3058:C:\Users\lvale\AppData\Local\Temp\s1i0.
 21 cinit CODE >24:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-22 cinit CODE >3060:C:\Users\lvale\AppData\Local\Temp\s13ks.
-23 cinit CODE >3064:C:\Users\lvale\AppData\Local\Temp\s13ks.
+22 cinit CODE >3060:C:\Users\lvale\AppData\Local\Temp\s1i0.
+23 cinit CODE >3064:C:\Users\lvale\AppData\Local\Temp\s1i0.
 24 cinit CODE >529:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-25 cinit CODE >3066:C:\Users\lvale\AppData\Local\Temp\s13ks.
-26 cinit CODE >3068:C:\Users\lvale\AppData\Local\Temp\s13ks.
+25 cinit CODE >3066:C:\Users\lvale\AppData\Local\Temp\s1i0.
+26 cinit CODE >3068:C:\Users\lvale\AppData\Local\Temp\s1i0.
 27 cinit CODE >529:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-28 cinit CODE >3070:C:\Users\lvale\AppData\Local\Temp\s13ks.
+28 cinit CODE >3070:C:\Users\lvale\AppData\Local\Temp\s1i0.
 29 cinit CODE >529:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-2A cinit CODE >3072:C:\Users\lvale\AppData\Local\Temp\s13ks.
-2B cinit CODE >3074:C:\Users\lvale\AppData\Local\Temp\s13ks.
+2A cinit CODE >3072:C:\Users\lvale\AppData\Local\Temp\s1i0.
+2B cinit CODE >3074:C:\Users\lvale\AppData\Local\Temp\s1i0.
 2C cinit CODE >28:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-2D cinit CODE >3076:C:\Users\lvale\AppData\Local\Temp\s13ks.
+2D cinit CODE >3076:C:\Users\lvale\AppData\Local\Temp\s1i0.
 2E cinit CODE >28:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-2F cinit CODE >3078:C:\Users\lvale\AppData\Local\Temp\s13ks.
+2F cinit CODE >3078:C:\Users\lvale\AppData\Local\Temp\s1i0.
 30 cinit CODE >28:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-31 cinit CODE >3080:C:\Users\lvale\AppData\Local\Temp\s13ks.
+31 cinit CODE >3080:C:\Users\lvale\AppData\Local\Temp\s1i0.
 32 cinit CODE >27:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-33 cinit CODE >3082:C:\Users\lvale\AppData\Local\Temp\s13ks.
-34 cinit CODE >3084:C:\Users\lvale\AppData\Local\Temp\s13ks.
-35 cinit CODE >3086:C:\Users\lvale\AppData\Local\Temp\s13ks.
+33 cinit CODE >3082:C:\Users\lvale\AppData\Local\Temp\s1i0.
+34 cinit CODE >3084:C:\Users\lvale\AppData\Local\Temp\s1i0.
+35 cinit CODE >3086:C:\Users\lvale\AppData\Local\Temp\s1i0.
 36 cinit CODE >27:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-37 cinit CODE >3088:C:\Users\lvale\AppData\Local\Temp\s13ks.
-38 cinit CODE >3105:C:\Users\lvale\AppData\Local\Temp\s13ks.
-39 cinit CODE >3106:C:\Users\lvale\AppData\Local\Temp\s13ks.
-3A cinit CODE >3107:C:\Users\lvale\AppData\Local\Temp\s13ks.
-3B cinit CODE >3108:C:\Users\lvale\AppData\Local\Temp\s13ks.
-3C cinit CODE >3109:C:\Users\lvale\AppData\Local\Temp\s13ks.
-3D cinit CODE >3110:C:\Users\lvale\AppData\Local\Temp\s13ks.
-40 cinit CODE >3114:C:\Users\lvale\AppData\Local\Temp\s13ks.
-41 cinit CODE >3115:C:\Users\lvale\AppData\Local\Temp\s13ks.
-42 cinit CODE >3116:C:\Users\lvale\AppData\Local\Temp\s13ks.
-43 cinit CODE >3117:C:\Users\lvale\AppData\Local\Temp\s13ks.
-44 cinit CODE >3118:C:\Users\lvale\AppData\Local\Temp\s13ks.
-45 cinit CODE >3122:C:\Users\lvale\AppData\Local\Temp\s13ks.
-46 cinit CODE >3132:C:\Users\lvale\AppData\Local\Temp\s13ks.
-47 cinit CODE >3123:C:\Users\lvale\AppData\Local\Temp\s13ks.
-48 cinit CODE >3124:C:\Users\lvale\AppData\Local\Temp\s13ks.
-49 cinit CODE >3125:C:\Users\lvale\AppData\Local\Temp\s13ks.
-4A cinit CODE >3126:C:\Users\lvale\AppData\Local\Temp\s13ks.
-4B cinit CODE >3127:C:\Users\lvale\AppData\Local\Temp\s13ks.
-4C cinit CODE >3128:C:\Users\lvale\AppData\Local\Temp\s13ks.
-4D cinit CODE >3133:C:\Users\lvale\AppData\Local\Temp\s13ks.
-4E cinit CODE >3134:C:\Users\lvale\AppData\Local\Temp\s13ks.
-4F cinit CODE >3135:C:\Users\lvale\AppData\Local\Temp\s13ks.
-50 cinit CODE >3136:C:\Users\lvale\AppData\Local\Temp\s13ks.
-51 cinit CODE >3137:C:\Users\lvale\AppData\Local\Temp\s13ks.
-54 cinit CODE >3141:C:\Users\lvale\AppData\Local\Temp\s13ks.
-55 cinit CODE >3142:C:\Users\lvale\AppData\Local\Temp\s13ks.
-56 cinit CODE >3143:C:\Users\lvale\AppData\Local\Temp\s13ks.
-57 cinit CODE >3144:C:\Users\lvale\AppData\Local\Temp\s13ks.
-58 cinit CODE >3145:C:\Users\lvale\AppData\Local\Temp\s13ks.
-59 cinit CODE >3146:C:\Users\lvale\AppData\Local\Temp\s13ks.
-5C cinit CODE >3150:C:\Users\lvale\AppData\Local\Temp\s13ks.
-5D cinit CODE >3151:C:\Users\lvale\AppData\Local\Temp\s13ks.
-5E cinit CODE >3152:C:\Users\lvale\AppData\Local\Temp\s13ks.
-5F cinit CODE >3153:C:\Users\lvale\AppData\Local\Temp\s13ks.
-60 cinit CODE >3154:C:\Users\lvale\AppData\Local\Temp\s13ks.
-61 cinit CODE >3155:C:\Users\lvale\AppData\Local\Temp\s13ks.
-63 cinit CODE >3161:C:\Users\lvale\AppData\Local\Temp\s13ks.
-63 cinit CODE >3163:C:\Users\lvale\AppData\Local\Temp\s13ks.
-64 cinit CODE >3164:C:\Users\lvale\AppData\Local\Temp\s13ks.
-65 cinit CODE >3165:C:\Users\lvale\AppData\Local\Temp\s13ks.
+37 cinit CODE >3088:C:\Users\lvale\AppData\Local\Temp\s1i0.
+38 cinit CODE >3105:C:\Users\lvale\AppData\Local\Temp\s1i0.
+39 cinit CODE >3106:C:\Users\lvale\AppData\Local\Temp\s1i0.
+3A cinit CODE >3107:C:\Users\lvale\AppData\Local\Temp\s1i0.
+3B cinit CODE >3108:C:\Users\lvale\AppData\Local\Temp\s1i0.
+3C cinit CODE >3109:C:\Users\lvale\AppData\Local\Temp\s1i0.
+3D cinit CODE >3110:C:\Users\lvale\AppData\Local\Temp\s1i0.
+40 cinit CODE >3114:C:\Users\lvale\AppData\Local\Temp\s1i0.
+41 cinit CODE >3115:C:\Users\lvale\AppData\Local\Temp\s1i0.
+42 cinit CODE >3116:C:\Users\lvale\AppData\Local\Temp\s1i0.
+43 cinit CODE >3117:C:\Users\lvale\AppData\Local\Temp\s1i0.
+44 cinit CODE >3118:C:\Users\lvale\AppData\Local\Temp\s1i0.
+45 cinit CODE >3122:C:\Users\lvale\AppData\Local\Temp\s1i0.
+46 cinit CODE >3132:C:\Users\lvale\AppData\Local\Temp\s1i0.
+47 cinit CODE >3123:C:\Users\lvale\AppData\Local\Temp\s1i0.
+48 cinit CODE >3124:C:\Users\lvale\AppData\Local\Temp\s1i0.
+49 cinit CODE >3125:C:\Users\lvale\AppData\Local\Temp\s1i0.
+4A cinit CODE >3126:C:\Users\lvale\AppData\Local\Temp\s1i0.
+4B cinit CODE >3127:C:\Users\lvale\AppData\Local\Temp\s1i0.
+4C cinit CODE >3128:C:\Users\lvale\AppData\Local\Temp\s1i0.
+4D cinit CODE >3133:C:\Users\lvale\AppData\Local\Temp\s1i0.
+4E cinit CODE >3134:C:\Users\lvale\AppData\Local\Temp\s1i0.
+4F cinit CODE >3135:C:\Users\lvale\AppData\Local\Temp\s1i0.
+50 cinit CODE >3136:C:\Users\lvale\AppData\Local\Temp\s1i0.
+51 cinit CODE >3137:C:\Users\lvale\AppData\Local\Temp\s1i0.
+54 cinit CODE >3141:C:\Users\lvale\AppData\Local\Temp\s1i0.
+55 cinit CODE >3142:C:\Users\lvale\AppData\Local\Temp\s1i0.
+56 cinit CODE >3143:C:\Users\lvale\AppData\Local\Temp\s1i0.
+57 cinit CODE >3144:C:\Users\lvale\AppData\Local\Temp\s1i0.
+58 cinit CODE >3145:C:\Users\lvale\AppData\Local\Temp\s1i0.
+59 cinit CODE >3146:C:\Users\lvale\AppData\Local\Temp\s1i0.
+5C cinit CODE >3150:C:\Users\lvale\AppData\Local\Temp\s1i0.
+5D cinit CODE >3151:C:\Users\lvale\AppData\Local\Temp\s1i0.
+5E cinit CODE >3152:C:\Users\lvale\AppData\Local\Temp\s1i0.
+5F cinit CODE >3153:C:\Users\lvale\AppData\Local\Temp\s1i0.
+60 cinit CODE >3154:C:\Users\lvale\AppData\Local\Temp\s1i0.
+61 cinit CODE >3155:C:\Users\lvale\AppData\Local\Temp\s1i0.
+63 cinit CODE >3161:C:\Users\lvale\AppData\Local\Temp\s1i0.
+63 cinit CODE >3163:C:\Users\lvale\AppData\Local\Temp\s1i0.
+64 cinit CODE >3164:C:\Users\lvale\AppData\Local\Temp\s1i0.
+65 cinit CODE >3165:C:\Users\lvale\AppData\Local\Temp\s1i0.
 4 intentry CODE >51:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/interrupt_manager.c
 4 intentry CODE >94:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/mcc.c
 6 intentry CODE >54:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\mcc_generated_files/interrupt_manager.c
@@ -1703,14 +1703,14 @@ C19 text13 CODE >2349:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Program
 133B maintext CODE >673:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 133C maintext CODE >614:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
 133E maintext CODE >617:C:\Users\lvale\Documents\TinyFPGA\repos\TinyFPGA-A-Programmer\firmware\main.c
-7F8 clrtext CODE >3094:C:\Users\lvale\AppData\Local\Temp\s13ks.
-7F8 clrtext CODE >3095:C:\Users\lvale\AppData\Local\Temp\s13ks.
-7F9 clrtext CODE >3096:C:\Users\lvale\AppData\Local\Temp\s13ks.
-7F9 clrtext CODE >3097:C:\Users\lvale\AppData\Local\Temp\s13ks.
-7FA clrtext CODE >3098:C:\Users\lvale\AppData\Local\Temp\s13ks.
-7FB clrtext CODE >3099:C:\Users\lvale\AppData\Local\Temp\s13ks.
-7FC clrtext CODE >3100:C:\Users\lvale\AppData\Local\Temp\s13ks.
-7FD clrtext CODE >3101:C:\Users\lvale\AppData\Local\Temp\s13ks.
+7F8 clrtext CODE >3094:C:\Users\lvale\AppData\Local\Temp\s1i0.
+7F8 clrtext CODE >3095:C:\Users\lvale\AppData\Local\Temp\s1i0.
+7F9 clrtext CODE >3096:C:\Users\lvale\AppData\Local\Temp\s1i0.
+7F9 clrtext CODE >3097:C:\Users\lvale\AppData\Local\Temp\s1i0.
+7FA clrtext CODE >3098:C:\Users\lvale\AppData\Local\Temp\s1i0.
+7FB clrtext CODE >3099:C:\Users\lvale\AppData\Local\Temp\s1i0.
+7FC clrtext CODE >3100:C:\Users\lvale\AppData\Local\Temp\s1i0.
+7FD clrtext CODE >3101:C:\Users\lvale\AppData\Local\Temp\s1i0.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1730,7 +1730,7 @@ __LdataBANK6 0 0 ABS 0 dataBANK6 -
 cmd_task@compare_data_matches 2EB 0 BANK5 1 dataBANK5 dist/default/production\firmware.production.obj
 USBStdGetStatusHandler@p 160 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 __end_ofi1_USBCtrlEPServiceComplete 2A5E 0 CODE 0 text47 dist/default/production\firmware.production.obj
-cmd_task@status_sent 2CE 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@status_sent 2C1 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __size_ofi1_USBSuspend 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __Hspace_0 8009 0 ABS 0 - -
 __Hspace_1 3E0 0 ABS 0 - -
@@ -1771,13 +1771,13 @@ _UEIR E93 0 ABS 0 - dist/default/production\firmware.production.obj
 _UEP0 E98 0 ABS 0 - dist/default/production\firmware.production.obj
 _UEP1 E99 0 ABS 0 - dist/default/production\firmware.production.obj
 _WPUA 20C 0 ABS 0 - dist/default/production\firmware.production.obj
-___sp 0 0 STACK 2 stack C:\Users\lvale\AppData\Local\Temp\s13ks.obj
+___sp 0 0 STACK 2 stack C:\Users\lvale\AppData\Local\Temp\s1i0.obj
 _main 23EE 0 CODE 0 maintext dist/default/production\firmware.production.obj
-_pDst 2C8 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_pDst 2DC 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 btemp 7E 0 ABS 0 - dist/default/production\firmware.production.obj
-_usb_rx_bytes_avail 26C 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
+_usb_rx_bytes_avail 26B 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
 __size_of_USBCtrlTrfTxService 0 0 ABS 0 - dist/default/production\firmware.production.obj
-start 24 0 CODE 0 init C:\Users\lvale\AppData\Local\Temp\s13ks.obj
+start 24 0 CODE 0 init C:\Users\lvale\AppData\Local\Temp\s1i0.obj
 _USBTransferOnePacket 38E2 0 CODE 0 text3 dist/default/production\firmware.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\firmware.production.obj
 i1USER_USB_CALLBACK_EVENT_HANDLER@size 5C 0 BANK0 1 cstackBANK0h dist/default/production\firmware.production.obj
@@ -1787,7 +1787,7 @@ _USBDeviceInit 1528 0 CODE 0 text13 dist/default/production\firmware.production.
 _pBDTEntryEP0OutNext 1EC 0 BANK3 1 bssBANK3 dist/default/production\firmware.production.obj
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\firmware.production.obj
 i1_USBCtrlEPAllowStatusStage 1D04 0 CODE 0 text46 dist/default/production\firmware.production.obj
-cmd_task@input_mask 269 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
+cmd_task@input_mask 268 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
 __size_of_USBDeviceTasks 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __LidataBANK4 0 0 ABS 0 idataBANK4 -
 __LidataBANK5 0 0 ABS 0 idataBANK5 -
@@ -1803,12 +1803,12 @@ _usb_rx_buf_0 120 0 ABS 1 - dist/default/production\firmware.production.obj
 _usb_rx_buf_1 220 0 ABS 1 - dist/default/production\firmware.production.obj
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_cmd_task 0 0 ABS 0 - dist/default/production\firmware.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s13ks.obj
-intlevel1 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s13ks.obj
-intlevel2 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s13ks.obj
-intlevel3 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s13ks.obj
-intlevel4 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s13ks.obj
-intlevel5 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s13ks.obj
+intlevel0 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s1i0.obj
+intlevel1 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s1i0.obj
+intlevel2 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s1i0.obj
+intlevel3 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s1i0.obj
+intlevel4 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s1i0.obj
+intlevel5 0 0 CODE 0 functab C:\Users\lvale\AppData\Local\Temp\s1i0.obj
 _pBDTEntryIn 2A7 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 wtemp0 7E 0 ABS 0 - dist/default/production\firmware.production.obj
 __Hfunctab 0 0 CODE 0 functab -
@@ -1820,17 +1820,17 @@ i1USBCtrlTrfInHandler@lastDTS 75 0 COMMON 1 cstackCOMMON dist/default/production
 __end_ofi1_USBDeviceTasks 1CC0 0 CODE 0 text46 dist/default/production\firmware.production.obj
 __size_of_USBEnableEndpoint 0 0 ABS 0 - dist/default/production\firmware.production.obj
 _cmd_rx_buf_put_task 0 0 CODE 0 text5 dist/default/production\firmware.production.obj
-_controlTransferState 268 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
-cmd_task@cmd 2DD 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
-cmd_task@op0 2DC 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_controlTransferState 26C 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
+cmd_task@cmd 2D0 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@op0 2CF 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 cmd_task@op1 166 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
-cmd_task@sie 26A 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
+cmd_task@sie 269 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
 cmd_task@tmp 16A 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 i1USBEnableEndpoint@p 77 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 _USBCtrlTrfTxService 2F3A 0 CODE 0 text14 dist/default/production\firmware.production.obj
 __Hclrtext 0 0 ABS 0 clrtext -
 __end_ofi1_USBCtrlEPService 1E52 0 CODE 0 text46 dist/default/production\firmware.production.obj
-cmd_task@num_bits 2DB 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@num_bits 2CE 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __size_of_USBCtrlEPAllowDataStage 0 0 ABS 0 - dist/default/production\firmware.production.obj
 USBDeviceInit@i 163 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 USBDeviceInit@p 160 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
@@ -1850,7 +1850,7 @@ __size_ofi1_USBCtrlTrfInHandler 0 0 ABS 0 - dist/default/production\firmware.pro
 __end_of_INTERRUPT_InterruptManager 24 0 CODE 0 intentry dist/default/production\firmware.production.obj
 __size_ofi1_USBDeviceInit 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_ofi1_USBCtrlTrfOutHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
-cmd_task@expected_data 2D3 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@expected_data 2C6 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __Hpa_nodes0 0 0 ABS 0 pa_nodes0 -
 i1USBConfigureEndpoint@EPNum 72 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 ?_USBTransferOnePacket 160 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
@@ -1868,8 +1868,8 @@ _cmd_task 0 0 CODE 0 text4 dist/default/production\firmware.production.obj
 __end_of_USBStallHandler 17E6 0 CODE 0 text13 dist/default/production\firmware.production.obj
 cmd_task@do0p0 E6 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
 cmd_task@do0p1 E5 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
-cmd_task@do1p0 2D9 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
-cmd_task@do1p1 2D8 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@do1p0 2CC 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@do1p1 2CB 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 i1_USBCtrlEPService 1DC6 0 CODE 0 text46 dist/default/production\firmware.production.obj
 _USBCtrlTrfSetupHandler 106E 0 CODE 0 text13 dist/default/production\firmware.production.obj
 __size_ofi1_USBCtrlTrfSetupHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -1883,14 +1883,15 @@ __end_of_cmd_task 0 0 CODE 0 text4 dist/default/production\firmware.production.o
 __size_ofi1_USBCtrlEPServiceComplete 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __Lpa_nodes0 0 0 ABS 0 pa_nodes0 -
 __end_of_USBCtrlTrfOutHandler 3EB2 0 CODE 0 text27 dist/default/production\firmware.production.obj
-_USBBusIsSuspended 2C6 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_USBBusIsSuspended 2DA 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __end_ofi1_USBConfigureEndpoint 373A 0 CODE 0 text57 dist/default/production\firmware.production.obj
 i1USER_USB_CALLBACK_EVENT_HANDLER@event 58 0 BANK0 1 cstackBANK0h dist/default/production\firmware.production.obj
 i1USER_USB_CALLBACK_EVENT_HANDLER@pdata 5A 0 BANK0 1 cstackBANK0h dist/default/production\firmware.production.obj
-cmd_task@i 2D6 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
-_USBDeferOUTDataStagePackets 2BE 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@i 2C9 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_USBDeferOUTDataStagePackets 2D2 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 _PIN_MANAGER_Initialize 33A6 0 CODE 0 text32 dist/default/production\firmware.production.obj
 start_initialization 28 0 CODE 0 cinit dist/default/production\firmware.production.obj
+cmd_task@bit_to_set_2364 168 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 _OSCCON 99 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_ofi1_USBCtrlTrfTxService 2C88 0 CODE 0 text47 dist/default/production\firmware.production.obj
 __size_ofi1_USBEnableEndpoint 0 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -1899,11 +1900,11 @@ __end_of_USBCheckStdRequest 1162 0 CODE 0 text13 dist/default/production\firmwar
 __size_ofi1_USBStallHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 _device_dsc 31EE 0 STRCODE 0 stringtext6 dist/default/production\firmware.production.obj
 __end_of_memset 3CBC 0 CODE 0 text17 dist/default/production\firmware.production.obj
-_USBTicksSinceSuspendEnd 2BD 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_USBTicksSinceSuspendEnd 2D1 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __end_of_SYSTEM_Initialize 3392 0 CODE 0 text32 dist/default/production\firmware.production.obj
 __end_ofi1_USBStdFeatureReqHandler 1B74 0 CODE 0 text46 dist/default/production\firmware.production.obj
 __end_of_USBDeviceInit 162A 0 CODE 0 text13 dist/default/production\firmware.production.obj
-cmd_task@byte_to_send 2D1 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@byte_to_send 2C4 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 i1USBDeviceTasks@i 5F 0 BANK0 1 cstackBANK0h dist/default/production\firmware.production.obj
 _USBStdGetDscHandler 39D0 0 CODE 0 text20 dist/default/production\firmware.production.obj
 __end_of_cmd_rx_buf_put_task 0 0 CODE 0 text5 dist/default/production\firmware.production.obj
@@ -1913,17 +1914,19 @@ __pcstackBANK2 160 0 BANK2 1 cstackBANK2 dist/default/production\firmware.produc
 __pcstackBANK3 1E0 0 BANK3 1 cstackBANK3 dist/default/production\firmware.production.obj
 __pcstackBANK4 260 0 BANK4 1 cstackBANK4 dist/default/production\firmware.production.obj
 __end_of_USER_USB_CALLBACK_EVENT_HANDLER 1528 0 CODE 0 text13 dist/default/production\firmware.production.obj
+cmd_task@last_phase_overlay_2365 165 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
+cmd_task@last_phase_overlay_2368 16B 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 i1_USBCheckCDCRequest 3408 0 CODE 0 text56 dist/default/production\firmware.production.obj
 __end_of_USBCtrlTrfTxService 3000 0 CODE 0 text14 dist/default/production\firmware.production.obj
 _USBStallHandler 17A6 0 CODE 0 text13 dist/default/production\firmware.production.obj
-USBDeviceInit@i_1661 162 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
+USBDeviceInit@i_1358 162 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 i1_USBCtrlTrfTxService 2BD8 0 CODE 0 text47 dist/default/production\firmware.production.obj
 __end_of_USBEnableEndpoint 37A2 0 CODE 0 text24 dist/default/production\firmware.production.obj
 i1_USBCtrlEPServiceComplete 295A 0 CODE 0 text47 dist/default/production\firmware.production.obj
 _WDTCON 97 0 ABS 0 - dist/default/production\firmware.production.obj
 i1USBCtrlTrfRxService@i 74 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 i1USBCtrlTrfTxService@byteToSend 72 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\lvale\AppData\Local\Temp\s13ks.obj
+___int_sp 0 0 STACK 2 stack C:\Users\lvale\AppData\Local\Temp\s1i0.obj
 _UIEbits E92 0 ABS 0 - dist/default/production\firmware.production.obj
 _UIRbits E90 0 ABS 0 - dist/default/production\firmware.production.obj
 __Hbank0 0 0 ABS 0 bank0 -
@@ -1997,8 +2000,8 @@ USBStdFeatureReqHandler@p 1E5 0 BANK3 1 cstackBANK3 dist/default/production\firm
 __CFG_FOSC$INTOSC 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 0 config -
-cmd_task@data 2D0 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
-cmd_task@mask 2D2 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@data 2C3 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@mask 2C5 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 i1_USBEnableEndpoint 36A0 0 CODE 0 text57 dist/default/production\firmware.production.obj
 __end_ofi1_USBCtrlTrfSetupHandler 189E 0 CODE 0 text46 dist/default/production\firmware.production.obj
 USER_USB_CALLBACK_EVENT_HANDLER@event 16A 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
@@ -2007,7 +2010,7 @@ USER_USB_CALLBACK_EVENT_HANDLER@size 16E 0 BANK2 1 cstackBANK2 dist/default/prod
 USBTransferOnePacket@handle 168 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 USER_USB_CALLBACK_EVENT_HANDLER@pdata 16C 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 __size_ofi1_USBCheckStdRequest 0 0 ABS 0 - dist/default/production\firmware.production.obj
-USBStdSetCfgHandler@i_2326 1E2 0 BANK3 1 cstackBANK3 dist/default/production\firmware.production.obj
+USBStdSetCfgHandler@i_2033 1E2 0 BANK3 1 cstackBANK3 dist/default/production\firmware.production.obj
 __Lbank0 0 0 ABS 0 bank0 -
 __Lbank1 0 0 ABS 0 bank1 -
 __Lbank2 0 0 ABS 0 bank2 -
@@ -2113,8 +2116,8 @@ __end_ofi1_USBCheckStdRequest 1938 0 CODE 0 text46 dist/default/production\firmw
 _USBWakeFromSuspend 1806 0 CODE 0 text13 dist/default/production\firmware.production.obj
 __end_of_gpio_init 0 0 CODE 0 text1 dist/default/production\firmware.production.obj
 _USBStdFeatureReqHandler 1162 0 CODE 0 text13 dist/default/production\firmware.production.obj
-_BothEP0OutUOWNsSet 2C4 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
-cmd_task@status 2CF 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_BothEP0OutUOWNsSet 2D8 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@status 2C2 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __size_of_gpio_init 0 0 ABS 0 - dist/default/production\firmware.production.obj
 i1USBConfigureEndpoint@direction 70 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 _UCONbits E8E 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -2135,13 +2138,12 @@ __size_of_USBStdGetStatusHandler 0 0 ABS 0 - dist/default/production\firmware.pr
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\firmware.production.obj
 _gpio_init 0 0 CODE 0 text1 dist/default/production\firmware.production.obj
 __end_of_USBStdGetDscHandler 3AC4 0 CODE 0 text20 dist/default/production\firmware.production.obj
-cmd_task@bit_to_set_870 168 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 __Lintentry 8 0 CODE 0 intentry -
 __size_of_USBStallHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_ofi1_USBWakeFromSuspend 2000 0 CODE 0 text46 dist/default/production\firmware.production.obj
 __end_of_USBCtrlTrfSetupHandler 10D4 0 CODE 0 text13 dist/default/production\firmware.production.obj
 __end_ofi1_memset 3BBC 0 CODE 0 text50 dist/default/production\firmware.production.obj
-reset_vec 0 0 CODE 0 reset_vec C:\Users\lvale\AppData\Local\Temp\s13ks.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\lvale\AppData\Local\Temp\s1i0.obj
 i1_USBStdGetDscHandler 3802 0 CODE 0 text53 dist/default/production\firmware.production.obj
 _USBEnableEndpoint 3768 0 CODE 0 text24 dist/default/production\firmware.production.obj
 __end_ofi1_USBStallHandler 1FAE 0 CODE 0 text46 dist/default/production\firmware.production.obj
@@ -2154,7 +2156,7 @@ __LbssBANK4 0 0 ABS 0 bssBANK4 -
 __LbssBANK5 0 0 ABS 0 bssBANK5 -
 __LbssBANK6 0 0 ABS 0 bssBANK6 -
 __LbssBANK7 0 0 ABS 0 bssBANK7 -
-i1USBDeviceInit@i_1661 72 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
+i1USBDeviceInit@i_1358 72 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 __size_ofi1_USBCtrlEPAllowStatusStage 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_ofi1_USBIncrement1msInternalTimers 1F6E 0 CODE 0 text46 dist/default/production\firmware.production.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -2279,7 +2281,7 @@ __CFG_IESO$ON 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_of_USBTransferOnePacket 39D0 0 CODE 0 text3 dist/default/production\firmware.production.obj
 __end_ofi1_USBCtrlEPAllowStatusStage 1DC6 0 CODE 0 text46 dist/default/production\firmware.production.obj
-_RemoteWakeup 2C7 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_RemoteWakeup 2DB 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 i1USBConfigureEndpoint@handle 73 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 pnum$maintext_split_1 65 0 ABS 0 - dist/default/production\firmware.production.obj
 pnum$maintext_split_2 66 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -2293,16 +2295,14 @@ _usb_rx_buf 26E 0 BANK4 1 dataBANK4 dist/default/production\firmware.production.
 _usb_rx_ptr E7 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
 USBEnableEndpoint@p 167 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 _dummy_encapsulated_cmd_response 324 0 BANK6 1 bssBANK6 dist/default/production\firmware.production.obj
-cmd_task@last_phase_overlay_871 165 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
-cmd_task@last_phase_overlay_874 16B 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
-stackhi 23EF 0 ABS 0 - C:\Users\lvale\AppData\Local\Temp\s13ks.obj
-stacklo 2270 0 ABS 0 - C:\Users\lvale\AppData\Local\Temp\s13ks.obj
+stackhi 23EF 0 ABS 0 - C:\Users\lvale\AppData\Local\Temp\s1i0.obj
+stacklo 2270 0 ABS 0 - C:\Users\lvale\AppData\Local\Temp\s1i0.obj
 __end_of_USBConfigureEndpoint 3802 0 CODE 0 text24 dist/default/production\firmware.production.obj
 _USBCtrlEPAllowDataStage 2DA2 0 CODE 0 text14 dist/default/production\firmware.production.obj
-_usb_tx_ptr 26B 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
+_usb_tx_ptr 26A 0 BANK4 1 bssBANK4 dist/default/production\firmware.production.obj
 _OSCTUNE 98 0 ABS 0 - dist/default/production\firmware.production.obj
 i1_USBStdGetStatusHandler 3536 0 CODE 0 text52 dist/default/production\firmware.production.obj
-cmd_task@num_bytes 2DA 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@num_bytes 2CD 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 cmd_task@last_phase_overlay 164 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 _inlined$_gpio_init 1 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_of_USBCtrlEPAllowDataStage 2E64 0 CODE 0 text14 dist/default/production\firmware.production.obj
@@ -2334,8 +2334,8 @@ __Hmaintext_split_1 0 0 ABS 0 maintext_split_1 -
 __Hmaintext_split_2 0 0 ABS 0 maintext_split_2 -
 __Hmaintext_split_3 0 0 ABS 0 maintext_split_3 -
 __Hintentry 24 0 CODE 0 intentry -
-_bytes_recieved 2CA 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
-_USBDeferStatusStagePacket 2C2 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_bytes_recieved 2BD 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_USBDeferStatusStagePacket 2D6 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __end_of_CDCInitEP 3768 0 CODE 0 text24 dist/default/production\firmware.production.obj
 _USER_USB_CALLBACK_EVENT_HANDLER 14EA 0 CODE 0 text13 dist/default/production\firmware.production.obj
@@ -2345,7 +2345,7 @@ __size_of_CDCInitEP 0 0 ABS 0 - dist/default/production\firmware.production.obj
 cmd_rx_buf_put_task@pt 165 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 __Hreset_vec 4 0 CODE 0 reset_vec -
 _inPipes E0 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
-_shortPacketStatus 2C9 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_shortPacketStatus 2DD 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __end_of_USB_CD_Ptr 322A 0 STRCODE 0 stringtext2 dist/default/production\firmware.production.obj
 i1_USBStallHandler 1F6E 0 CODE 0 text46 dist/default/production\firmware.production.obj
 USBTransferOnePacket@ep 167 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
@@ -2355,13 +2355,13 @@ __HbssBANK4 0 0 ABS 0 bssBANK4 -
 __HbssBANK5 0 0 ABS 0 bssBANK5 -
 __HbssBANK6 0 0 ABS 0 bssBANK6 -
 __HbssBANK7 0 0 ABS 0 bssBANK7 -
-_endpoint_number 2C5 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
-cmd_task@inout_cfg 2D7 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_endpoint_number 2D9 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@inout_cfg 2CA 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 cmd_task@PT_YIELD_FLAG 163 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 USBConfigureEndpoint@EPNum 162 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 _USB_SD_Ptr 3212 0 STRCODE 0 stringtext1 dist/default/production\firmware.production.obj
 _inlined$_cmd_task 1 0 ABS 0 - dist/default/production\firmware.production.obj
-_usb_rx_pp_put_ptr 2CC 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_usb_rx_pp_put_ptr 2BF 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __ptext1 0 0 CODE 0 text1 dist/default/production\firmware.production.obj
 __ptext2 0 0 CODE 0 text2 dist/default/production\firmware.production.obj
 __ptext3 38E2 0 CODE 0 text3 dist/default/production\firmware.production.obj
@@ -2385,6 +2385,8 @@ __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 _configDescriptor1 3118 0 STRCODE 0 stringtext3 dist/default/production\firmware.production.obj
 i1USBCtrlTrfRxService@byteToRead 75 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
+cmd_task@data_2366 16C 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
+cmd_task@data_2367 169 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 __end_of_cmd_tx_buffer_task 0 0 CODE 0 text2 dist/default/production\firmware.production.obj
 USBStdFeatureReqHandler@current_ep_data 1E4 0 BANK3 1 cstackBANK3 dist/default/production\firmware.production.obj
 cmd_rx_buf_get_task@pt 162 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
@@ -2408,7 +2410,7 @@ __size_of_USBWakeFromSuspend 0 0 ABS 0 - dist/default/production\firmware.produc
 __pidataBANK4 0 0 CODE 0 idataBANK4 dist/default/production\firmware.production.obj
 __pidataBANK5 0 0 CODE 0 idataBANK5 dist/default/production\firmware.production.obj
 __pidataBANK6 0 0 CODE 0 idataBANK6 dist/default/production\firmware.production.obj
-cmd_task@actual_data 2D4 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@actual_data 2C7 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 USBCtrlTrfTxService@byteToSend 162 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 _USTATcopy 1EF 0 BANK3 1 bssBANK3 dist/default/production\firmware.production.obj
 __Lclrtext 0 0 ABS 0 clrtext -
@@ -2416,14 +2418,14 @@ __pcstackBANK0h 58 0 BANK0 1 cstackBANK0h dist/default/production\firmware.produ
 _USBCheckCDCRequest 349E 0 CODE 0 text23 dist/default/production\firmware.production.obj
 _outPipes 2A0 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __size_of_USBCtrlTrfSetupHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
-_USBStatusStageTimeoutCounter 2C3 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_USBStatusStageTimeoutCounter 2D7 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __size_ofi1_USBCtrlTrfRxService 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 _cmd_tx_buffer_task 0 0 CODE 0 text2 dist/default/production\firmware.production.obj
 __size_ofi1_USBCheckCDCRequest 0 0 ABS 0 - dist/default/production\firmware.production.obj
 main@rx_get_pt 262 0 BANK4 1 cstackBANK4 dist/default/production\firmware.production.obj
 __Hend_init 28 0 CODE 0 end_init -
-i1USBStdSetCfgHandler@i_2326 7C 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
+i1USBStdSetCfgHandler@i_2033 7C 0 COMMON 1 cstackCOMMON dist/default/production\firmware.production.obj
 __end_ofi1_USBCtrlTrfOutHandler 3D22 0 CODE 0 text60 dist/default/production\firmware.production.obj
 __end_of_USB_SD_Ptr 321E 0 STRCODE 0 stringtext1 dist/default/production\firmware.production.obj
 __end_of_main E10 0 CODE 0 maintext_split_3 dist/default/production\firmware.production.obj
@@ -2442,11 +2444,11 @@ __end_of_sd001 31EE 0 STRCODE 0 stringtext5 dist/default/production\firmware.pro
 __end_of_sd002 31CA 0 STRCODE 0 stringtext4 dist/default/production\firmware.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-_usb_rx_pp_get_ptr 2CB 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_usb_rx_pp_get_ptr 2BE 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 _USBStdGetStatusHandler 35D2 0 CODE 0 text19 dist/default/production\firmware.production.obj
 __size_ofi1_USBStdGetStatusHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 _inlined$_cmd_rx_buf_get_task 1 0 ABS 0 - dist/default/production\firmware.production.obj
-_USBDeferINDataStagePackets 2BF 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_USBDeferINDataStagePackets 2D3 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 _sd000 321E 0 STRCODE 0 stringtext7 dist/default/production\firmware.production.obj
 _sd001 31CA 0 STRCODE 0 stringtext5 dist/default/production\firmware.production.obj
 _sd002 319E 0 STRCODE 0 stringtext4 dist/default/production\firmware.production.obj
@@ -2463,7 +2465,7 @@ __HdataBANK4 0 0 ABS 0 dataBANK4 -
 __HdataBANK5 0 0 ABS 0 dataBANK5 -
 __HdataBANK6 0 0 ABS 0 dataBANK6 -
 __end_of_OSCILLATOR_Initialize 33A6 0 CODE 0 text32 dist/default/production\firmware.production.obj
-_usb_rx_pp_size 2CD 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_usb_rx_pp_size 2C0 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __initialization 28 0 CODE 0 cinit dist/default/production\firmware.production.obj
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\firmware.production.obj
 __pbssBANK1 E0 0 BANK1 1 bssBANK1 dist/default/production\firmware.production.obj
@@ -2481,7 +2483,7 @@ USBDeviceTasks@i 1EB 0 BANK3 1 cstackBANK3 dist/default/production\firmware.prod
 __size_of_USER_USB_CALLBACK_EVENT_HANDLER 0 0 ABS 0 - dist/default/production\firmware.production.obj
 USBConfigureEndpoint@direction 160 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
 _usb_rx_buf_array 330 0 BANK6 1 dataBANK6 dist/default/production\firmware.production.obj
-cmd_task@loop_is_active 2D5 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+cmd_task@loop_is_active 2C8 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 cmd_task@loop_count 2BB 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __size_ofi1_USBStdGetDscHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 _inlined$_cmd_tx_buffer_task 1 0 ABS 0 - dist/default/production\firmware.production.obj
@@ -2492,10 +2494,8 @@ pnum$maintext 1D 0 ABS 0 - dist/default/production\firmware.production.obj
 __size_of_USBStdFeatureReqHandler 0 0 ABS 0 - dist/default/production\firmware.production.obj
 i1_USBConfigureEndpoint 36DA 0 CODE 0 text57 dist/default/production\firmware.production.obj
 __end_ofi1_USBStdSetCfgHandler 3B8E 0 CODE 0 text50 dist/default/production\firmware.production.obj
-cmd_task@data_872 16C 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
-cmd_task@data_873 169 0 BANK2 1 cstackBANK2 dist/default/production\firmware.production.obj
-_USBStatusStageEnabledFlag1 2C1 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
-_USBStatusStageEnabledFlag2 2C0 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_USBStatusStageEnabledFlag1 2D5 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
+_USBStatusStageEnabledFlag2 2D4 0 BANK5 1 bssBANK5 dist/default/production\firmware.production.obj
 __pswtext1 1000 0 CONST 0 swtext1 dist/default/production\firmware.production.obj
 __pswtext2 E1C 0 CONST 0 swtext2 dist/default/production\firmware.production.obj
 __pswtext3 3000 0 CONST 0 swtext3 dist/default/production\firmware.production.obj
