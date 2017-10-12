@@ -1246,7 +1246,12 @@ class JtagCustomProgrammer(object):
         self.runtest(1000)
 
         row_count = num_rows
-        for line in jed_file.cfg_data + jed_file.ebr_data:
+        combined_cfg_data = jed_file.cfg_data
+        
+        if jed_file.ebr_data is not None:
+            combined_cfg_data += jed_file.ebr_data
+
+        for line in combined_cfg_data:
             # LSC_PROG_INCR_NV
             self.write_ir(8, 0x70)
             self.write_dr(128, line)
@@ -1297,7 +1302,7 @@ class JtagCustomProgrammer(object):
         self.feature_row = None
         self.feature_bits = None
 
-        for line in jed_file.cfg_data + jed_file.ebr_data:
+        for line in combined_cfg_data:
             self.runtest(2)
             self.check_dr(128, line, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF)
 
