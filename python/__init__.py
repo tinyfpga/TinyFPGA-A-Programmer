@@ -1,1 +1,1 @@
-from tinyfpgaa import *
+from .tinyfpgaa import *
