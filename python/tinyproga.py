@@ -9,7 +9,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("-q", action="store_true", help="Silent mode.")
     parser.add_argument("-p", type=str, help="Manually specify serial device.")
-    parser.add_argument("jed", type=str, help="JEDEC file to program.")
+    parser.add_argument("-b", action="store_true", help="Input is bitstream file.")
+    parser.add_argument("jed", type=str, help="JEDEC or bitstream file to program.")
     args = parser.parse_args()
 
     if not args.p:
@@ -30,13 +31,20 @@ def main():
         programmer = tinyfpgaa.JtagCustomProgrammer(jtag)
 
         if not args.q:
-            print("Parsing JEDEC file...")
-        jedec_file = tinyfpgaa.JedecFile(open(args.jed, 'r'))
+            if args.b:
+                print("Parsing bitstream file...")
+            else:
+                print("Parsing JEDEC file...")
+
+        if args.b:
+            input_file = tinyfpgaa.BitstreamFile(open(args.jed, 'rb'))
+        else:
+            input_file = tinyfpgaa.JedecFile(open(args.jed, 'r'))
 
         try:
             if not args.q:
                 print("Programming TinyFPGA A on {}...".format(a_port))
-            programmer.program(jedec_file)
+            programmer.program(input_file)
         except:
             print("Programming Failed!")
             traceback.print_exc()
