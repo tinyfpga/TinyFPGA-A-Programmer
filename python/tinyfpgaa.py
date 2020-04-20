@@ -17,7 +17,7 @@ class SyncSerial(object):
 
 
     def write(self, data):
-        if isinstance(data, (int, long)):
+        if isinstance(data, int):
             self.pending_write_data.append(data)
         else:
             self.pending_write_data.extend(data)
@@ -27,13 +27,13 @@ class SyncSerial(object):
             self.pending_write_data = self.pending_write_data[63:]
             self.ser.write(array.array('B', write_data).tostring())
             self.ser.flush()
-        
+
 
     def read(self, num_bytes, callback, blocking = False):
         self.flush()
         read_data = [x for x in array.array('B', self.ser.read(size = num_bytes)).tolist()]
         callback(read_data)
-        
+
 
     def task(self):
         return 0
@@ -51,7 +51,7 @@ class AsyncSerial(object):
     """
     Async wrapper class for serial objects.  Ensures that write operations are
     buffered and read operations are executed asynchronously with a callback
-    function to process each individual read request data.  Read and write 
+    function to process each individual read request data.  Read and write
     order is strictly maintained in FIFO order.
     """
     def __init__(self, ser, write_buffer_size = 63, write_flush_timeout = 0.001):
@@ -70,9 +70,9 @@ class AsyncSerial(object):
     def write(self, data):
         """
         Issue an asynchronous write.
-        """ 
+        """
         self.last_write_time = time.time()
-       
+
         #print "write: " + str(data)
 
         if isinstance(data, int):
@@ -90,7 +90,7 @@ class AsyncSerial(object):
 
     def read(self, num_bytes, callback, blocking = False):
         """
-        Issue an asynchronous read.  This read callback is inserted into the 
+        Issue an asynchronous read.  This read callback is inserted into the
         read queue in the order it was issued.  Once all previous read requests
         have been satisfied and enough bytes are ready for this request the
         callback will be called with the read data.
@@ -114,7 +114,7 @@ class AsyncSerial(object):
         #else:
         #    self.pending_reads.append((num_bytes, callback))
 
-        
+
 
     def task(self):
         """
@@ -171,11 +171,11 @@ class AsyncSerial(object):
 
 class Pin(object):
     """
-    Property that represents an individual GPIO pin on the TinyFPGA Programmer 
+    Property that represents an individual GPIO pin on the TinyFPGA Programmer
     board. This allows for the GPIO pins to be referenced by a name rather than
     an index number.  This is to be used with the TinyFpgaProgrammer class.
     """
-    def __init__(self, index, direction=1): 
+    def __init__(self, index, direction=1):
         self.index = index
         self.direction = direction
 
@@ -228,7 +228,7 @@ class TinyFpgaProgrammer(object):
         """
         Asynchronously sends any pending commands.  If you sent a series
         of GPIO commands expecting read data you must also send a read_callback
-        that will process the read data when it arrives.  
+        that will process the read data when it arrives.
         """
         self.ser.task()
 
@@ -286,8 +286,8 @@ class TinyFpgaProgrammer(object):
     def get_status(self, status_callback, blocking = True):
         self.ser.write(0x21)
         self.ser.read(1, status_callback, blocking = blocking)
-        
-            
+
+
 
 
     def configure_io(self, directions):
@@ -295,7 +295,7 @@ class TinyFpgaProgrammer(object):
         Configure input/output direction of GPIO pins.
         """
         CONFIG_IO_CMD = [0x00, directions]
-        
+
         if self.in_loop_body:
             self.loop_byte_count += len(CONFIG_IO_CMD)
             self.loop_body += CONFIG_IO_CMD
@@ -332,7 +332,7 @@ class TinyFpgaProgrammer(object):
         assert sie_id >= 0 and sie_id <= 7
 
         SHIFT_CMD = 0x18 + sie_id
-        
+
         do_input = self.sie_gets_input[sie_id]
         do_output = self.sie_sends_output[sie_id]
         do_mask = self.sie_has_mask[sie_id]
@@ -343,17 +343,21 @@ class TinyFpgaProgrammer(object):
 
         if do_output and do_mask:
             iters = [
-                iter(self._int_to_byte_list(num_bytes, data)), 
+                iter(self._int_to_byte_list(num_bytes, data)),
                 iter(self._int_to_byte_list(num_bytes, mask))]
 
-            payload_bytes = list(it.next() for it in itertools.cycle(iters))
-            shift_cmd_bytes += payload_bytes
+            payload_bytes = list()
+            for it in itertools.cycle(iters):
+                try:
+                    payload_bytes.append(next(it))
+                except StopIteration:
+                    break
 
-            #print str(payload_bytes)
+            shift_cmd_bytes += payload_bytes
 
         elif do_output:
             shift_cmd_bytes += self._int_to_byte_list(num_bytes, data)
-        
+
         if self.in_loop_body:
             self.loop_byte_count += len(shift_cmd_bytes)
             self.loop_body += shift_cmd_bytes
@@ -371,17 +375,17 @@ class TinyFpgaProgrammer(object):
                     self.send(num_read_bytes = 1, read_callback = read_callback, blocking = blocking)
 
 
-    def configure_sie(self, 
-        sie_id, 
-        sends_output, 
-        input_on_phase0, 
-        input_on_phase1, 
-        has_input_mask, 
-        input_mask, 
-        do0p0, 
-        do0p1, 
-        do1p0, 
-        do1p1, 
+    def configure_sie(self,
+        sie_id,
+        sends_output,
+        input_on_phase0,
+        input_on_phase1,
+        has_input_mask,
+        input_mask,
+        do0p0,
+        do0p1,
+        do1p0,
+        do1p1,
         last_phase_overlay
     ):
         """
@@ -405,11 +409,11 @@ class TinyFpgaProgrammer(object):
         self.ser.write([
             CONFIG_SIE_CMD,
             config_byte,
-            input_mask, 
-            do0p0, 
-            do0p1, 
-            do1p0, 
-            do1p1, 
+            input_mask,
+            do0p0,
+            do0p1,
+            do1p0,
+            do1p1,
             last_phase_overlay
         ])
 
@@ -417,7 +421,7 @@ class TinyFpgaProgrammer(object):
     def loop(self, iter_count):
         """
         Begin a loop definition.  Loops are very efficient for polling a status
-        bit from the hardware.  The loop can be executed completely within the 
+        bit from the hardware.  The loop can be executed completely within the
         TinyFPGA Programmer firmware.  Because of this, any polling data can be
         checked within the firmware and does not need to be sent back to the
         host computer over USB to be processed.  This saves 1-2 milliseconds
@@ -436,24 +440,24 @@ class TinyFpgaProgrammer(object):
     def end_loop(self, status_callback):
         """
         End a loop definition.  The status_callback will be called with a
-        single byte list indicating 0 if no loop iterations remain and 
+        single byte list indicating 0 if no loop iterations remain and
         1 if there were more loop iterations remaining.
         """
 
         # FW doesn't have another buffer for loops, so we need to make sure
         # the entire loop encoding fits in one packet.
         self.ser.flush()
-        
+
         LOOP_CMD = 0x10
         END_LOOP_CMD = 0x11
-        
+
         self.ser.write(
-            [LOOP_CMD] + 
-            [self.loop_iter_count & 0xff, self.loop_iter_count >> 8] + 
+            [LOOP_CMD] +
+            [self.loop_iter_count & 0xff, self.loop_iter_count >> 8] +
             self.loop_body +
             [END_LOOP_CMD]
         )
-    
+
         self.in_loop_body = False
 
         #self.send(num_read_bytes = 1, read_callback = status_callback)
@@ -476,73 +480,73 @@ class JtagTinyFpgaProgrammer(TinyFpgaProgrammer):
 
         ### setup serial interface engine parameters for JTAG
         # run_tck
-        self.configure_sie( 
-            sie_id = 0, 
-            sends_output = 0, 
-            input_on_phase0 = 0, 
-            input_on_phase1 = 0, 
-            has_input_mask = 0, 
-            input_mask = 0, 
-            do0p0 = 0x00, 
-            do0p1 = 0x10, 
-            do1p0 = 0x00, 
-            do1p1 = 0x10, 
+        self.configure_sie(
+            sie_id = 0,
+            sends_output = 0,
+            input_on_phase0 = 0,
+            input_on_phase1 = 0,
+            has_input_mask = 0,
+            input_mask = 0,
+            do0p0 = 0x00,
+            do0p1 = 0x10,
+            do1p0 = 0x00,
+            do1p1 = 0x10,
             last_phase_overlay = 0x00)
 
         # shift_tms
-        self.configure_sie( 
-            sie_id = 1, 
-            sends_output = 1, 
-            input_on_phase0 = 0, 
-            input_on_phase1 = 0, 
-            has_input_mask = 0, 
-            input_mask = 0, 
-            do0p0 = 0x00, 
-            do0p1 = 0x10, 
-            do1p0 = 0x20, 
-            do1p1 = 0x30, 
+        self.configure_sie(
+            sie_id = 1,
+            sends_output = 1,
+            input_on_phase0 = 0,
+            input_on_phase1 = 0,
+            has_input_mask = 0,
+            input_mask = 0,
+            do0p0 = 0x00,
+            do0p1 = 0x10,
+            do1p0 = 0x20,
+            do1p1 = 0x30,
             last_phase_overlay = 0x00)
 
         # shift_tdi
-        self.configure_sie( 
-            sie_id = 2, 
-            sends_output = 1, 
-            input_on_phase0 = 0, 
-            input_on_phase1 = 0, 
-            has_input_mask = 0, 
-            input_mask = 0, 
-            do0p0 = 0x00, 
-            do0p1 = 0x10, 
-            do1p0 = 0x08, 
-            do1p1 = 0x18, 
+        self.configure_sie(
+            sie_id = 2,
+            sends_output = 1,
+            input_on_phase0 = 0,
+            input_on_phase1 = 0,
+            has_input_mask = 0,
+            input_mask = 0,
+            do0p0 = 0x00,
+            do0p1 = 0x10,
+            do1p0 = 0x08,
+            do1p1 = 0x18,
             last_phase_overlay = 0x20)
 
         # shift_tdo
-        self.configure_sie( 
-            sie_id = 3, 
-            sends_output = 0, 
-            input_on_phase0 = 0, 
-            input_on_phase1 = 1, 
-            has_input_mask = 0, 
-            input_mask = 0x04, 
-            do0p0 = 0x00, 
-            do0p1 = 0x10, 
-            do1p0 = 0x00, 
-            do1p1 = 0x10, 
+        self.configure_sie(
+            sie_id = 3,
+            sends_output = 0,
+            input_on_phase0 = 0,
+            input_on_phase1 = 1,
+            has_input_mask = 0,
+            input_mask = 0x04,
+            do0p0 = 0x00,
+            do0p1 = 0x10,
+            do1p0 = 0x00,
+            do1p1 = 0x10,
             last_phase_overlay = 0x20)
 
         # shift_tdo_poll
-        self.configure_sie( 
-            sie_id = 4, 
-            sends_output = 0, 
-            input_on_phase0 = 0, 
-            input_on_phase1 = 1, 
-            has_input_mask = 1, 
-            input_mask = 0x04, 
+        self.configure_sie(
+            sie_id = 4,
+            sends_output = 0,
+            input_on_phase0 = 0,
+            input_on_phase1 = 1,
+            has_input_mask = 1,
+            input_mask = 0x04,
             do0p0 = 0x00,
-            do0p1 = 0x10, 
-            do1p0 = 0x00, 
-            do1p1 = 0x10, 
+            do0p1 = 0x10,
+            do1p0 = 0x00,
+            do1p1 = 0x10,
             last_phase_overlay = 0x20)
 
 
@@ -568,7 +572,7 @@ class JtagTinyFpgaProgrammer(TinyFpgaProgrammer):
 
 
 def ntuples(lst, n):
-    return zip(*[lst[i:]+lst[:i] for i in range(n)])
+    return list(zip(*[lst[i:]+lst[:i] for i in range(n)]))
 
 
 
@@ -618,7 +622,7 @@ class JtagStateMachine(object):
 
         dist[source] = 0
 
-        while len(q) is not 0:
+        while len(q) != 0:
             u = min(q, key = lambda x: dist[x])
             q.remove(u)
 
@@ -657,7 +661,7 @@ class JtagStateMachine(object):
         tms_sequence = [get_tms(p) for p in ntuples(path, 2)][:-1]
         self.memo[memo_key] = tms_sequence
 
-        return tms_sequence            
+        return tms_sequence
 
 
 
@@ -678,8 +682,8 @@ def is_last(val):
 
 # https://stackoverflow.com/questions/2429098/how-to-treat-the-last-element-in-list-differently-in-python
 def with_sentinal(itr):
-    itr = iter(itr)  
-    prev = itr.next()
+    itr = iter(itr)
+    prev = next(itr)
     for item in itr:
         yield prev
         prev = item
@@ -693,7 +697,7 @@ class Jtag(object):
         self.sm = JtagStateMachine()
         self.current_state = None
 
-    
+
     def run_tms(self, tms_sequence):
         #data = 0
         #for i, v in enumerate(tms_sequence):
@@ -704,7 +708,7 @@ class Jtag(object):
             self.pins.tms = tms
             self.pins.tck = 0
             self.pins.update()
-         
+
             self.pins.tck = 1
             self.pins.update()
 
@@ -760,22 +764,22 @@ class Jtag(object):
             if read_back:
                 def check_read_data(read_data):
                     #print "  check_read_data(" + str(read_data) + ")"
-                
+
                     read_bits = 0
-                
+
                     for i, v in enumerate(read_data):
-                        read_bits |= v << (i * 8) 
-                
+                        read_bits |= v << (i * 8)
+
                     match = (tdo & mask) == (read_bits & mask)
-                     
+
                     if status_callback is not None:
                         if not match:
-                            print ""
-                            print "        read data: 0x%032x" % read_bits
-                            print "    expected data: 0x%032x" % tdo
-                            print "        mask data: 0x%032x" % mask
+                            print("")
+                            print("        read data: 0x%032x" % read_bits)
+                            print("    expected data: 0x%032x" % tdo)
+                            print("        mask data: 0x%032x" % mask)
                         status_callback(match)
-                
+
                 self.pins.shift_tdo(num_bits, check_read_data)
                 self.current_state = self.sm.states[self.current_state][1]
                 return
@@ -785,7 +789,7 @@ class Jtag(object):
                 self.pins.shift_tdi(num_bits, tdi)
                 self.current_state = self.sm.states[self.current_state][1]
                 return
-        
+
 
         for i in range(num_bits - 1):
             self.pins.tdi = out_data_shift_reg & 1
@@ -827,7 +831,7 @@ class Jtag(object):
 
                 if status_callback is not None:
                     status_callback(match)
-        
+
             self.pins.send(read_callback = check_read_data)
 
 
@@ -861,8 +865,8 @@ class JtagSvfParser(object):
             if name == "mask" and "tdo" in cmd:
                 return (2 ** num_bits) - 1
             else:
-                return 0 
-            
+                return 0
+
         def runtest_field(cmd, name):
             for v, k in ntuples(cmd, 2):
                 if k == name:
@@ -926,23 +930,23 @@ class JtagSvfParser(object):
                     else:
                         self.loop_count[0] = None
                         loop_index = None
-                
+
 
             if name == "runtest":
                 self.jtag.goto_state(cmd[1].upper())
 
                 sleep_time = runtest_field(cmd, "sec")
                 tck_count = runtest_field(cmd, "tck")
-                
+
                 if tck_count is None:
                     tck_count = 0
                 else:
-                    tck_count = int(tck_count)  
+                    tck_count = int(tck_count)
 
                 if sleep_time is not None:
                     tck_count = max(float(sleep_time) / 0.00001, tck_count)
 
-                self.jtag.run(int(tck_count), 0)  
+                self.jtag.run(int(tck_count), 0)
 
             if name == "sir":
                 self.jtag.goto_state("IRSHIFT")
@@ -954,9 +958,9 @@ class JtagSvfParser(object):
                 def status_callback(match):
                     if loop_count[0] is not None:
                         if not match and loop_count[0] <= 1:
-                            print "MISMATCH!"
-                            print "cmd %d: %s" % (cmd_index, str(cmd))
-                            print ""
+                            print("MISMATCH!")
+                            print("cmd %d: %s" % (cmd_index, str(cmd)))
+                            print("")
                             exit()
 
                         if match:
@@ -964,12 +968,12 @@ class JtagSvfParser(object):
                             loop_count[0] = 0
 
                 self.jtag.shift(
-                    int(cmd[1]), 
-                    #tdi =  (field(self.tir, "tdi")  << tr_loc) | (field(cmd, "tdi")  << r_loc) | (field(self.hir, "tdi")  << hr_loc), 
-                    #tdo =  (field(self.tir, "tdo")  << tr_loc) | (field(cmd, "tdo")  << r_loc) | (field(self.hir, "tdo")  << hr_loc), 
+                    int(cmd[1]),
+                    #tdi =  (field(self.tir, "tdi")  << tr_loc) | (field(cmd, "tdi")  << r_loc) | (field(self.hir, "tdi")  << hr_loc),
+                    #tdo =  (field(self.tir, "tdo")  << tr_loc) | (field(cmd, "tdo")  << r_loc) | (field(self.hir, "tdo")  << hr_loc),
                     #mask = (field(self.tir, "mask") << tr_loc) | (field(cmd, "mask") << r_loc) | (field(self.hir, "mask") << hr_loc)
-                    tdi  = field(cmd, "tdi"), 
-                    tdo  = field(cmd, "tdo"), 
+                    tdi  = field(cmd, "tdi"),
+                    tdo  = field(cmd, "tdo"),
                     mask = field(cmd, "mask"),
                     status_callback = status_callback
                 )
@@ -989,9 +993,9 @@ class JtagSvfParser(object):
                 def status_callback(match):
                     if loop_count[0] is not None:
                         if not match and loop_count[0] <= 1:
-                            print "MISMATCH!"
-                            print "cmd %d: %s" % (cmd_index, str(cmd))
-                            print ""
+                            print("MISMATCH!")
+                            print("cmd %d: %s" % (cmd_index, str(cmd)))
+                            print("")
                             exit()
 
                         if match:
@@ -999,12 +1003,12 @@ class JtagSvfParser(object):
                             loop_count[0] = None
 
                 self.jtag.shift(
-                    int(cmd[1]), 
-                    #tdi =  (field(self.tdr, "tdi")  << tr_loc) | (field(cmd, "tdi")  << r_loc) | (field(self.hdr, "tdi")  << hr_loc), 
-                    #tdo =  (field(self.tdr, "tdo")  << tr_loc) | (field(cmd, "tdo")  << r_loc) | (field(self.hdr, "tdo")  << hr_loc), 
+                    int(cmd[1]),
+                    #tdi =  (field(self.tdr, "tdi")  << tr_loc) | (field(cmd, "tdi")  << r_loc) | (field(self.hdr, "tdi")  << hr_loc),
+                    #tdo =  (field(self.tdr, "tdo")  << tr_loc) | (field(cmd, "tdo")  << r_loc) | (field(self.hdr, "tdo")  << hr_loc),
                     #mask = (field(self.tdr, "mask") << tr_loc) | (field(cmd, "mask") << r_loc) | (field(self.hdr, "mask") << hr_loc)
-                    tdi  = field(cmd, "tdi"), 
-                    tdo  = field(cmd, "tdo"), 
+                    tdi  = field(cmd, "tdi"),
+                    tdo  = field(cmd, "tdo"),
                     mask = field(cmd, "mask"),
                     status_callback = status_callback
                 )
@@ -1085,24 +1089,24 @@ class JedecFile(object):
         lines = iter(jed)
 
         try:
-            line = lines.next().strip()
+            line = next(lines).strip()
 
             while True:
                 current_field = [line]
 
                 while not line_is_end_of_field(line):
-                    line = lines.next().strip()
+                    line = next(lines).strip()
                     current_field.append(line)
 
                 process_field(current_field)
 
-                line = lines.next().strip()
+                line = next(lines).strip()
 
         except StopIteration:
-            pass 
-        
-        
-        
+            pass
+
+
+
 
 class JtagCustomProgrammer(object):
     def __init__(self, jtag):
@@ -1112,32 +1116,32 @@ class JtagCustomProgrammer(object):
         self.config_data = None
 
     def write_ir(self, num_bits, write_data):
-         self.jtag.goto_state("IRSHIFT")                
+         self.jtag.goto_state("IRSHIFT")
          self.jtag.pins.shift_tdi(num_bits, write_data)
          self.jtag.current_state = self.jtag.sm.states[self.jtag.current_state][1]
          self.jtag.goto_state("IRPAUSE")
 
     def read_dr(self, num_bits, read_callback, blocking = False):
-         self.jtag.goto_state("DRSHIFT")                
+         self.jtag.goto_state("DRSHIFT")
          self.jtag.pins.shift_tdo(num_bits, read_callback, blocking = blocking)
          self.jtag.current_state = self.jtag.sm.states[self.jtag.current_state][1]
          self.jtag.goto_state("DRPAUSE")
 
     def write_dr(self, num_bits, write_data):
-         self.jtag.goto_state("DRSHIFT")                
+         self.jtag.goto_state("DRSHIFT")
          self.jtag.pins.shift_tdi(num_bits, write_data)
          self.jtag.current_state = self.jtag.sm.states[self.jtag.current_state][1]
          self.jtag.goto_state("DRPAUSE")
 
     def check_dr(self, num_bits, check_data, check_mask, status_callback = None):
-         self.jtag.goto_state("DRSHIFT")                
+         self.jtag.goto_state("DRSHIFT")
          self.jtag.pins.shift_tdo_poll(num_bits, check_data, check_mask, status_callback)
          self.jtag.current_state = self.jtag.sm.states[self.jtag.current_state][1]
          self.jtag.goto_state("DRPAUSE")
 
     def runtest(self, clks, state = "IDLE"):
-        self.jtag.goto_state(state) 
-        
+        self.jtag.goto_state(state)
+
         while clks > 0:
             clks_now = min(clks, 1000)
             self.jtag.pins.run_tck(clks_now)
@@ -1176,10 +1180,10 @@ class JtagCustomProgrammer(object):
                     progress(description + " - Failed!")
 
             return status_callback
-       
+
         # drain any lingering read data before continuing
         if self.jtag.pins.ser.ser.inWaiting() > 0:
-            print str([x for x in array.array('B', self.jtag.pins.ser.ser.read(size = self.jtag.pins.ser.ser.inWaiting())).tolist()])
+            print(str([x for x in array.array('B', self.jtag.pins.ser.ser.read(size = self.jtag.pins.ser.ser.inWaiting())).tolist()]))
 
         self.jtag.pins.clear_status()
 
@@ -1193,29 +1197,29 @@ class JtagCustomProgrammer(object):
         self.write_dr(208, 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF)
 
         ### check key protection fuses
-        self.write_ir(8, 0x3C)   
+        self.write_ir(8, 0x3C)
         self.runtest(1000)
         self.check_dr(32, 0x00000000, 0x00010000)
-        
+
         ### enable the flash
         # ISC ENABLE
         self.write_ir(8, 0xC6)
-        self.write_dr(8, 0x00)   
+        self.write_dr(8, 0x00)
         self.runtest(1000)
         # ISC ERASE
         self.write_ir(8, 0x0E)
-        self.write_dr(8, 0x01) 
+        self.write_dr(8, 0x01)
         self.runtest(1000)
         # BYPASS
         self.write_ir(8, 0xFF)
         # ISC ENABLE
         self.write_ir(8, 0xC6)
-        self.write_dr(8, 0x08) 
+        self.write_dr(8, 0x08)
         self.runtest(1000)
 
         ### check the OTP fuses
         # LSC_READ_STATUS
-        self.write_ir(8, 0x3C) 
+        self.write_ir(8, 0x3C)
         self.runtest(1000)
         self.check_dr(32, 0x00000000, 0x00024040)
 
@@ -1247,7 +1251,7 @@ class JtagCustomProgrammer(object):
 
         row_count = num_rows
         combined_cfg_data = jed_file.cfg_data
-        
+
         if jed_file.ebr_data is not None:
             combined_cfg_data += jed_file.ebr_data
 
@@ -1329,7 +1333,7 @@ class JtagCustomProgrammer(object):
                 if prog_update_cnt % prog_update_freq == 0:
                     self.jtag.pins.get_status(status("Verifying bitstream", prog_update_freq), blocking = True)
 
-        
+
         self.jtag.pins.get_status(status("Writing and verifying feature rows", 0), blocking = True)
         ### program feature rows
         # LSC_INIT_ADDRESS
@@ -1398,7 +1402,7 @@ class JtagCustomProgrammer(object):
         self.write_ir(8, 0x3C)
         self.check_dr(32, 0x00000100, 0x00002100)
 
-        self.jtag.goto_state("RESET") 
+        self.jtag.goto_state("RESET")
 
         self.jtag.pins.get_status(status("Done", 0), blocking = True)
 
@@ -1426,8 +1430,8 @@ class JtagCustomProgrammer(object):
 #        programmer = JtagCustomProgrammer(jtag)
 #        programmer.program(JedecFile(svf_file))
 
-            
-        
+
+
         #pins.tck = 0
         #pins.tdi = 0
         #pins.tms = 0
@@ -1436,4 +1440,3 @@ class JtagCustomProgrammer(object):
         #pins.send()
 
 #    print "Done!"
-
