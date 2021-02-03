@@ -25,7 +25,7 @@ class SyncSerial(object):
         while len(self.pending_write_data) > self.write_buffer_size:
             write_data = self.pending_write_data[0:63]
             self.pending_write_data = self.pending_write_data[63:]
-            self.ser.write(array.array('B', write_data).tostring())
+            self.ser.write(array.array('B', write_data).tobytes())
             self.ser.flush()
 
 
@@ -40,7 +40,7 @@ class SyncSerial(object):
 
     def flush(self):
         if len(self.pending_write_data) > 0:
-            self.ser.write(array.array('B', self.pending_write_data).tostring())
+            self.ser.write(array.array('B', self.pending_write_data).tobytes())
             self.pending_write_data = []
 
         self.ser.flush()
@@ -138,7 +138,7 @@ class AsyncSerial(object):
             #print "writing pending write data: " + str(len(self.pending_write_data))
             write_data = self.pending_write_data[0:63]
             self.pending_write_data = self.pending_write_data[63:]
-            self.ser.write(array.array('B', write_data).tostring())
+            self.ser.write(array.array('B', write_data).tobytes())
             self.ser.flush()
 
         flush_timeout_expired = (time.time() - self.last_write_time) >= self.write_flush_timeout
@@ -151,7 +151,7 @@ class AsyncSerial(object):
 
     def flush(self):
         if len(self.pending_write_data) > 0:
-            self.ser.write(array.array('B', self.pending_write_data).tostring())
+            self.ser.write(array.array('B', self.pending_write_data).tobytes())
             self.ser.flush()
             self.pending_write_data = []
 
